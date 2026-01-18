@@ -1,0 +1,67 @@
+Property,detail,text,translated_Property,translated_text
+Objekt-ID,X,Interne ID für eindeutige Referenzierung in der Datenbank,Object ID,Internal ID for clear reference in the database
+Titel,X,"Erkennbarer Titel (auf diskriminierende Begriffe und Herkunft prüfen. Die Titeln wurden nicht immer vom Künstler:In selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.)",title,"Recognizable title (check for discriminatory terms and origin. The titles were not always by the artist: in themselves, but often come from museums, publishers or later catalogizations.)"
+Künstler*in/Autor*in,X,Wer das Objekt geschaffen oder veröffentlicht hat,Artist/Author,Who created or published the object
+Sichtbare Personen,X,,Visible people,
+Entstehungsjahr,X,Datum oder Zeitraum der Entstehung,Year of origin,Date or period of the formation
+Ort der Entstehung / Nutzung,X,"Geografische Lage (Ort, Region)",Place of origin / use,"Geographical location (location, region)"
+Gattung / Genre ,Musik,Reprofotografie,Genus / genre,Repropotography
+Technik,Analogfotografie,,Technology,
+Dimensionen:,X,"Bildende Kunst: 50x70 cm (Malerei), 200x100x50 cm (Skulptur)
+
+Literatur: 200 Seiten (Buch), A4 (E-Book)
+
+Film: Laufzeit 90 Min, HD 1920x1080
+
+Musik & Audio: 45 Min, 320 kbps, Stereo
+
+Theater & Performance: 60 Min, Bühne 10x15 m",Dimensions:,"Fine art: 50x70 cm (painting), 200x100x50 cm (sculpture)
+
+Literature: 200 pages (book), A4 (e-book)
+
+Film: runtime 90 min, HD 1920x1080
+
+Music & audio: 45 min, 320 Kbps, stereo
+
+Theater & performance: 60 min, stage 10x15 m"
+Kurzbeschreibung,X,"Eine kurze Beschreibung (100 Wörter) des Objekts, Werks oder Datensatzes (z.B. Inhalt, Thema, Bedeutung).",Brief description,"A brief description (100 words) of the object, work or data record (e.g. content, topic, meaning)."
+Motive / Topoi ,X,"Typische Stereotypmotive, z.B. Lagerfeuer, Musikant",Motifs / topoi,"Typical stereotype motifs, e.g. campfire, musician"
+Narrative / Diskurse,X,"Narrative Rahmen: Romantisierung, Kriminalisierung",Narrative / discourses,"Narrative framework: romance, criminalization"
+Historischer Kontext,X,"Ereignisse wie 1848er-Revolution, Gesetzgebungen",Historical context,"Events such as 1848 revolution, legislation"
+Antiziganistische / Stigmatisierende Elemente,X,Diskriminierende Darstellungen benennen,Anti -Zigan / stigmatizing elements,Name discriminatory representations
+Agency,X,"Form(en) der Selbstermächtigung, Selbstrepräsentation oder Selbstartikulation, die dem Objekt zugeordnet werden können",Agent,"Form (s) of self -empowerment, self -representation or self -launch that can be assigned to the object"
+Verknüpfung ,X,"Verlinkung verwandter Werke auch in anderen Medienformen (z. B. Vorlage für Film, Adaption als Illustration etc.)",Link,"Link of related works also in other media forms (e.g. template for film, adaptation as illustration etc.)"
+Narrativwandel bei Medienwechsel,X,Veränderung des Narrativs über Medien hinweg,Narrative change in media change,Change of narrative over media
+Rezeptionsweg,X,"Wie wurde ein literarisches Werk von der Zielgruppe bei seiner Veröffentlichung aufgenommen?
+
+Wie haben sich Interpretationen eines Films über die Jahre verändert?
+
+Welche Reaktionen gab es auf eine künstlerische Ausstellung?",Way of reception,"How was a literary work recorded by the target group when it was published?
+
+How have interpretations of a film have changed over the years?
+
+What reactions were there on an artistic exhibition?"
+Sammlung / Archiv ,X,Ort ,Collection / archive,Location
+Provenienz,X,Chronologischer Weg des Objekts,Provenance,Chronological path of the property
+Literatur,X,Wissenschaftliche oder publizistische Referenzen,literature,Scientific or journalistic references
+Ausstellungen / Aufführungen / Veröffentlichungen,X,"Präsentationen, Aufführungen, Ausstellungen",Exhibitions / performances / publications,"Presentations, performances, exhibitions"
+Objekt- oder Werkteil,X,Zitat / Detail / Szene / Schnitt / Still / Beschriftung / Glossierung,Object or work part,Quote / detail / scene / cut / still / lettering / glossing
+Rechte / Lizenzen,X,"Lizenzstatus, CC-Lizenz etc.",Right / licenses,"License status, CC license etc."
+Digitalisat-Link/Pfad,X,Pfad oder URL zum Digitalisat,Digitized link/path,Path or URL to the digitized
+Metadaten-Status,X,"vollständig, unvollständig, geprüft",Metadata status,"Complete, incomplete, checked"
+Erfasst von,X,Name der erfassenden Person,Calculated by,Name of the captivating person
+Erfassungsdatum,X,JJJJ-MM-TT,Detection date,JJJJ-MM-TT
+Kommentar / Anmerkung,X,Zusätzliche Bemerkungen oder Besonderheiten,Comment / note,Additional comments or special features
+Versionsgeschichte,X,"Beispiel für eine Versionsgeschichte:
+
+Version 1.0 – 2023-05-01: Ersterfassung des Datensatzes durch Max Mustermann.
+
+Version 1.1 – 2023-05-10: Titel angepasst, Rechtschreibfehler korrigiert, hinzugefügt von Anna Beispiel.
+
+Version 2.0 – 2023-06-01: Erweiterung der Beschreibung und Hinzufügung von Metadaten, geändert von Maria Beispiel.",Version history,"Example of a version of a version:
+
+Version 1.0-2023-05-01: First recording of the data record by Max Mustermann.
+
+Version 1.1-2023-05-10: Title adjusted, spelling errors corrected, added by Anna example.
+
+Version 2.0-2023-06-01: Expansion of the description and addition of metadata, changed by Maria Example."

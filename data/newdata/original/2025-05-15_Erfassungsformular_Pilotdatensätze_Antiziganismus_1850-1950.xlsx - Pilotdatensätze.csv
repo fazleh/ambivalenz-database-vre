@@ -1,0 +1,60 @@
+Property,,text,Hinweis
+Objekt-ID,Wird intern vergeben, dient der eindeutigen Identifikation und Inventarisierung.,"Die Objekt-ID ist eine eindeutige interne Kennziffer, die jedem Datensatz innerhalb der Forschungsumgebung oder Datenbank zugewiesen wird.
+Sie dient der Identifikation, Nachverfolgbarkeit und Inventarisierung der erfassten Werke und wird zentral vergeben."
+Titel,,"Originaltitel oder aktueller Titel des Werkes. Hinweise auf diskriminierende Begriffe, historische Kontextualisierung (z. B. antiziganistische Begriffe im Titel). Eine besondere Aufmerksamkeit gilt der kritischen Überprüfung der Titel auf sprachliche Diskriminierungen, insbesondere auf antiziganistische, rassistische und kolonial geprägte Begriffe. Dabei ist zu berücksichtigen, dass viele Titel nicht von den ursprünglichen Urheber*innen selbst stammen, sondern durch spätere Katalogisierungen, museale Ordnungen oder Verlage geprägt wurden.
+Die Rekonstruktion der Entstehungskontexte und die Kontextualisierung problematischer Begriffe sind wesentliche Schritte, um historisch gewachsene Ausgrenzungsmechanismen sichtbar zu machen und einen diskriminierungssensiblen, verantwortungsvollen Umgang mit kulturellem und wissenschaftlichem Erbe zu fördern.",
+"Urheber*in / Verantwortliche Person
+",,"Name der Person(en), die für die Entstehung verantwortlich sind (z. B. Künstler*in, Autor*in, Regisseur*in, Fotograf*in, Forscher*in etc.)",
+Sichtbare oder rekonstruierbare Personen,,"Erfassung von Personen, die sichtbar dargestellt oder beschrieben sind. Bitte soweit möglich Name, Geburtsort, Zugehörigkeit (z. B. Sinti*zze und Rom*nja) und biografische Hinweise angeben. In diesem Erfassungsfeld werden reale Personen dokumentiert, die auf Gemälden, Fotografien, Kunstwerken, Theateraufführungen oder Filmen sichtbar dargestellt oder in literarischen Werken beschrieben werden. Voraussetzung ist, dass eine Identifizierung möglich ist, etwa durch Angaben zu Name, Geburtsort, biografischen Daten oder Community-Zugehörigkeit (z. B. Sinti*zze und Rom*nja). Auch in wissenschaftlichen Beiträgen rekonstruierbare Personen sollen erfasst werden. ",
+Entstehungsjahr,,Jahr oder Zeitraum der Entstehung oder Veröffentlichung,
+Ort der Entstehung / Nutzung,,"Geografische Lage (Ort, Region)",
+Gattung / Genre ,,"Auswahl: Literatur, Film, Fotografie, Theater, wissenschaftliche Aufzeichnung usw.",
+Technik,,"Technik: Herstellungs- oder Dokumentationsverfahren (z. B. Öl auf Leinwand, Schwarzweißfotografie, 16mm-Film, Tonbandaufzeichnung).",
+Dimensionen:,"
+
+",Maße (Höhe × Breite × Tiefe in cm) bei Objekten oder Laufzeit (Minuten) bei medialen Werken. Bei Texten Seitenanzahl angeben usw.,
+Kurzbeschreibung / Inhaltliche Zusammenfassung,,"Eine kurze Beschreibung (100 Wörter) des Objekts, Werks oder Datensatzes (z.B. Inhalt, Thema, Bedeutung).",
+Motive / Topoi ,,"In diesem Feld werden zentrale Themen, wiederkehrende Darstellungen oder kulturelle Stereotype erfasst, die im Werk sichtbar sind.
+Dazu gehören Motive wie Wanderschaft, Freiheit, Fremdheit, Naturverbundenheit oder Lagerleben sowie spezifische Themen wie Handlesen, Wahrsagerei oder Kinderraub.
+Bitte benennen Sie sowohl neutrale als auch stigmatisierende Inhalte, um Narrative und Repräsentationsmuster kritisch nachvollziehen zu können.",
+Narrative / Diskurse,,"In diesem Feld wird dokumentiert, welche übergeordneten Erzählmuster und gesellschaftlichen Bedeutungsrahmen das Werk prägen.
+Erfasst werden soll, welche Geschichten oder Perspektiven vermittelt werden (z. B. Freiheit, Fremdheit, Verfolgung) und in welche größeren gesellschaftlichen Diskurse sie eingebettet sind, wie etwa Antiziganismus, Rassismus oder koloniale Deutungsmuster.",
+Historischer Kontext,,"In diesem Feld soll der gesellschaftliche, politische oder kulturelle Rahmen beschrieben werden, in dem das Werk entstanden ist oder auf den es sich bezieht.
+Zur Orientierung können folgende historische Zeiträume herangezogen werden: ca. 1830–1848 (frühe Romantik und nationale Bewegungen in verschiedenen Teilen Europas), die Revolutionen von 1848 (insbesondere in Frankreich, Deutschland, Italien, Ungarn und Österreich), die Phase der nationalstaatlichen Konsolidierung und verstärkten Minderheitenkontrolle zwischen 1850 und 1914, der Erste Weltkrieg (1914–1918) mit europaweiter Repression und Militarisierung, die politisch instabile Zwischenkriegszeit (1918–1939) mit der Verabschiedung rassistischer Sondergesetze in vielen Staaten, die NS-Zeit (1933–1945) mit der systematischen Verfolgung und Ermordung von Sinti und Roma im von Deutschland besetzten Europa sowie die frühe Nachkriegszeit (1945–1950) mit beginnender Aufarbeitung, aber weiterhin bestehenden Diskriminierungsstrukturen.
+Diese Beispiele dienen lediglich als Anhaltspunkte. Bitte analysieren und beschreiben Sie den spezifischen historischen und kulturhistorischen Kontext des jeweiligen Werkes individuell und berücksichtigen Sie dabei auch regionale und nationale Besonderheiten.",
+Antiziganistische / Stigmatisierende Elemente,,"In diesem Feld sollen Begriffe, Darstellungen oder Narrative erfasst werden, die antiziganistische oder anderweitig stigmatisierende Inhalte transportieren.
+Typische Beispiele sind die Verwendung abwertender Begriffe wie „Zigeuner“, die Darstellung von Sinti*zze und Rom*nja als kriminell, arbeitsscheu oder exotisch-romantisiert, sowie stereotype Motive wie Handleserei, Kinderraub oder mystische Fähigkeiten.
+Auch die Darstellung als Bedrohung für Eigentum und Ordnung, die Reduktion auf Rollen wie Musiker*in, Wahrsager*in oder Dieb*in, sowie Bilder, die Sinti*zze und Rom*nja als unzivilisierte „Fremde“ oder ewige Außenseiterinnen zeigen, können als stigmatisierend gelten.
+Bitte prüfen Sie sorgfältig, ob und wie das Werk solche Elemente aufweist, und dokumentieren Sie diese kritisch.",
+Agency,,"Rekonstruktion der Agency von Sinti*zze und Rom*nja. In diesem Feld sollen Form(en) der Selbstermächtigung, Selbstrepräsentation oder Selbstartikulation dokumentiert werden, die im Werk sichtbar werden oder den dargestellten Personen zugeordnet werden können. Agency bezeichnet die Fähigkeit von Individuen oder Gruppen, als handelnde Subjekte aufzutreten, eigene Perspektiven sichtbar zu machen und bestehende Stereotypen oder dominante Deutungsmuster bewusst zu durchbrechen.
+Bitte prüfen Sie, ob und in welcher Weise das Werk solche Momente der Selbstbehauptung, Selbstrepräsentation oder bewussten Gegenpositionierung erkennen lässt.",
+Verknüpfung ,,"Verlinkung verwandter Werke auch in anderen Medienformen (z. B. Vorlage für Film, Adaption als Illustration etc.) Dieses Feld erfasst thematische oder narrative Verbindungen zwischen Darstellungen von Sinti*zze und Rom*nja und anderen marginalisierten Communities, etwa jüdischen, Schwarzen, indigenen oder migrantischen Gruppen. Bitte prüfen Sie kritisch, ob ähnliche Muster von Stigmatisierung, Selbstermächtigung oder Repräsentation erkennbar sind.",
+Narrativwandel bei Medienwechsel,,"Falls das Werk Adaptionen, Bearbeitungen oder Übertragungen in andere Medien erfahren hat, bitte entsprechende Veränderungen dokumentieren.",
+Rezeptionsweg,,"In diesem Feld soll dokumentiert werden, auf welchem Weg das Werk rezipiert, verbreitet oder weitervermittelt wurde. Auch Veränderungen in der öffentlichen Wahrnehmung oder Umdeutungen im Laufe der Zeit gehören dazu.
+Dabei kann es sich um Erstveröffentlichungen, Neuauflagen, Ausstellungen, Aufführungen, Übersetzungen, Verfilmungen oder weitere mediale Adaptionen handeln. 
+Bitte geben Sie an, ob das Werk beispielsweise durch eine breite Veröffentlichung, museale Präsentationen, wissenschaftliche Bearbeitungen oder populärkulturelle Verarbeitungen eine besondere Reichweite oder Bedeutungsverschiebung erfahren hat.",
+Sammlung / Archiv ,,"Name der Institution oder Sammlung, in der das Werk verwahrt wird; ggf. Inventarnummer oder Signatur angeben.",
+Provenienz,,"In diesem Feld soll die Herkunfts- und Besitzgeschichte des Werkes erfasst werden, einschließlich Entstehungszusammenhang, früherer Eigentümer*innen und Stationen in Sammlungen oder Archiven.
+Bitte beachten Sie insbesondere mögliche Übertragungen im Kontext von Kolonialismus, Enteignung, Diskriminierung oder gewaltsamer Aneignung, um kritische Aspekte der Werkgeschichte sichtbar zu machen.",
+Literatur,,Wissenschaftliche oder publizistische Referenzen,
+Ausstellungen / Aufführungen / Veröffentlichungen,,"Präsentationen, Aufführungen, Ausstellungen",
+Objekt- oder Werkteil,,"Bitte angeben, ob es sich um ein vollständiges Werk oder einen Teil (z. B. Fragment, Szene, Auszug) handelt",
+Rechte / Lizenzen,,"Bitte erfassen Sie Urheberrechte, Nutzungsbedingungen oder bestehende Lizenzen des Werkes, wie etwa „Alle Rechte vorbehalten“, „Creative Commons“-Lizenzen (z. B. CC BY, CC BY-SA), Gemeinfreiheit (Public Domain) oder institutionelle Nutzungseinschränkungen.",
+Digitalisat-Link/Pfad,,"In diesem Feld soll der Verweis auf ein vorhandenes Digitalisat des Werkes eingetragen werden.
+Bitte geben Sie die genaue URL (bei Online-Verfügbarkeit) oder den Speicherort bzw. Pfad innerhalb eines digitalen Archivsystems an.
+Alternativ oder ergänzend kann das Digitalisat (z. B. Scan, Fotografie, audiovisuelle Datei) auch direkt eingereicht oder hochgeladen werden, sofern dies technisch möglich ist.
+Das Ziel ist es, die Auffindbarkeit, Zugänglichkeit und langfristige Sicherung der digitalen Version zu gewährleisten. 
+Bitte beachten Sie, dass zu diesem Punkt weitere Hinweise zu Dateiformaten, Ablagestrukturen und Dateibenennungen zu einem späteren Zeitpunkt folgen werden, da die geplante Forschungsumgebung bzw. multimodale Datenbank derzeit noch in Entwicklung ist.",
+Metadaten-Status,,"Bitte Bearbeitungsstand angeben: Vollständig, Teilweise, In Bearbeitung oder Offene Fragen.",
+Erfasst von,,Name oder Kürzel der erfassenden Person/Gruppe angeben.,
+Erfassungsdatum,,"In diesem Feld soll das Datum eingetragen werden, an dem die Erfassung oder die letzte wesentliche Bearbeitung des Datensatzes vorgenommen wurde.
+Bitte verwenden Sie das Format TT.MM.JJJJ, um eine einheitliche Dokumentation und spätere Nachverfolgbarkeit der Erfassungs- und Bearbeitungsprozesse zu gewährleisten.",
+Kommentar / Anmerkung,,"Hier können zusätzliche Informationen oder Hinweise eingetragen werden, die in den anderen Feldern nicht abgebildet sind.",
+Versionsgeschichte,,"In diesem Feld sollen wesentliche Änderungen und Bearbeitungen des Datensatzes nachvollziehbar dokumentiert werden.
+Bitte geben Sie Datum, Bearbeiter*in und eine kurze Beschreibung der Änderung an.
+Die Versionsgeschichte dient der Transparenz des Entstehungs- und Überarbeitungsprozesses der Metadaten.
+
+Beispiel für die Dokumentation:
+Version 1.0 – 2023-05-01: Ersterfassung des Datensatzes durch Max Mustermann.
+Version 1.1 – 2023-05-10: Titel angepasst, Rechtschreibfehler korrigiert, hinzugefügt von Anna Beispiel.
+Version 2.0 – 2023-06-01: Erweiterung der Beschreibung und Hinzufügung von Metadaten, geändert von Maria Beispiel.",

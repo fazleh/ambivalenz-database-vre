@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Visual Art</title>
+
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}">
+
+    <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.detect_swipe.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/helper.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+    <!--[if lt IE 9]>
+
+		<script src="/static/js/vendor/html5shiv.min.js"></script>
+
+	<![endif]-->
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1300px;
+            /* increased to fit image + text */
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .portrait {
+            width: 400px;
+            height: 400px;
+            /* increased height */
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid black;
+            flex-shrink: 0;
+        }
+
+        .text {
+            width: 660px;
+            /* remaining width (1300 - 600 - 20 gap) */
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 18px;
+            /* adjust as needed */
+            /* includes padding in width */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            /* border: 2px solid black; */
+            /* border around the whole table */
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            /* black border on all sides of each cell */
+            padding: 12px 20px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eaeaea;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+        .col1 {
+            width: 400px; /* width of first column */
+        }
+        .col2 {
+            width: 800px; /* width of second column */
+        }
+        .row-height {
+            height: 60px; /* height of row */
+        }
+        .property-table {
+            font-size: 16px;
+            /* adjust as needed */
+        }
+        .property-table a {
+            color: #0645AD;
+            /* Wikipedia blue */
+            text-decoration: underline;
+            /* always underlined */
+            text-decoration-color: #0645AD;
+            /* blue underline */
+            text-decoration-thickness: 2px;
+            /* thicker underline */
+        }
+
+        .property-table a:hover {
+            text-decoration-thickness: 3px;
+            /* thicker on hover */
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body class=" bundle list">
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+    <header class="site">
+        <a id="header-logo" href="http://127.0.0.1:5000/">
+
+            <img class="logo" srcset="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 57w,
+                         {{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 93w,
+                         {{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 103w" src="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }}" alt="Uni Marburg Logo">
+        </a>
+
+
+
+        <h1 id="header-title">Ilonka</h1>
+
+        <div id="header-tools">
+            <a id="search" href=href="http://127.0.0.1:5000/search/">
+                <img src="{{ url_for('static', filename='images/search.svg') }}" alt="Search"></a>
+
+
+            <div id="hamburger">
+                <img class="hamburger" src="{{ url_for('static', filename='images/menu-open.svg') }}">
+            </div>
+        </div>
+    </header>
+
+    <div id="menu" class="menu">
+
+
+
+        <img class="logo" srcset="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 57w,
+                    {{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 93w,
+                    {{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 103w" src="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }}">
+
+
+        <nav class="site">
+            <h1 id="header-title-menu" class="box clickable-box"><a class="box-link" href="http://127.0.0.1:5000/">Antiziganismus und Ambivalenz in Europa</a></h1>
+
+            <ul class="menu">
+                <li class="box clickable-box">
+                    <a class="box-link" href="http://127.0.0.1:5000/">Home</a>
+                </li>
+                <li class="submenu collapsed">
+                    <div class="box submenu-header clickable-box">
+                        <a class="box-link" href="http://127.0.0.1:5000/sections/">Curated sections</a>
+                        <button class="collapse"><img src="{{ url_for('static', filename='images/open-vertical.svg') }}" alt="collapse"></button>
+                    </div>
+                    <ul class="menu">
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('visual_art') }}">Visual Art</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('audio') }}">Audio</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('video') }}">Video</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('book') }}">Book</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="http://localhost:7474/browser/">Graph Database</a></li> <!-- External URL is fine -->
+                    </ul>
+                </li>
+                <li class="box clickable-box"><a class="box-link" href="{{ url_for('visual_art') }}">Visual Art</a></li>
+                <li class="box clickable-box"><a class="box-link" href="{{ url_for('audio') }}">Audio</a></li>
+                <li class="box clickable-box"><a class="box-link" href="{{ url_for('video') }}">Video</a></li>
+                <li class="box clickable-box"><a class="box-link" href="{{ url_for('book') }}">Book</a></li>
+                <li class="box clickable-box"><a class="box-link" href="http://localhost:7474/browser/">Graph Database</a></li> <!-- External URL is fine -->
+
+
+                <li class="secondary submenu collapsed">
+
+
+                    <div class="box submenu-header clickable-box">
+                        <a class="box-link" href="{{ url_for('about') }}">About</a>
+                        <button class="collapse"><img src="{{ url_for('static', filename='images/open-vertical.svg') }}" alt="collapse"></button>
+                    </div>
+
+                    <ul class="menu">
+
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('context_project') }}">Roma: Who Are We?</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('history_of_romarchive') }}">Idea - Advisory Board - Team</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('curators') }}">Archive Sections and Curators</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('ethical_guidelines') }}">RomArchive Ethical Guidelines*</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('collection_policy') }}">Collection Policy</a></li>
+                        <li class="box clickable-box"><a class="box-link" href="{{ url_for('faq') }}">Frequently Asked Questions | FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="box secondary clickable-box"><a class="box-link" href="{{ url_for('search') }}">Search</a></li>
+                <li class="box secondary clickable-box"><a class="box-link" href="{{ url_for('terms') }}">Terms</a></li>
+                <li class="box secondary clickable-box"><a class="box-link" href="{{ url_for('contact') }}">Contact</a></li>
+
+            </ul>
+
+            <div class="language-selector">
+
+                <a href="http://127.0.0.1:5000/" hreflang="en"><svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <path d="M5.12690455,23.7465804 L0.141880336,28.7982954 L0.141880336,18.4091071 C0.0488516495,17.9539311 9.47288506e-16,17.4826705 8.8817842e-16,17 L0,7 C-4.73447626e-16,3.13400675 3.13400675,7.10171439e-16 7,0 L22,0 C25.8659932,-7.10171439e-16 29,3.13400675 29,7 L29,17 C29,20.8659932 25.8659932,24 22,24 L7,24 C6.35123751,24 5.72308855,23.911743 5.12690455,23.7465804 Z" id="language-switcher-path-1"></path>
+                        </defs>
+                        <g id="language-switcher" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Icon-Color" transform="translate(7.000000, 8.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#language-switcher-path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#202020" xlink:href="#language-switcher-path-1"></use>
+                                <g id="black" mask="url(#mask-2)" fill="#000000">
+                                    <g transform="translate(-7.000000, -8.000000)" id="Color-Rectangle">
+                                        <rect x="0" y="0" width="44" height="44"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                            <text id="language" font-family="Montserrat-Bold, Montserrat" font-size="9.9" font-weight="bold" letter-spacing="0.297000021" fill="#FFFFFF">
+                                <tspan x="16.7739" y="19">EN</tspan>
+                            </text>
+                        </g>
+                    </svg>
+                </a>
+
+
+
+
+
+                <a href="http://127.0.0.1:5000/de/frontpage/" hreflang="de"><svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <path d="M5.12690455,23.7465804 L0.141880336,28.7982954 L0.141880336,18.4091071 C0.0488516495,17.9539311 9.47288506e-16,17.4826705 8.8817842e-16,17 L0,7 C-4.73447626e-16,3.13400675 3.13400675,7.10171439e-16 7,0 L22,0 C25.8659932,-7.10171439e-16 29,3.13400675 29,7 L29,17 C29,20.8659932 25.8659932,24 22,24 L7,24 C6.35123751,24 5.72308855,23.911743 5.12690455,23.7465804 Z" id="language-switcher-path-1"></path>
+                        </defs>
+                        <g id="language-switcher" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Icon-Color" transform="translate(7.000000, 8.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#language-switcher-path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#202020" xlink:href="#language-switcher-path-1"></use>
+                                <g id="black" mask="url(#mask-2)" fill="#000000">
+                                    <g transform="translate(-7.000000, -8.000000)" id="Color-Rectangle">
+                                        <rect x="0" y="0" width="44" height="44"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                            <text id="language" font-family="Montserrat-Bold, Montserrat" font-size="9.9" font-weight="bold" letter-spacing="0.297000021" fill="#FFFFFF">
+                                <tspan x="16.7739" y="19">DE</tspan>
+                            </text>
+                        </g>
+                    </svg>
+                </a>
+
+
+
+
+
+                <a href="http://127.0.0.1:5000/rom/frontpage/" hreflang="rom"><svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <path d="M5.12690455,23.7465804 L0.141880336,28.7982954 L0.141880336,18.4091071 C0.0488516495,17.9539311 9.47288506e-16,17.4826705 8.8817842e-16,17 L0,7 C-4.73447626e-16,3.13400675 3.13400675,7.10171439e-16 7,0 L22,0 C25.8659932,-7.10171439e-16 29,3.13400675 29,7 L29,17 C29,20.8659932 25.8659932,24 22,24 L7,24 C6.35123751,24 5.72308855,23.911743 5.12690455,23.7465804 Z" id="language-switcher-path-1"></path>
+                        </defs>
+                        <g id="language-switcher" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Icon-Color" transform="translate(7.000000, 8.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#language-switcher-path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#202020" xlink:href="#language-switcher-path-1"></use>
+                                <g id="black" mask="url(#mask-2)" fill="#000000">
+                                    <g transform="translate(-7.000000, -8.000000)" id="Color-Rectangle">
+                                        <rect x="0" y="0" width="44" height="44"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                            <text id="language" font-family="Montserrat-Bold, Montserrat" font-size="9.9" font-weight="bold" letter-spacing="0.297000021" fill="#FFFFFF">
+                                <tspan x="9" y="19">ROM</tspan>
+                            </text>
+                        </g>
+                    </svg>
+                </a>
+
+
+            </div>
+        </nav>
+
+    </div>
+
+
+    <div>
+        <form class="filters" action="" method="get">
+            <select name="section">
+                <option value="" selected="selected">Informationen</option>
+                <option value="Objekt_Informationen">1. Objektinformationen</option>
+                <option value="Inhaltliche_Beschreibung"> 2. Inhaltliche Beschreibung</option>
+                <option value="Semantische_Annotation"> 3. Semantische Annotation</option>
+                <option value="Semantische_Relationen"> 4. Semantische Relationen</option>
+                <option value="Technische_rechtliche"> 5. Technische and rechtliche</option>
+            </select>
+
+        </form>
+    </div>
+
+
+
+    <div class="container">
+        <img class="portrait" srcset="{{ url_for('static', filename='private/Ilonka.png') }} 1x,
+                                      {{ url_for('static', filename='private/Ilonka.png') }} 2x" src="{{ url_for('static', filename='private/Ilonka.png') }}" width="400" height="400" alt="Portrait of Ilonka">
+
+        <div class="text">
+            <p>
+                Fremdbild vs. Selbstpräsenz: Ilonka wird mit Attributen der „Zigeunerin“ ausgestattet: dunkle Kleidung, Goldschmuck, sinnlicher Blick Deutungsrahmen: Exotisierung – aber: Sie schaut selbstbewusst, konfrontativ zurück
+            </p>
+        </div>
+    </div>
+
+
+    <h2> 1. Objektinformationen </h2>
+    <table class="property-table">
+        <thead>
+            <tr>
+                <th class="row-height">
+                    <p style="color: #333333;">
+                        <strong>Property</strong>
+                    </p>
+                </th>
+                <th><strong>Value</strong></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Objekt-ID</strong></td>
+                <td class="col2" class="left-align">2</td>
+            </tr>
+            <tr>
+                <td class="col1" class="left-align"> <strong>Titel</strong></td>
+                <td class="col2" class="left-align">Ilonka</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Objekttyp / Medium / Technik</strong></td>
+                <td class="col2" class="left-align">Öl auf Leinwand, Maße 135 × 100 cm</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Entstehungsdatum</strong></td>
+                <td class="col2" class="left-align">1932</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Entstehungsort</strong></td>
+                <td class="col2" class="left-align">Land / Stadt / Region ?</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Autor*in / Künstler*in / Regisseur*in</strong></td>
+                <td class="col2" class="left-align">Name (ggf. mit Lebensdaten): Max Beckmann (Max Carl Friedrich Beckman</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Beteiligte / Sichtbare Personen</strong></td>
+                <td class="col2" class="left-align">Name (ggf. mit Lebensdaten) Ilonka (name der Abgebildeten Romni)</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Sammlung / Archiv / Fundort</strong></td>
+                <td class="col2" class="left-align">
+                    <a href="https://de.wikipedia.org/wiki/Museum_Ludwig" target="_blank">
+                        Museum Ludwig (Köln)
+                    </a>
+                </td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Provenienz</strong></td>
+                <td class="col2" class="left-align">1954-1957, Lilly von Schnitzler-Mallinckrodt, Murnau (Kreis Garmisch-Partenkirchen)
+                    1957-1976, Wallraf-Richartz-Museum & Fondation Corboud, Köln, Inv.-Nr.: WRM 3015 (Ankauf 1957)
+                    1954 Ankauf Lilly von Schnitzler aus dem Nachlass Beckmann. 1957 erworben aus der Sammlung Lilly von Schnitzler-Malinckrodt, Murnau.</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Literatur</strong></td>
+                <td class="col2" class="left-align">Beckmann, Max, Winterthur 1938, Kat-Nr. 7 hrsg. v. Kunsthalle Winterthur 1938 Beckmann, Max, Zürich 1955, Kat-Nr. 63 hrsg. v. Kunsthalle Basel Basel 1956</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Ausstellungen</strong></td>
+                <td class="col2" class="left-align">Max Beckmann, 1932 Berlin, Galerie Alfred Flechtheim / 1938 Winterthur, Kunstverein/ 22.11.1955-08.01.1956 Zürich, Kunsthaus</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Beschriftung</strong></td>
+                <td class="col2" class="left-align">Signatur, Vorderseite (links oben): Beckmann F. 32
+                    Aufkleber, Rückseite, oben links, auf dem Rahmen: BUCHHOL GALLERY / CURT VALENTIN / 32 EAST 57th STREET, NEW YORK. / TITLE & YEAR Gypsy. 1932 / ARTIST Max Beckmann / MEDIUM & / SIZE Oil 53 1/2 X 39 3/4 " / NO. / 11296 / Oui [handschritfliche Notiz]</td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Werkkommentar (Museum Ludwig, Köln)</strong></td>
+                <td class="col2" class="left-align">Kurz nach Entstehen wurde das Bild mit dem Titel „Ilonka“ ausgestellt. Offensichtlich handelt es sich um ein Porträt. Eine Zeichnung des wahrscheinlich selben Modells (heute Art Institute Chicago, Inv-Nr. 1989.169), ist ebenfalls Ilonka betitelt. Sie wurde 1955 bei Theo Hill, Köln unter diesem Titel ausgestellt. (Vgl. Kat. Hill, S. 14) Das WVZ Göpel 1979 erwähnt zwei Stellen aus Beckmanns Tagebuch von 1945, in denen Beckmann auf das Bild, das er in einer Amsterdamer Ausstellung sah, mit „Zigeunerin✶✶“ referiert. Göpel erwähnt auch die Zeichnung Ilonka, ohne daraus einen Rückschluss auf den Titel zu ziehen. Im Zuge einer Prüfung von Bildtiteln auf rassistische Bezeichnungen, haben wir entschieden, den ersten Titel Ilonka wiederherzustellen und auf den späteren Titel Zigeunerin✶✶ II zu verzichten. Barbara Tiedemann und Siegfried Gohr, die das aktuelle Werkverzeichnis zu Beckmann bearbeiten, werden das Werk ebenfalls unter dem Titel Ilonka führen.
+                    <br>Dr. Julia Friedrich
+                </td>
+            </tr>
+            <tr class="row-height">
+                <td class="col1" class="left-align"><strong>Angaben zur rassistische Fremdbezeichnung (Museum Ludwig, Köln)</strong></td>
+                <td class="col2" class="left-align">Diese rassistische Fremdbezeichnung vermittelt seit Jahrhunderten negative und exotisierende Stereotype. Sie ist untrennbar verbunden mit der Ausgrenzung, Vertreibung, Verfolgung und Ermordung von Sinti*zze und Rom*nja und schreibt ein diskriminierendes Menschenbild fort. Dennoch belassen wir sie im Werktitel. Als Museum können wir Werke nicht ändern – eine rassistische Darstellung so wenig wie einen rassistischen Titel. Wir können auf die soziale Gewalt und Unterdrückung, die Kunstwerke spiegeln oder selbst betreiben, hinweisen und sie in der Präsentation sichtbar machen.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- New lines after the table -->
+    <br><br><br>
+
+    <footer class="site">
+
+        <div class="footer-title">Antiziganismus und Ambivalenz in Europa</div>
+
+        <nav class="footer">
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('supporters') }}">Supporters</a>
+            <a href="{{ url_for('imprint') }}">Imprint</a>
+            <a href="{{ url_for('privacy') }}">Privacy statement</a>
+        </nav>
+
+    </footer>
+
+
+    <script>
+        document.querySelectorAll('.filters select').forEach(function(element) {
+            element.addEventListener('change', function(event) {
+                document.querySelector('.filters').submit()
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>

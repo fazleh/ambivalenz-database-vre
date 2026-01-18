@@ -1,0 +1,811 @@
+[
+    {
+        "text": "Ilonka",
+        "entities": []
+    },
+    {
+        "text": "Eindeutige Kennung des Objekts in der Datenbank",
+        "entities": []
+    },
+    {
+        "text": "Ilonka",
+        "entities": []
+    },
+    {
+        "text": "Öl auf Leinwand, Maße\t135 × 100 cm",
+        "entities": [
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            }
+        ]
+    },
+    {
+        "text": "Ilonka",
+        "entities": []
+    },
+    {
+        "text": "1932",
+        "entities": []
+    },
+    {
+        "text": "Land / Stadt / Region ?",
+        "entities": []
+    },
+    {
+        "text": "Autor_Künstler_Regisseur",
+        "entities": []
+    },
+    {
+        "text": "Name (ggf. mit Lebensdaten) Ilonka (name der Abgebildeten Romni)",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            }
+        ]
+    },
+    {
+        "text": "Museum Ludwig, Köln",
+        "entities": [
+            {
+                "surface_form": "Museum Ludwig",
+                "dbpedia_uri": "http://dbpedia.org/resource/Museum_Ludwig",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Museum_Ludwig"
+            },
+            {
+                "surface_form": "Köln",
+                "dbpedia_uri": "http://dbpedia.org/resource/Cologne",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Cologne"
+            }
+        ]
+    },
+    {
+        "text": "1954-1957, Lilly von Schnitzler-Mallinckrodt, Murnau (Kreis Garmisch-Partenkirchen)\n1957-1976, Wallraf-Richartz-Museum & Fondation Corboud, Köln, Inv.-Nr.: WRM 3015 (Ankauf 1957)\n1954 Ankauf Lilly von Schnitzler aus dem Nachlass Beckmann. 1957 erworben aus der Sammlung Lilly von Schnitzler-Malinckrodt, Murnau.",
+        "entities": [
+            {
+                "surface_form": "Lilly",
+                "dbpedia_uri": "http://dbpedia.org/resource/Eli_Lilly_and_Company",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Eli_Lilly_and_Company"
+            },
+            {
+                "surface_form": "Kreis",
+                "dbpedia_uri": "http://dbpedia.org/resource/Districts_of_Germany",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Districts_of_Germany"
+            },
+            {
+                "surface_form": "Garmisch-Partenkirchen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Garmisch-Partenkirchen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Garmisch-Partenkirchen"
+            },
+            {
+                "surface_form": "Wallraf-Richartz-Museum & Fondation Corboud",
+                "dbpedia_uri": "http://dbpedia.org/resource/Wallraf–Richartz_Museum",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Wallraf–Richartz_Museum"
+            },
+            {
+                "surface_form": "Köln",
+                "dbpedia_uri": "http://dbpedia.org/resource/Cologne",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Cologne"
+            },
+            {
+                "surface_form": "Lilly",
+                "dbpedia_uri": "http://dbpedia.org/resource/Eli_Lilly_and_Company",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Eli_Lilly_and_Company"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Nachlass",
+                "dbpedia_uri": "http://dbpedia.org/resource/Nachlass",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Nachlass"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "Lilly",
+                "dbpedia_uri": "http://dbpedia.org/resource/Eli_Lilly_and_Company",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Eli_Lilly_and_Company"
+            }
+        ]
+    },
+    {
+        "text": "Beckmann, Max, Winterthur 1938, Kat-Nr. 7 \nhrsg. v. Kunsthalle Winterthur 1938\nBeckmann, Max, Zürich 1955, Kat-Nr. 63 hrsg. v. Kunsthalle Basel\nBasel 1956",
+        "entities": [
+            {
+                "surface_form": "Max",
+                "dbpedia_uri": "http://dbpedia.org/resource/Max_Fleischer",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Max_Fleischer"
+            },
+            {
+                "surface_form": "Winterthur",
+                "dbpedia_uri": "http://dbpedia.org/resource/Winterthur",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Winterthur"
+            },
+            {
+                "surface_form": "Winterthur",
+                "dbpedia_uri": "http://dbpedia.org/resource/Winterthur",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Winterthur"
+            },
+            {
+                "surface_form": "Max",
+                "dbpedia_uri": "http://dbpedia.org/resource/Max_Fleischer",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Max_Fleischer"
+            },
+            {
+                "surface_form": "Zürich",
+                "dbpedia_uri": "http://dbpedia.org/resource/University_of_Zurich",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/University_of_Zurich"
+            },
+            {
+                "surface_form": "Kunsthalle Basel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Kunsthalle_Basel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Kunsthalle_Basel"
+            },
+            {
+                "surface_form": "Basel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Basel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Basel"
+            }
+        ]
+    },
+    {
+        "text": "Max Beckmann, 1932 Berlin, Galerie Alfred Flechtheim /  1938 Winterthur, Kunstverein/  22.11.1955-08.01.1956 Zürich, Kunsthaus",
+        "entities": [
+            {
+                "surface_form": "Max Beckmann",
+                "dbpedia_uri": "http://dbpedia.org/resource/Max_Beckmann",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Max_Beckmann"
+            },
+            {
+                "surface_form": "Berlin",
+                "dbpedia_uri": "http://dbpedia.org/resource/Berlin",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Berlin"
+            },
+            {
+                "surface_form": "Alfred Flechtheim",
+                "dbpedia_uri": "http://dbpedia.org/resource/Alfred_Flechtheim",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Alfred_Flechtheim"
+            },
+            {
+                "surface_form": "Winterthur",
+                "dbpedia_uri": "http://dbpedia.org/resource/Winterthur",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Winterthur"
+            },
+            {
+                "surface_form": "Zürich",
+                "dbpedia_uri": "http://dbpedia.org/resource/University_of_Zurich",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/University_of_Zurich"
+            },
+            {
+                "surface_form": "Kunsthaus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Kunsthaus_Graz",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Kunsthaus_Graz"
+            }
+        ]
+    },
+    {
+        "text": "Signatur, Vorderseite (links oben): Beckmann F. 32\nAufkleber, Rückseite, oben links, auf dem Rahmen: BUCHHOL GALLERY / CURT VALENTIN / 32 EAST 57th STREET, NEW YORK. / TITLE & YEAR Gypsy. 1932 / ARTIST Max Beckmann / MEDIUM & / SIZE Oil 53 1/2 X 39 3/4 \" / NO. / 11296 / Oui [handschritfliche Notiz]",
+        "entities": [
+            {
+                "surface_form": "Signatur",
+                "dbpedia_uri": "http://dbpedia.org/resource/NSB_Class_73",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/NSB_Class_73"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "CURT VALENTIN",
+                "dbpedia_uri": "http://dbpedia.org/resource/Curt_Valentin",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Curt_Valentin"
+            },
+            {
+                "surface_form": "57th STREET",
+                "dbpedia_uri": "http://dbpedia.org/resource/57th_Street_(Manhattan)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/57th_Street_(Manhattan)"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Max Beckmann",
+                "dbpedia_uri": "http://dbpedia.org/resource/Max_Beckmann",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Max_Beckmann"
+            },
+            {
+                "surface_form": "Oui",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oui_(magazine)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oui_(magazine)"
+            }
+        ]
+    },
+    {
+        "text": "Kurz nach Entstehen wurde das Bild mit dem Titel „Ilonka“ ausgestellt. Offensichtlich handelt es sich um ein Porträt. Eine Zeichnung des wahrscheinlich selben Modells (heute Art Institute Chicago, Inv-Nr. 1989.169), ist ebenfalls Ilonka betitelt. Sie wurde 1955 bei Theo Hill, Köln unter diesem Titel ausgestellt. (Vgl. Kat. Hill, S. 14) Das WVZ Göpel 1979 erwähnt zwei Stellen aus Beckmanns Tagebuch von 1945, in denen Beckmann auf das Bild, das er in einer Amsterdamer Ausstellung sah, mit „Zigeunerin✶✶“ referiert. Göpel erwähnt auch die Zeichnung Ilonka, ohne daraus einen Rückschluss auf den Titel zu ziehen. Im Zuge einer Prüfung von Bildtiteln auf rassistische Bezeichnungen, haben wir entschieden, den ersten Titel Ilonka wiederherzustellen und auf den späteren Titel Zigeunerin✶✶ II zu verzichten. Barbara Tiedemann und Siegfried Gohr, die das aktuelle Werkverzeichnis zu Beckmann bearbeiten, werden das Werk ebenfalls unter dem Titel Ilonka führen.\n\nDr. Julia Friedrich",
+        "entities": [
+            {
+                "surface_form": "Kurz",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sebastian_Kurz",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sebastian_Kurz"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "heute",
+                "dbpedia_uri": "http://dbpedia.org/resource/Heute",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Heute"
+            },
+            {
+                "surface_form": "Art Institute Chicago",
+                "dbpedia_uri": "http://dbpedia.org/resource/Art_Institute_of_Chicago",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Art_Institute_of_Chicago"
+            },
+            {
+                "surface_form": "Theo Hill",
+                "dbpedia_uri": "http://dbpedia.org/resource/Theo_Hill",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Theo_Hill"
+            },
+            {
+                "surface_form": "Köln",
+                "dbpedia_uri": "http://dbpedia.org/resource/Cologne",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Cologne"
+            },
+            {
+                "surface_form": "unter",
+                "dbpedia_uri": "http://dbpedia.org/resource/Unter_(playing_card)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Unter_(playing_card)"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "Kat",
+                "dbpedia_uri": "http://dbpedia.org/resource/Kat_Slater",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Kat_Slater"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "Barbara",
+                "dbpedia_uri": "http://dbpedia.org/resource/Saint_Barbara",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Saint_Barbara"
+            },
+            {
+                "surface_form": "Siegfried",
+                "dbpedia_uri": "http://dbpedia.org/resource/Siegfried_Wagner",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Siegfried_Wagner"
+            },
+            {
+                "surface_form": "Werkverzeichnis",
+                "dbpedia_uri": "http://dbpedia.org/resource/Catalogue_raisonné",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Catalogue_raisonné"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "das Werk",
+                "dbpedia_uri": "http://dbpedia.org/resource/Das_Werk",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Das_Werk"
+            },
+            {
+                "surface_form": "unter",
+                "dbpedia_uri": "http://dbpedia.org/resource/Unter_(playing_card)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Unter_(playing_card)"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "Julia",
+                "dbpedia_uri": "http://dbpedia.org/resource/Julia_the_Elder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Julia_the_Elder"
+            }
+        ]
+    },
+    {
+        "text": "Diese rassistische Fremdbezeichnung vermittelt seit Jahrhunderten negative und exotisierende Stereotype. Sie ist untrennbar verbunden mit der Ausgrenzung, Vertreibung, Verfolgung und Ermordung von Sinti*zze und Rom*nja und schreibt ein diskriminierendes Menschenbild fort. Dennoch belassen wir sie im Werktitel. Als Museum können wir Werke nicht ändern – eine rassistische Darstellung so wenig wie einen rassistischen Titel. Wir können auf die soziale Gewalt und Unterdrückung, die Kunstwerke spiegeln oder selbst betreiben, hinweisen und sie in der Präsentation sichtbar machen.",
+        "entities": [
+            {
+                "surface_form": "Stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Rom",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "fort",
+                "dbpedia_uri": "http://dbpedia.org/resource/Fortification",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Fortification"
+            },
+            {
+                "surface_form": "Als",
+                "dbpedia_uri": "http://dbpedia.org/resource/Montreal_Alouettes",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Montreal_Alouettes"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "machen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Machen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Machen"
+            }
+        ]
+    },
+    {
+        "text": "Eine dunkelhaarige Frau mit auffälligem Schmuck sitzt in Nahsicht an einem Tisch, ein blonder Mann mit Flasche im Hintergrund.",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Mann",
+                "dbpedia_uri": "http://dbpedia.org/resource/Thomas_Mann",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Thomas_Mann"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            }
+        ]
+    },
+    {
+        "text": "„Zigeunerin“ – als Repräsentation einer Romni-Frau, möglicherweise als Wahrsagerin oder Barbesucherin inszeniert",
+        "entities": [
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            }
+        ]
+    },
+    {
+        "text": "visuelle Codierung durch Kleidung, Haltung, Exotik. Goldene Reifenarmbänder, große Ohrringe, Fächerartige Drapierung, schwarze Mähne, Begleitfigur (Kavalier) mit Alkoholflasche",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            }
+        ]
+    },
+    {
+        "text": "Szene in einem Innenraum (Bar? Bordell? Bühne?), Frau als Objekt männlicher Begierde oder Projektionsfläche",
+        "entities": [
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            }
+        ]
+    },
+    {
+        "text": "Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:\nkritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels.",
+        "entities": [
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            }
+        ]
+    },
+    {
+        "text": "Erotisierung, Exotisierung, Mystifizierung",
+        "entities": []
+    },
+    {
+        "text": "Frau wird zur Projektionsfläche für Männlichkeit, Fremdheit, und sexuelles Begehren",
+        "entities": []
+    },
+    {
+        "text": "Expressiv-stilisiert, selbstbewusst, aber auch fragmentarisch anonymisiert",
+        "entities": []
+    },
+    {
+        "text": "Ambivalent – Frau erscheint selbstsicher, aber bleibt Objekt des männlichen Blicks",
+        "entities": [
+            {
+                "surface_form": "männlichen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Männlichen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Männlichen"
+            },
+            {
+                "surface_form": "Blicks",
+                "dbpedia_uri": "http://dbpedia.org/resource/Blicks_River",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Blicks_River"
+            }
+        ]
+    },
+    {
+        "text": "1. Fremdbild vs. Selbstpräsenz:\tIlonka wird mit Attributen der „Zigeunerin“ ausgestattet: dunkle Kleidung, Goldschmuck, sinnlicher Blick  Deutungsrahmen: Exotisierung – aber: Sie schaut selbstbewusst, konfrontativ zurück                                                                                                                                                                                                                                                                                                                         2. Erotisierung vs. Eigenständigkeit: Körperhaltung & Kleidung betonen Sexualität – zugleich kein passives Objekt, sondern aktiv gesetzte Präsenz Deutungsrahmen: Erotik wird nicht konsumierbar gemacht, sondern wirkt verweigernd                                                                                                  3. Stilisierung vs. Individualisierung: Typisierte Züge, starke Farbkontraste – aber auch persönliche Tiefe, Melancholie Deutungsrahmen: Beckmann bricht mit klarem Stereotyp durch Ambivalenz der Darstellung                                                                                                        4. Historischer Kontext: Krise vs. Aufwertung\t1932 – kurz vor Machtübernahme der NSDAP, zunehmende Entmenschlichung von Roma Deutungsrahmen: Gegenbild zur NS-Ideologie? Oder doch Projektion bürgerlicher Männlichkeit?  Beckmanns Ilonka verkörpert ein Spannungsverhältnis:\nSie ist eine Figur der Projektion – und zugleich eine Figur der Störung dieser Projektion. Beckmann inszeniert Ambivalenz bewusst: Ilonka ist weder Opfer noch Klischee, sondern eine Art Grenzfigur im Bilddiskurs der Weimarer Republik.                                                                                   Beckmanns Ilonka ist ein Beispiel für die ambivalente Konstruktion von „Zigeunerinnenbildern“: Das Bild bewegt sich zwischen diskursiver Zuschreibung und ästhetischer Destabilisierung, zwischen Kunstbild und kulturellem Spiegel gesellschaftlicher Spannungen in der Zwischenkriegszeit.",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Erotik",
+                "dbpedia_uri": "http://dbpedia.org/resource/Erotik",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Erotik"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "NSDAP",
+                "dbpedia_uri": "http://dbpedia.org/resource/Nazi_Party",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Nazi_Party"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Weimarer Republik",
+                "dbpedia_uri": "http://dbpedia.org/resource/Weimar_Republic",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Weimar_Republic"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            }
+        ]
+    },
+    {
+        "text": "keine Selbstdarstellung, aber starke Eigenpräsenz gegen stereotype Lesart",
+        "entities": [
+            {
+                "surface_form": "stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            }
+        ]
+    },
+    {
+        "text": "Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:\nkritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels.",
+        "entities": [
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            }
+        ]
+    },
+    {
+        "text": "Beckmanns frühere Werke 289 Zigeunerin\nGemälde 1928 Frankfurt am Main\nÖl auf Leinwand 136 × 58 cm\nNicht signiert\nIm Museum: HAMBURG Kunsthalle\nInventarnummer: HK-5001",
+        "entities": [
+            {
+                "surface_form": "Frankfurt",
+                "dbpedia_uri": "http://dbpedia.org/resource/Frankfurt",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Frankfurt"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "HAMBURG Kunsthalle",
+                "dbpedia_uri": "http://dbpedia.org/resource/Hamburger_Kunsthalle",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Hamburger_Kunsthalle"
+            }
+        ]
+    },
+    {
+        "text": "„inspiriert von“, „stilistisch verwandt“, „kritisiert romantisierende Darstellung“",
+        "entities": []
+    },
+    {
+        "text": "Motivwanderung: von Postkarten / Fotografie ins expressionistische Gemälde, später in Filmästhetik. Verbindung zur Filmästhetik der Weimarer Republik, insbesondere Club- und Varieté-Szenen",
+        "entities": [
+            {
+                "surface_form": "Weimarer Republik",
+                "dbpedia_uri": "http://dbpedia.org/resource/Weimar_Republic",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Weimar_Republic"
+            }
+        ]
+    },
+    {
+        "text": "Zwischenkriegszeit, Deutschland 1932 – kurz vor dem Machtantritt der Nationalsozialisten, Krise der Repräsentation, politische Unsicherheit",
+        "entities": [
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Digital_elevation_model",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Digital_elevation_model"
+            },
+            {
+                "surface_form": "Nationalsozialisten",
+                "dbpedia_uri": "http://dbpedia.org/resource/Nazism",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Nazism"
+            }
+        ]
+    },
+    {
+        "text": "Besonders historische Werke, bei denen diskriminierende Begriffe unreflektiert tradiert oder unhinterfragt übernommen wurden.Diese Titel wurden nicht immer vom Künstler selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.\nUngeprüfte Übernahme solcher Titel kann zur Reproduktion diskriminierender Begriffe führen. Beispiel für Formulierung im Metadatenblatt\nOriginaltitel: Zigeunerin mit Fächer\nAlternativtitel: Porträt einer Frau mit Fächer (vermutlich Romni)\nHinweis: Der im Originaltitel verwendete Begriff „Zigeunerin“ gilt heute als diskriminierend. Er wurde hier aus dokumentarischen Gründen belassen, jedoch kritisch kontextualisiert. Weiterführende Informationen\nZigeuner*in ist eine historische, seit den1980er Jahren allgemein aufgegebene Fremdbezeichnung der Sinti und Roma. Der Titel des Gemäldes wurde beibehalten, obwohl er diesen heute nicht mehr erwünschten und als diskriminierend empfundenen Begriff beinhaltet. Wie die meisten Titel hat auch dieser seinen Ursprung in der Bilderliste des Künstlers und ist in einem historischen Kontext entstanden. Max Beckmann hat ihn nicht in beleidigender oder demütigender Weise verwendet. Er ist ein Teil seines künstlerischen\nVermächtnisses.",
+        "entities": [
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "vom",
+                "dbpedia_uri": "http://dbpedia.org/resource/VOM_(punk_rock_band)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/VOM_(punk_rock_band)"
+            },
+            {
+                "surface_form": "stammen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Craig_Stammen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Craig_Stammen"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "heute",
+                "dbpedia_uri": "http://dbpedia.org/resource/Heute",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Heute"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "Sinti",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sinti",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sinti"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "heute",
+                "dbpedia_uri": "http://dbpedia.org/resource/Heute",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Heute"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "seinen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Seinen_manga",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Seinen_manga"
+            },
+            {
+                "surface_form": "Max Beckmann",
+                "dbpedia_uri": "http://dbpedia.org/resource/Max_Beckmann",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Max_Beckmann"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Weise",
+                "dbpedia_uri": "http://dbpedia.org/resource/Julius_Weise",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Julius_Weise"
+            }
+        ]
+    },
+    {
+        "text": "Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:\nkritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels.",
+        "entities": [
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            }
+        ]
+    }
+]

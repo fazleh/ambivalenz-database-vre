@@ -1,0 +1,49 @@
+Property,detail,text
+Objekt-ID,X,Interne ID für eindeutige Referenzierung in der Datenbank
+Titel,X,"Erkennbarer Titel (auf diskriminierende Begriffe und Herkunft prüfen. Die Titeln wurden nicht immer vom Künstler:In selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.)"
+Künstler*in/Autor*in,X,Wer das Objekt geschaffen oder veröffentlicht hat
+Sichtbare Personen,X,
+Entstehungsjahr,X,Datum oder Zeitraum der Entstehung
+Ort der Entstehung / Nutzung,X,"Geografische Lage (Ort, Region)"
+Gattung / Genre ,Musik,Reprofotografie
+Technik,Analogfotografie,
+Dimensionen:,X,"Bildende Kunst: 50x70 cm (Malerei), 200x100x50 cm (Skulptur)
+
+Literatur: 200 Seiten (Buch), A4 (E-Book)
+
+Film: Laufzeit 90 Min, HD 1920x1080
+
+Musik & Audio: 45 Min, 320 kbps, Stereo
+
+Theater & Performance: 60 Min, Bühne 10x15 m"
+Kurzbeschreibung,X,"Eine kurze Beschreibung (100 Wörter) des Objekts, Werks oder Datensatzes (z.B. Inhalt, Thema, Bedeutung)."
+Motive / Topoi ,X,"Typische Stereotypmotive, z.B. Lagerfeuer, Musikant"
+Narrative / Diskurse,X,"Narrative Rahmen: Romantisierung, Kriminalisierung"
+Historischer Kontext,X,"Ereignisse wie 1848er-Revolution, Gesetzgebungen"
+Antiziganistische / Stigmatisierende Elemente,X,Diskriminierende Darstellungen benennen
+Agency,X,"Form(en) der Selbstermächtigung, Selbstrepräsentation oder Selbstartikulation, die dem Objekt zugeordnet werden können"
+Verknüpfung ,X,"Verlinkung verwandter Werke auch in anderen Medienformen (z. B. Vorlage für Film, Adaption als Illustration etc.)"
+Narrativwandel bei Medienwechsel,X,Veränderung des Narrativs über Medien hinweg
+Rezeptionsweg,X,"Wie wurde ein literarisches Werk von der Zielgruppe bei seiner Veröffentlichung aufgenommen?
+
+Wie haben sich Interpretationen eines Films über die Jahre verändert?
+
+Welche Reaktionen gab es auf eine künstlerische Ausstellung?"
+Sammlung / Archiv ,X,Ort 
+Provenienz,X,Chronologischer Weg des Objekts
+Literatur,X,Wissenschaftliche oder publizistische Referenzen
+Ausstellungen / Aufführungen / Veröffentlichungen,X,"Präsentationen, Aufführungen, Ausstellungen"
+Objekt- oder Werkteil,X,Zitat / Detail / Szene / Schnitt / Still / Beschriftung / Glossierung
+Rechte / Lizenzen,X,"Lizenzstatus, CC-Lizenz etc."
+Digitalisat-Link/Pfad,X,Pfad oder URL zum Digitalisat
+Metadaten-Status,X,"vollständig, unvollständig, geprüft"
+Erfasst von,X,Name der erfassenden Person
+Erfassungsdatum,X,JJJJ-MM-TT
+Kommentar / Anmerkung,X,Zusätzliche Bemerkungen oder Besonderheiten
+Versionsgeschichte,X,"Beispiel für eine Versionsgeschichte:
+
+Version 1.0 – 2023-05-01: Ersterfassung des Datensatzes durch Max Mustermann.
+
+Version 1.1 – 2023-05-10: Titel angepasst, Rechtschreibfehler korrigiert, hinzugefügt von Anna Beispiel.
+
+Version 2.0 – 2023-06-01: Erweiterung der Beschreibung und Hinzufügung von Metadaten, geändert von Maria Beispiel."

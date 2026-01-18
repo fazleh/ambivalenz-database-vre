@@ -1,0 +1,126 @@
+SubjectType,PropertyTpe,ObjectType,Subject,NodeProperty,NodeObject,PropertyCategory,ObjectAsNode,Property,Object
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Name,Zwei_Zigeuner
+Painting,GND,xsd:integer,Zwei_Zigeuner,X,X,Objektinformationen,X,Objekt-ID-String,6
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Objekt-ID,1
+Painting,URL,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Titel,Zwei Zigeuner
+Painting,GND_Getty_AAT,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Objekttyp_Medium_Technik,"Öl auf Leinwand, Maße	 73 × 92 cm"
+Painting,Datumsfeld,xsd:gYear,Zwei_Zigeuner,X,X,Objektinformationen,X,Entstehungsdatum,Zwei Zigeuner
+Painting,Datumsfeld,xsd:gYear,Zwei_Zigeuner,X,X,Objektinformationen,X,Entstehungsdatum_Original,1910
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Entstehungsort,Land / Stadt / Region ?
+Painting,GND,xsd:string,Zwei_Zigeuner,dbo:author,"Kunffy, Lajos",Objektinformationen,"Kunffy, Lajos",Autorin_Künstlerin_Regisseurin,"Name (ggf. mit Lebensdaten): Kunffy, Lajos (GND: 132187388)"
+Painting,GND-ID,anyURI,Zwei_Zigeuner,X,X,Objektinformationen,X,Beteiligte_Sichtbare_Personen,Name (ggf. mit Lebensdaten) Ermittlung der Namen (ggf. mit Lebensdaten) der abgebildeten Roma-Männer – Rechercheaufgabe im Nachlass von Kunffy sowie im Stadtarchiv.
+Painting,URL,xsd:string,Zwei_Zigeuner,dbo:mueseum,Lajos Kunffy- Memorial-Museum,Objektinformationen,Lajos Kunffy- Memorial-Museum,Sammlung_Archiv_Fundort,"Lajos Kunffy- Memorial-Museum, Somogytúr, Ungarn"
+Painting,URL,xsd:gYear,Zwei_Zigeuner,X,X,Objektinformationen,X,Provenienz,Ermittlung der Daten…
+Painting,GND,xsd:string,Zwei_Zigeuner,dbo:ethenicGroup,Roma & Sint,Objektinformationen,Roma & Sint,Literatur,"
+• Roma & Sinti : ""Zigeuner-Darstellungen"" der Moderne ; [Katalog zur Ausstellung Roma & Sinti. ""Zigeuner-Darstellungen"" der Moderne, 17. Juni bis 2. September 2007 ; Kooperationsprojekt der Kunsthalle Krems mit dem Ethnographischen Museum Budapest] 1. Aufl. Krems an der Donau: Kunsthalle,2007                                                                                                                                         •  Black Bodies, White Bodies –
+‘Gypsy’ Images in Central Europe at the Turn
+of the Twentieth Century (1880–1920) Éva Kovács In: Vol. 3. No. 2. 2020, 72–94 • DOI: 10.29098/crs.v3i2.75
+• Kunffy Lajos: Visszaemlékezéseim (szerk.: Horváth Kános). Kaposvár, Somogy Mezei Múzeumok Igazgatósága 2006, 108-109.   (Lajos Kunffy: Meine Erinnerungen (Hrsg.: Kános Horváth) Kaposvár, Somogy Mezei Múzeumok Direktgatósága 2006, 108-109.)                                          "
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Ausstellungen,"Gerhard Baumgartner, Ausstellung Roma & Sinti. Zigeuner-Darstellungen der Moderne (2007, Krems an der Donau) und Kunsthalle Krems"
+Painting,URL,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Beschriftung,"Ermittlung der Daten: Signatur, Vorderseite (links oben): ?
+Aufkleber, Rückseite, oben links, auf dem Rahmen: ?"
+Painting,ISBN 3-901261-39-7,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Werkkommentar ,"Zusammenfassung:  Der ungarische Maler Lajos Kunffy beschreibt in seinen Erinnerungen, wie er ab 1905 begann, Bilder von sogenannten „Zigeunern“ zu malen – besonders von einer Gruppe mit langen Haaren und dunkler Haut, die er als besonders malerisch empfand. Diese Menschen weckten für ihn einen ursprünglichen, exotischen Eindruck. Kunffy stellte fest, dass man vergleichbare „Gestalten“ auch in Ungarn finden könne, und seine Werke fanden internationales Interesse, u.a. auf einer Ausstellung in Paris 1912, wo er als „Maler der Zigeuner“ bekannt wurde.
+
+Er berichtet, dass nach dem Ersten Weltkrieg die langen Haare dieser Männer verschwunden waren – sie wurden als Rekruten geschoren. Um Deserteure zu entlarven, kontrollierten Gendarmen sogar ihre Hüte auf eingenähte Haarsträhnen. Kunffy malte nach dem Krieg weiterhin diese Personen, obwohl ihr charakteristisches äußeres Merkmal – die langen Haare – fehlte. Originaltext In: Roma & Sinti : ""Zigeuner-Darstellungen"" der Moderne ; Katalog zur Ausstellung  S. 78"
+Painting,URL,xsd:string,Zwei_Zigeuner,X,X,Objektinformationen,X,Angaben_zur_rassistische_Fremdbezeichnung ,Ermittlung der Daten…
+Painting,Freitext_(Deskriptiv_objektiv),xsd:string,Zwei_Zigeuner,X,X,Inhaltliche_Beschreibung,X,Bilderzählungen,"Das Bild stellt zwei Männer mit langen, ungepflegten Haaren, dunklem Teint und einfacher Kleidung dar – Merkmale, die häufig mit dem romantisierten, aber auch negativ stereotypisierten Bild von „Zigeunern“ verknüpft wurden. Die Darstellung spielt mit Exotik und sozialer Außenseiterposition. Kunffy fokussiert nicht auf Individualität, sondern stilisiert „das Fremde“, was eine exotisierende, entmenschlichende Wirkung haben kann."
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Inhaltliche_Beschreibung,X,Zentrale_Figuren_Typen,"Der Wilde / Primitive: Die Männer erscheinen rau, ernst, wortkarg, fast archaisch.
+Der Fremde / Andere: Ihre Erscheinung (lange Haare, zusammengewachsene Augenbrauen, einfache Kleidung) hebt sie stark von der bürgerlichen Norm ab.
+Beide Typen verkörpern romantisierte Randfiguren, wie sie im 19. Jahrhundert im europäischen Kunst- und Literaturkanon auftauchten."
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Inhaltliche_Beschreibung,X,Tradierte_Antiziganistische_Motive,"Nomadentum und Naturverbundenheit: Durch Kleidung und Haartracht werden die Männer mit ""ursprünglichen"" Lebensformen verbunden.
+
+Mystifizierte Fremdheit: Die dargestellten Merkmale wurden im Zeitraum 1850–1950 häufig verwendet, um Romnja und Sintizze als „nicht zivilisiert“ oder „andersartig“ zu kennzeichnen.
+
+Männliche Stärke und Wildheit – ein wiederkehrendes Motiv in Kunstwerken, die sich mit dem antiziganistischen Blick auf „Zigeuner“ beschäftigten."
+Painting,Freitext_(Deskriptiv_objektiv),xsd:string,Zwei_Zigeuner,X,X,Inhaltliche_Beschreibung,X,Ästhetischen_Kompositorischen," Dunkle Farbpalette: Erzeugt eine melancholische, erdverbundene Atmosphäre.
+
+Realistische Darstellung: Die realistische Malweise verstärkt die Wirkung der Stereotype – sie erscheinen „authentisch“ und „beweisend“.
+
+Kompakte Komposition: Die beiden Männer sind eng zusammen dargestellt, ohne Kontext oder Hintergrund – was ihren Typuscharakter verstärkt und sie nicht als individuelle Persönlichkeiten, sondern als Beispiel einer „Gattung“ erscheinen lässt."
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Inhaltliche_Beschreibung,X,Schlagwörter_(Inhaltliche_Beschreibung),"Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:
+kritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels. Antiziganismus
+
+• Stereotyp
+• Porträtmalerei
+• Ungarn (Früh 20. Jh.)
+• Romani-Darstellung in der Kunst
+• Exotismus
+• Ethnisierung
+• Lajos Kunffy
+• Zigeunerbild (historisch)                                                                                                                              • Mitteleuropa
+• Kolonialer Blick
+• Emanzipatorischer Blick
+• Modernität
+• Malerei an der Wende zum 19. Jahrhundert
+• Visuelle Darstellung"
+Painting,Projektspezifischer_Thesaurus ,xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Stereotyptypus ,"Der „edle Wilde“ / „primitive Fremde“: Die dargestellten Männer verkörpern einen Typus, der romantisiert, aber zugleich kulturell abgewertet wird.
+Männlich, stark, schweigend, archaisch: Diese Art der Darstellung konstruiert eine vermeintlich typische „Zigeuner-Männlichkeit“, die wild und unzivilisiert erscheint.
+Es handelt sich um einen ethnisierten Stereotyp, der kulturelle Unterschiede überbetont und Individualität ausblendet."
+Painting,Freitext_(Interpretativ_analytisch),xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Diskursanalyse,"Das Bild ist Teil eines kolonial geprägten Blicks auf das „Fremde“ im eigenen Land – hier Ungarn.
+Der Diskurs um „Zigeuner“ speiste sich aus romantisierenden Vorstellungen, aber auch aus sozialer Ausgrenzung, Kriminalisierung und rassistischen Zuschreibungen.
+Kunffys Werk spiegelt eine bürgerliche Sehnsucht nach Ursprünglichkeit, aber auch eine ideologische Konstruktion von Differenz."
+Painting,kontrollierte_Vokabularien,xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Modus_der_Darstellung,"Realistische Malweise mit dokumentarischem Anspruch – dies verleiht der Darstellung eine vermeintliche Objektivität.
+Die Inszenierung ist bewusst statisch, ohne Handlung oder Kontext, was den Eindruck verstärkt, dass die Figuren „zeitlos“ und „typisch“ seien.
+Durch das Fehlen eines erzählerischen Rahmens entsteht eine visuelle Fixierung auf den Typus, nicht auf Biografie oder Individualität."
+Painting,Freitext ,xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Bezug_zu_Agency ,"Die dargestellten Männer haben keine erkennbare Handlung oder Stimme – sie sind passive Objekte eines Blicks.
+Keine Agency im Bild selbst: Sie handeln nicht, sie werden gezeigt.
+Auch Kunffys Erzählsituation (aus seiner Perspektive, nachträglich reflektierend) unterstreicht seine Deutungsmacht über die Figuren.                                                                                                                                                                                                                                             Die Hand kann als einzige Andeutung von Agency im Bild gedeutet werden: Während die Figuren sonst passiv dargestellt sind, drückt sich hier ein individueller Moment aus.
+Im antiziganistischen Kontext solcher Bilder könnte diese Hand zwischen menschlicher Nähe und exotisierender Distanz vermitteln: Ein Versuch der Identifikation – aber aufgeladen mit Projektionen.
+Auch könnte sie als stilles Protestzeichen gelesen werden – gegen den „fremden Blick“, gegen die Reduktion auf ein Stereotyp. Ihre Haltung, ihr Blick, ihre Kleidung, die Geste der Hand – all das steht in einem nicht sichtbaren, aber wirksamen Zusammenhang mit einem Erbe von Enteignung, Entmenschlichung und kolonialer Kontrolle.
+Ihre Passivität oder Stille im Bild könnte weniger als Abwesenheit von Agency gelesen werden – sondern als Agency unter der Bedingung von Trauma."
+Painting,Freitext ,xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Antiziganismus_Ambivalenz ,"Das Bild ist ambivalent: Es zeigt einerseits Respekt für die Ästhetik und „Malerhaftigkeit“ der dargestellten Menschen, andererseits reproduziert es stereotype und exotisierende Merkmale.
+Es kann sowohl als bewundernde Darstellung als auch als visuelle Festschreibung von „Andersartigkeit“ gelesen werden.
+Die Ambivalenz liegt in der gleichzeitigen Bewunderung und Abwertung. Die Hand der linken Figur ist ein emotionaler Ankerpunkt in der ansonsten starren Komposition. Sie bringt Bewegung, Ambivalenz und vielleicht sogar Widerstand in die Darstellung hinein. In einem Bild, das stark von Fremdzuschreibungen geprägt ist, eröffnet diese kleine Geste eine menschlichere, vielschichtigere Lesart.                                                                                                                                                                   Für eine reparative Lesart ist es essenziell, solche Risse im hegemonialen Bilddiskurs zu erkennen und weiterzudenken: Was bleibt an Subjektivität sichtbar, selbst unter entmenschlichender Repräsentation?"
+Painting,Freitext ,xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Selbstartikulation_Fremdrepräsentation,"Es handelt sich klar um eine Fremdrepräsentation – die dargestellten Männer haben keine Stimme, keine Perspektive im Bild oder Text.
+Kunffy als Maler und Erzähler beansprucht Definitionsmacht über ihre Darstellung.
+Keine Hinweise auf Selbstinszenierung oder Beteiligung der dargestellten Personen.In einem Bild, das stark von Fremdrepräsentation geprägt ist, bietet die Geste der Hand eine visuelle Bresche: ein Moment, in dem die dargestellte Person nicht nur Objekt des Blicks ist, sondern etwas Eigenes, Individuelles ausdrückt.
+Reparative Narrationen könnten genau an solchen Brüchen im Stereotyp ansetzen, um neue Sichtweisen zu entwickeln. Wenn wir wissen, dass die abgebildeten Männer Nachfahren einer Gruppe sind, die über Jahrhunderte versklavt war (in den Fürstentümern Moldau und Walachei bis 1856), dann lesen wir das Bild nicht mehr nur als ethnografisch oder exotisierend – sondern als ?"
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Semantische_Annotation,X,Schlagwörter_(Semantische_Annotation),
+Painting,URL,xsd:string,Zwei_Zigeuner,X,X,Semantische_Relationen,X,Verwandte_Objekte,"Weitere Gemälde von Lajos Kunffy mit ähnlichen Motiven („Zigeunerbilder“) Ermittlung der Daten…
+
+Werke von Künstlern wie József Rippl-Rónai (https://d-nb.info/gnd/118601210 ) die sich mit ähnlichen Themen im osteuropäischen oder bürgerlichen Kontext auseinandersetzen
+
+Fotografien und Reiseberichte über Roma-Gruppen um 1900 Ermittlung der Daten…
+
+Exotismus- und Völkerkundesammlungen aus dem 19. Jh. Ermittlung der Daten…
+"
+Painting,Freitext,xsd:string,Zwei_Zigeuner,X,X,Semantische_Relationen,X,Relationstyp,"Ikonographisch: Vergleichbare Darstellungen ethnischer oder sozialer Typen in der Malerei
+Diskursiv: Verknüpft mit kolonialen und antiziganistischen Diskursen
+Rezeptionell: Rezeption in Frankreich (Kunffy wurde als „peintre des Tziganes“ bekannt) Ermittlung der Daten… ""Transgressions and Exceptions
+This is how the optical unconscious of society is reflected in typical ‘Gypsy’ representations of
+Modernity. Yet, there are certain (and as far as I know unique) cases when multifaceted pro-Gypsy
+sensibilities and essentialist anti-Gypsy feelings – Romaphilia and Romaphobia – transgress the
+limits of ‘Gypsy’ as a cultural code and paradoxically come close to self-representation or even create
+a position to be taken by Roma artists later – even if no ‘Gypsy’ or Roma artists were known to be
+practicing fine art production at the time these paintings were created. An example of this is Gypsy
+with a Pipe by József Rippl-Rónai (Figure 8). Rippl-Rónai is said to have depicted one of Kunffy’s
+models (Figure 9) when visiting in Somogytúr; in his painting Kunffy’s beautiful beast is turned into
+a jovial gentleman."" In: Èva Kovács, Black Bodies, White Bodies – ‘Gypsy’ Images in Central Europe at the Turn of the Twentieth Century (1880–1920), S. 87"
+Painting,Transmediale_Relation,xsd:string,Zwei_Zigeuner,X,X,Semantische_Relationen,X,Medienübergreifender_Zusammenhang,"Die Darstellung knüpft an mediale Erzählformen der Zeit an: ethnografische Fotografien, Reiseliteratur, Opern (z. B. Carmen), Literatur (z. B. Victor Hugo, Puschkin)
+Stereotype des „Zigeuners“ wurden über verschiedene Medien hinweg tradiert und verstärkt
+Kunffys Werk steht in einem europäischen Zusammenhang antiziganistischer Bildproduktion Ermittlung der Daten…"
+Painting,Freitext ,xsd:string,Zwei_Zigeuner,X,X,Semantische_Relationen,X,Historischer_Kontext,"Entstehung: frühes 20. Jahrhundert, kurz vor dem Ersten Weltkrieg
+Ungarn als Teil der Donaumonarchie mit starken ethnischen Spannungen
+Zunehmende politische Kontrolle und Militarisierung (z. B. Haarschnitt der Rekruten ab 1914 als Disziplinierungsmaßnahme)
+Stigmatisierung und Marginalisierung von Roma-Gruppen im gesamten europäischen Raum
+Beginn einer staatlich regulierten Rassifizierung  Ermittlung der Daten…"
+Painting,Angepasster_Titel,xsd:string,Zwei_Zigeuner,X,X,Semantische_Relationen,X,Prüfung_rassistische_Bezeichnungen,"Besonders historische Werke, bei denen diskriminierende Begriffe unreflektiert tradiert oder unhinterfragt übernommen wurden.Diese Titel wurden nicht immer vom Künstler selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.
+Ungeprüfte Übernahme solcher Titel kann zur Reproduktion diskriminierender Begriffe führen. Beispiel für Formulierung im Metadatenblatt Originaltitel: Zigeunerin mit Fächer. Alternativtitel: Porträt einer Frau mit Fächer (vermutlich Romni) Hinweis: Der im Originaltitel verwendete Begriff „Zigeunerin“ gilt heute als diskriminierend. Er wurde hier aus dokumentarischen Gründen belassen, jedoch kritisch kontextualisiert. Der Begriff „Zigeuner“ ist heute klar als rassistisch und diskriminierend einzuordnen. Auch wenn er historisch korrekt für Kunffys Zeit ist, sollte er kontextualisiert und mit heutigen Begriffen wie „Roma“ bzw. „Sinti“ ersetzt oder problematisiert werden
+Eine kritische Umbenennung oder Annotation im Museumskontext wäre empfehlenswert"
+Painting,GND,xsd:string,Zwei_Zigeuner,X,X,Semantische_Relationen,X,"
+Schlagwörter_(Semantische_Relationen)","Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:
+kritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels. Antiziganismus
+
+•Bildanalyse
+•Ethnische Stereotype
+•Fremdbild
+•Kunst und Kolonialismus
+•Rassismus in der Kunst                                                                                                                                                                                                 •Exotismus
+•Ethnische Stereotype
+•Fremdwahrnehmung
+•Porträtmalerei
+•Ungarn
+•Romani-Darstellung
+•Realismus (Kunst)
+•Lajos Kunffy
+•Bilddiskurs                                                                                                                                                                                                                                               • Èva Kovács                                                                                                                                                                                                                                                                                          •József Rippl-Rónai                                                                                                                                                                                                                                           •Gypsy with a Pipe                                                                                                                                                                                                                  •Pipe"
