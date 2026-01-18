@@ -198,6 +198,48 @@
 .value-editor.gray { background-color: #f9f9f9; }
 
 
+/* Modern buttons */
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px 10px 10px;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #3498db;
+}
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+.btn-save {
+  background-color: #27ae60;
+}
+.btn-save:hover {
+  background-color: #1e8449;
+}
+
+.btn-review {
+  background-color: #e67e22;
+}
+.btn-review:hover {
+  background-color: #d35400;
+}
+
+.btn-refresh {
+  background-color: #7f8c8d;
+}
+.btn-refresh:hover {
+  background-color: #606f73;
+}
+
+
       /* neutral */
     </style>
   </head>
@@ -216,11 +258,6 @@
     </div>
     <h2>Object Information</h2>
     <form method="POST" action="{{ url_for('submit_review') }}">
-      <div style="text-align:center; margin-bottom:15px;">
-       <button type="button" id="editBtn" onclick="enableEditMode()" style="padding:8px 20px; font-size:15px; cursor:pointer;"> Edit </button>
-       <button type="button" id="saveBtn" onclick="saveChanges()" style="padding:8px 20px; font-size:15px; cursor:pointer;"> Save </button>
-      </div>
-
 
       <table class="property-table">
         <thead>
@@ -247,9 +284,15 @@
             </td>
           </tr> {% endfor %} </tbody>
       </table>
-      <div style="text-align:center; margin: 30px;">
-        <button type="submit" style="padding:10px 25px; font-size:16px; cursor:pointer;"> Submit Review </button>
-      </div>
+
+      <div class="btn-container" style="text-align:center; margin:25px 0;">
+
+  <button type="button" class="btn btn-edit" id="editBtn" onclick="enableEditMode()">Edit</button>
+  <button type="button" class="btn btn-save" id="saveBtn" onclick="saveChanges()">Save</button>
+  <button type="button" class="btn btn-refresh" onclick="refreshData()">Refresh</button>
+  <button type="submit" class="btn btn-review">Submit Review</button>
+
+</div>
     </form>
     <footer class="site">
       <div class="footer-title">Antiziganismus und Ambivalenz in Europa</div>
@@ -339,6 +382,11 @@
   })
   .catch(err => alert("❌ Error: " + err));
 }
+
+
+  function refreshData() {
+    window.location.reload();
+  }
 
     </script>
   </body>
