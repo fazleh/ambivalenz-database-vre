@@ -10,55 +10,7 @@
     <script src="{{ url_for('static', filename='js/jquery.detect_swipe.js') }}"></script>
     <script src="{{ url_for('static', filename='js/helper.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
     <style>
-/* === HEADER styled like FOOTER (black box, centered title) === */
-header.site {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 24px;
-  margin-bottom: 18px;
-
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-
-/* Logo stays on the left */
-header.site #header-logo {
-  justify-self: start;
-}
-
-/* Title: BIG + perfectly centered */
-header.site h1 {
-  justify-self: center;
-  text-align: center;
-
-  color: #fff;
-  font-size: 32px;   /* ⬅ BIGGER TITLE */
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.25;
-}
-
-/* Invisible spacer to keep center true */
-header.site::after {
-  content: "";
-}
-
-/* Make logo readable on black */
-header.site .logo {
-  height: 46px;
-  width: auto;
-  background-color: #fff;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-
-
-
-
       body {
         font-family: Arial, sans-serif;
         background-color: #f9f9f9;
@@ -66,13 +18,12 @@ header.site .logo {
       }
 
       .container {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  max-width: 1300px;
-  margin: 20px auto 10px auto; /* ⬅ less bottom space */
-}
-
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 1300px;
+        margin: 40px auto;
+      }
 
       .portrait {
   width: 260px;
@@ -125,12 +76,11 @@ header.site .logo {
       }
 
       h2 {
-  text-align: center;
-  margin-top: 12px;   /* ⬅ key change */
-  margin-bottom: 14px;
-  color: #333333;
-}
-
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #333333;
+      }
 
       table.property-table {
         width: 90%;
