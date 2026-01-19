@@ -515,6 +515,15 @@ th.sortable:hover {
     rows.forEach(row => table.appendChild(row));
   }
 
+         document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const statusFilter = urlParams.get("status"); // red | yellow | null
+
+    if (statusFilter === "red" || statusFilter === "yellow") {
+      enableEditMode();              // 🔥 auto-enable editing
+      document.getElementById("editBtn").style.display = "none"; // optional
+    }
+  });
 
     </script>
   </body>
