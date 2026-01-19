@@ -78,16 +78,15 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
 </td>
 <td class="col3">
     {# Use user-chosen color if present; otherwise yellow if value present, else gray #}
-    {% if val %}
     {% if field in colors and colors[field] %}
         {% set color = colors[field] %}
     {% else %}
-        {% set color = 'yellow' %}
+        {% if val %}
+            {% set color = 'yellow' %}
+        {% else %}
+            {% set color = 'gray' %}
+        {% endif %}
     {% endif %}
-{% else %}
-    {% set color = 'gray' %}
-{% endif %}
-
 
     <div class="traffic-light {{ color }}"
          id="light_{{ field|replace(' ','_') }}"
@@ -169,36 +168,23 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
   window.fillFields = fillFields;
 
   function cycleLight(f) {
-  const l = document.getElementById("light_" + f);
-  const h = document.getElementById("traffic_" + f);
-  if (!l || !h) return;
+    const l = document.getElementById("light_" + f);
+    const h = document.getElementById("traffic_" + f);
+    if (!l || !h) return;
 
-  /* 🔒 CHECK VALUE FIELD */
-  const row = l.closest("tr");
-  const textarea = row?.querySelector("td.col2 textarea, td.col2 input:not([readonly])");
-  const value = textarea ? textarea.value.trim() : "";
+    const c = h.value;
+    let next;
+    // cycle: gray -> yellow -> green -> red -> gray
+    if (c === "gray") next = "yellow";
+    else if (c === "yellow") next = "green";
+    else if (c === "green") next = "red";
+    else next = "gray";
 
-  /* ⛔ EMPTY → FORCE GRAY */
-  if (!value) {
-    h.value = "gray";
+    h.value = next;
+
     l.classList.remove("red", "yellow", "green", "gray");
-    l.classList.add("gray");
-    return;
+    l.classList.add(next);
   }
-
-  /* NORMAL CYCLING */
-  const c = h.value;
-  let next;
-  if (c === "gray") next = "yellow";
-  else if (c === "yellow") next = "green";
-  else if (c === "green") next = "red";
-  else next = "gray";
-
-  h.value = next;
-  l.classList.remove("red", "yellow", "green", "gray");
-  l.classList.add(next);
-}
-
   window.cycleLight = cycleLight;
 
   function addRow() {
