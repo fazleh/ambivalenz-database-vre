@@ -308,6 +308,8 @@ def video():
 @app.route("/visual_art/<painting_name>")
 def painting_page(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+    status_filter = request.args.get("status")  # red | yellow | None
+
     with driver.session() as session:
         query = """
             MATCH (n:Painting {Name: $name})
@@ -359,20 +361,20 @@ def painting_page(painting_name):
     table_rows = []
 
     for key in ordered_keys:
-        safe_key = neo4j_safe_prop(key)  # ✅ CRITICAL
+        safe_key = neo4j_safe_prop(key)
 
         raw_value = node.get(safe_key)
-
-        if raw_value in (None, "", "No data"):
-            value = ""
-        else:
-            value = raw_value
-
         status = node.get(f"Z_{safe_key}", "")
 
+        # 🔴🟡 FILTER HERE
+        if status_filter and status != status_filter:
+            continue
+
+        value = "" if raw_value in (None, "", "No data") else raw_value
+
         table_rows.append({
-            "property": key.replace("_", " "),  # UI label
-            "prop_key": safe_key,  # ✅ ADD THIS
+            "property": key.replace("_", " "),
+            "prop_key": safe_key,
             "value": value,
             "status": status,
             "comment": ""
@@ -1135,6 +1137,41 @@ def update_object(painting_name):
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
 
+@app.route("/manage_data")
+@login_required
+def manage_data():
+    status = request.args.get("status", "red")  # red | yellow
+    label = request.args.get("label", "Painting")
+
+    with driver.session() as session:
+        query = f"""
+        MATCH (n:`{label}`)
+        WITH n, keys(n) AS ks
+        UNWIND ks AS k
+        WITH n, k
+        WHERE k STARTS WITH 'Z_' AND n[k] = $status
+        RETURN DISTINCT n
+        ORDER BY n.Name
+        """
+        result = session.run(query, status=status)
+
+        objects = []
+        for record in result:
+            raw = dict(record["n"])
+            node = {k: normalize_neo4j_value(v) for k, v in raw.items()}
+
+            objects.append({
+                "name": node.get("Name"),
+                "title": node.get("Titel", node.get("Name")),
+                "label": label
+            })
+
+    return render_template(
+        "management.html",
+        objects=objects,
+        status=status,
+        label=label
+    )
 
 # -----------------------
 # Run app
