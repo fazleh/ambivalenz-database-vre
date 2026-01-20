@@ -93,12 +93,15 @@
 
       /* ===================== TABLE ===================== */
       table.property-table {
-        width: 95%;
-        margin: 10px auto;
-        border-collapse: collapse;
-        background-color: #ffffff;
-        font-size: 14px;
-      }
+  width: 95%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+
+  table-layout: fixed; /* ✅ add this line */
+}
+
 
       table.property-table th,
       table.property-table td {
@@ -122,6 +125,35 @@
         color: #0645AD;
         text-decoration: underline;
       }
+
+      /* Fix column widths to prevent shrinking when editing */
+.property-table th:nth-child(1),
+.property-table td:nth-child(1) {
+  width: 20%;
+}
+
+.property-table th:nth-child(2),
+.property-table td:nth-child(2) {
+  width: 45%; /* Value column */
+}
+
+.property-table th:nth-child(3),
+.property-table td:nth-child(3) {
+  width: 10%;
+  text-align: center;
+}
+
+.property-table th:nth-child(4),
+.property-table td:nth-child(4) {
+  width: 25%;
+}
+
+.value-editor {
+  width: 100%;
+  box-sizing: border-box; /* ensures padding doesn't expand column */
+  resize: vertical;       /* optional: only allow height resize */
+}
+
 
       /* ===================== TRAFFIC LIGHT ===================== */
       .traffic-light {

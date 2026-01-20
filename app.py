@@ -1051,104 +1051,114 @@ EMAIL_GROUPS = {
     "lawyer": ["haider.badol@gmail.com"]
 }
 
+
+PAGE_ROUTE_MAP = {
+    "Painting": "visual_art",
+    "Poster": "poster",
+    "Portrait": "portrait",
+    "Book": "book",
+    "Scientific Article": "article",
+    "Song": "song",
+    "Poem": "poem",
+    "Legal Text": "legal_text",
+    "Person": "Person"
+}
+
+
+from flask import url_for
+
 @app.route('/submit_review', methods=['POST'])
 def submit_review():
 
-    # 1️⃣ Get selected group
     recipient_group = request.form.get("recipient_group")
 
     if not recipient_group:
-        flash("Please select a recipient group.")
+        flash("Please select a recipient group.", "error")
         return redirect(request.referrer)
 
     recipients = REVIEW_EMAIL_GROUPS.get(recipient_group)
-
     if not recipients:
-        flash("Invalid recipient group selected.")
+        flash("Invalid recipient group selected.", "error")
         return redirect(request.referrer)
 
-    # 2️⃣ Build HTML table from submitted form
-    table_rows = ""
+    page_name = request.form.get("page_type")
+    route_name = PAGE_ROUTE_MAP.get(page_name)
 
-    for key, value in request.form.items():
-        if key in ("recipient_group",):
-            continue
-        if key.startswith("traffic_") or key.startswith("status_"):
-            continue
+    if not route_name:
+        flash("Invalid page type.", "error")
+        return redirect(request.referrer)
 
-        safe_key = str(key).replace("_", " ")
-        safe_value = str(value).replace("<", "&lt;").replace(">", "&gt;")
-
-        table_rows += f"""
-        <tr>
-          <td><strong>{safe_key}</strong></td>
-          <td>{safe_value}</td>
-        </tr>
-        """
+    page_url = url_for(route_name, _external=True)
 
     html_content = f"""
     <h2>New Review Submitted</h2>
-    <p><strong>Recipient group:</strong> {recipient_group.capitalize()}</p>
-
-    <table border="1" cellpadding="6" cellspacing="0"
-           style="border-collapse: collapse; width:100%;">
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {table_rows}
-      </tbody>
-    </table>
+    <p>Please review the page <strong>{page_name}</strong>.</p>
+    <p><a href="{page_url}">Open {page_name} Management Page</a></p>
     """
 
-    # 3️⃣ Send email
     try:
         message = Mail(
-            from_email='fazleh2010@gmail.com',  # VERIFIED sender
+            from_email='fazleh2010@gmail.com',
             to_emails=recipients,
             subject='New Review Submitted',
             html_content=html_content
         )
 
-        sg = SendGridAPIClient(os.environ['SENDGRID_API_KEY'])
-        sg.send(message)
+        sg = SendGridAPIClient(os.environ.get("SENDGRID_API_KEY"))
+        response = sg.send(message)
 
-        flash("Review submitted successfully and emailed.")
+        # ✅ SUCCESS CONFIRMATION
+        if response.status_code == 202:
+            flash("✅ Review email successfully sent.", "success")
+        else:
+            flash(f"⚠️ Email accepted but returned status {response.status_code}.", "warning")
 
     except Exception as e:
-        print("Email error:", e)
-        flash(f"Error sending email: {e}")
+        print("Email sending failed:", e)
+        flash("❌ Failed to send review email.", "error")
 
-    return redirect(url_for('index'))
-
+    return redirect(request.referrer)
 
 
 
 @app.route("/test_email")
 def test_email():
     try:
-        sg = SendGridAPIClient(os.environ["SENDGRID_API_KEY"])
+        sg = SendGridAPIClient(os.environ.get("SENDGRID_API_KEY"))
 
         message = Mail(
-            from_email="fazleh2010@gmail.com",   # EXACT verified sender
-            to_emails="fazleh2010@gmail.com",    # Recipient (can be same)
+            from_email="fazleh2010@gmail.com",   # VERIFIED sender
+            to_emails="fazleh2010@gmail.com",    # Test recipient
             subject="SendGrid Test Email",
             plain_text_content="This is a SendGrid test. ✅",
             html_content="<strong>This is a SendGrid test. ✅</strong>"
         )
 
         response = sg.send(message)
-        print("Status code:", response.status_code)
-        print("Response headers:", response.headers)
+
+        # ✅ ALWAYS RETURN A RESPONSE
+        if response.status_code == 202:
+            return (
+                "<h2>✅ Test email SENT successfully</h2>"
+                "<p>SendGrid accepted the email (status 202).</p>"
+                "<p>Check Inbox / Spam / Promotions.</p>"
+            )
+        else:
+            return (
+                f"<h2>⚠️ Email NOT confirmed</h2>"
+                f"<p>Status code: {response.status_code}</p>"
+            )
 
     except Exception as e:
-        print("❌ ERROR")
-        print(e)
+        error_msg = str(e)
         if hasattr(e, "body"):
-            print("Body:", e.body)
+            error_msg += f"<br><pre>{e.body}</pre>"
+
+        return (
+            "<h2>❌ Email FAILED</h2>"
+            f"<p>{error_msg}</p>"
+        ), 500
+
 
 from flask import request, jsonify
 
