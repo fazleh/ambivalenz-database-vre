@@ -177,6 +177,26 @@
 
       .btn-refresh { background-color: #7f8c8d; }
       .btn-refresh:hover { background-color: #606f73; }
+
+
+      /* Light background based on traffic light */
+.value-cell.red, .value-editor.red {
+  background-color: #fdecea;  /* very light red */
+}
+
+.value-cell.yellow, .value-editor.yellow {
+  background-color: #fffbe6;  /* very light yellow */
+}
+
+.value-cell.green, .value-editor.green {
+  background-color: #eafaf1;  /* very light green */
+}
+
+.value-cell.gray, .value-editor.gray {
+  background-color: #f9f9f9;  /* neutral */
+}
+
+
     </style>
 </head>
 
@@ -270,18 +290,21 @@
   document.getElementById("editBtn").disabled = true;
 
   document.querySelectorAll(".value-cell").forEach(cell => {
-    const status = cell.dataset.status;
+    const status = cell.dataset.status;           // red, yellow, green, gray
     const textSpan = cell.querySelector(".value-text");
     const textarea = cell.querySelector(".value-editor");
 
-    if (status === "yellow" || status === "red") {
+    if (status === "yellow" || status === "red" || status === "green") {
       textSpan.style.display = "none";
       textarea.style.display = "block";
+
+      // Add status class for background
       textarea.classList.add(status);
       cell.classList.add(status);
     }
   });
 }
+
 
 
  function saveChanges() {
@@ -397,6 +420,13 @@
     rows.forEach(row => table.appendChild(row));
   }
 
+         // <-- Add this at the end of your script
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const status = cell.dataset.status;
+      cell.classList.add(status); // applies background color immediately
+    });
+  });
 
     </script>
   </body>
