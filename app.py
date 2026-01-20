@@ -1037,43 +1037,94 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import os
 
+from flask import request, redirect, url_for, flash
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+import os
+
+EMAIL_GROUPS = {
+    "administration": ["fazleh2010@gmail.com"],
+    "reviewers": [
+        "elahim@staff.uni-marburg.de",
+        "fazlehlmu@gmail.com"
+    ],
+    "lawyer": ["haider.badol@gmail.com"]
+}
+
 @app.route('/submit_review', methods=['POST'])
 def submit_review():
-    # Build HTML table from submitted form
+
+    # 1️⃣ Get selected group
+    recipient_group = request.form.get("recipient_group")
+
+    if not recipient_group:
+        flash("Please select a recipient group.")
+        return redirect(request.referrer)
+
+    recipients = REVIEW_EMAIL_GROUPS.get(recipient_group)
+
+    if not recipients:
+        flash("Invalid recipient group selected.")
+        return redirect(request.referrer)
+
+    # 2️⃣ Build HTML table from submitted form
     table_rows = ""
+
     for key, value in request.form.items():
+        if key in ("recipient_group",):
+            continue
         if key.startswith("traffic_") or key.startswith("status_"):
             continue
+
+        safe_key = str(key).replace("_", " ")
         safe_value = str(value).replace("<", "&lt;").replace(">", "&gt;")
-        table_rows += f"<tr><td>{key}</td><td>{safe_value}</td></tr>"
+
+        table_rows += f"""
+        <tr>
+          <td><strong>{safe_key}</strong></td>
+          <td>{safe_value}</td>
+        </tr>
+        """
 
     html_content = f"""
     <h2>New Review Submitted</h2>
-    <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse;">
-        <thead><tr><th>Property</th><th>Value</th></tr></thead>
-        <tbody>{table_rows}</tbody>
+    <p><strong>Recipient group:</strong> {recipient_group.capitalize()}</p>
+
+    <table border="1" cellpadding="6" cellspacing="0"
+           style="border-collapse: collapse; width:100%;">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {table_rows}
+      </tbody>
     </table>
     """
 
+    # 3️⃣ Send email
     try:
-        # ✅ Use verified SendGrid sender email
         message = Mail(
-            from_email='fazleh2010@gmail.com',               # Verified sender
-            to_emails=['fazleh2010@gmail.com'],
+            from_email='fazleh2010@gmail.com',  # VERIFIED sender
+            to_emails=recipients,
             subject='New Review Submitted',
             html_content=html_content
         )
 
         sg = SendGridAPIClient(os.environ['SENDGRID_API_KEY'])
-        response = sg.send(message)
-        print(f"Email sent! Status code: {response.status_code}")
-        flash("Review submitted successfully! Email sent.")
+        sg.send(message)
+
+        flash("Review submitted successfully and emailed.")
 
     except Exception as e:
-        print(f"Error sending email: {e}")
+        print("Email error:", e)
         flash(f"Error sending email: {e}")
 
     return redirect(url_for('index'))
+
+
 
 
 @app.route("/test_email")
@@ -1172,6 +1223,15 @@ def manage_data():
         status=status,
         label=label
     )
+REVIEW_EMAIL_GROUPS = {
+    "administration": ["fazleh2010@gmail.com"],
+    "reviewers": [
+        "elahim@staff.uni-marburg.de",
+        "fazlehlmu@gmail.com"
+    ],
+    "lawyer": ["haider.badol@gmail.com"]
+}
+
 
 # -----------------------
 # Run app
