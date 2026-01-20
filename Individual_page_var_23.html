@@ -5,75 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}">
     <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.detect_swipe.js') }}"></script>
     <script src="{{ url_for('static', filename='js/helper.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
     <style>
-      /* ===================== HEADER like FOOTER (BLACK BAR) ===================== */
-      header.site {
-        background-color: #000;    /* black background */
-        color: #fff;               /* white text */
-        padding: 20px 0;           /* vertical padding */
-        margin: 0;                 /* no extra margin */
-        text-align: center;        /* center everything */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        
+  header.site {
+    margin: 20px 0;       /* smaller vertical spacing */
+    text-align: center;   /* center everything */
+  }
 
-      header.site h1#header-title {
-        font-size: 32px;           /* BIG title like you wanted */
-        font-weight: 700;
-        margin: 0;
-        line-height: 1.2;
-        color: #fff;               /* white text */
-      }
+  header.site img.logo {
+    max-height: 50px;    /* similar to footer icons, adjust if needed */
+    vertical-align: middle;
+    margin-right: 10px;
+  }
 
-      /* optional: logo on the left if needed */
-      header.site #header-logo {
-        position: absolute;        /* stays left */
-        left: 20px;
-      }
+  header.site h1#header-title {
+    display: inline-block; /* inline with logo */
+    font-size: 20px;       /* similar to footer links */
+    margin: 0;
+    vertical-align: middle;
+    color: #0645AD;       /* same as footer links for consistency */
+    font-weight: 600;
+  }
 
-      header.site #header-logo img {
-        height: 46px;
-        width: auto;
-        background-color: #fff;    /* optional white background */
-        padding: 4px;
-        border-radius: 4px;
-      }
+  /* optional: if you want footer-like links in header */
+  header.site nav.header-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0645AD;
+  }
 
-      /* ===================== BODY ===================== */
+
+
+
       body {
         font-family: Arial, sans-serif;
         background-color: #f9f9f9;
         padding: 20px;
       }
 
-      /* ===================== CONTAINER ===================== */
-      .container {
-        margin: 10px auto;   /* reduce gap between header and table */
-        gap: 14px;
-        display: flex;
-        align-items: flex-start;
-        max-width: 1300px;
-      }
+      /* Reduce spacing for container (header + image/text) */
+  .container {
+    margin: 10px auto;   /* smaller top/bottom spacing */
+    gap: 14px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 1300px;
+  }
 
       .portrait {
-        width: 260px;
-        height: 260px;
-        max-width: 35vw;
-        max-height: 35vw;
-        object-fit: contain;
-        background-color: #eeeeee;
-        border-radius: 8px;
-        border: 2px solid black;
-        flex-shrink: 0;
-      }
+  width: 260px;
+  height: 260px;
+  max-width: 35vw;
+  max-height: 35vw;
+  object-fit: contain;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  border: 2px solid black;
+  flex-shrink: 0;
+}
+
+.container {
+  gap: 14px;   /* was 20px */
+}
+
+
+
 
       .text {
         flex-grow: 1;
@@ -84,17 +85,47 @@
         box-sizing: border-box;
       }
 
-      h2 {
-        text-align: center;
-        margin-top: 10px;   /* smaller gap above table */
-        margin-bottom: 10px; /* smaller gap below header */
-        color: #333333;
+      .property-table textarea {
+        width: 100%;
+        min-height: 38px;
+        resize: vertical;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        padding: 4px 6px;
+        font-size: 13px;
+        line-height: 1.3;
       }
 
-      /* ===================== TABLE ===================== */
+      .property-table td:nth-child(3),
+      .property-table th:nth-child(3) {
+        width: 60px;
+        text-align: center;
+      }
+
+      .value-editor {
+        border: 2px solid #f1c40f;
+        background-color: #fffbe6;
+      }
+
+      /* Reduce spacing for h2 */
+  h2 {
+    text-align: center;
+    margin-top: 10px;   /* smaller gap above table */
+    margin-bottom: 10px; /* smaller gap below header */
+    color: #333333;
+  }
+
+      table.property-table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: white;
+        font-size: 16px;
+      }
+
       table.property-table {
         width: 95%;
-        margin: 10px auto;
+        margin: 16px auto;
         border-collapse: collapse;
         background-color: #ffffff;
         font-size: 14px;
@@ -115,6 +146,10 @@
       }
 
       table.property-table tr:nth-child(even) {
+        background-color: #fafafa;
+      }
+
+      table.property-table tr:nth-child(even) {
         background-color: #f5f5f5;
       }
 
@@ -123,7 +158,7 @@
         text-decoration: underline;
       }
 
-      /* ===================== TRAFFIC LIGHT ===================== */
+      /* 🔴🟡🟢 TRAFFIC LIGHT STYLES */
       .traffic-light {
         width: 20px;
         height: 20px;
@@ -133,54 +168,132 @@
         border: 1px solid #333;
       }
 
-      .red { background: #c0392b; }
-      .yellow { background: #f1c40f; }
-      .green { background: #27ae60; }
-      .gray { background: #ccc; }
+      .red {
+        background: #c0392b;
+      }
 
-      /* ===================== FOOTER ===================== */
+      .yellow {
+        background: #f1c40f;
+      }
+
+      .green {
+        background: #27ae60;
+      }
+
+      .gray {
+        background: #ccc;
+      }
+
       footer.site {
         margin-top: 40px;
         text-align: center;
-        background-color: #000;
-        color: #fff;
-        padding: 15px 0;
       }
 
       footer.site a {
         margin: 0 10px;
         text-decoration: none;
-        color: #fff;
+        color: #0645AD;
       }
 
-      /* ===================== BUTTONS ===================== */
-      .btn {
-        padding: 12px 28px;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 6px;
-        border: none;
-        cursor: pointer;
-        margin: 0 10px 10px 10px;
-        transition: all 0.2s ease;
-        color: white;
+      /* Column widths */
+      table.property-table td:nth-child(2),
+      table.property-table th:nth-child(2) {
+        width: 50%;
+        /* Value column smaller */
       }
 
-      .btn-edit { background-color: #3498db; }
-      .btn-edit:hover { background-color: #2980b9; }
+      table.property-table td:nth-child(4),
+      table.property-table th:nth-child(4) {
+        width: 20%;
+        /* Comment column bigger */
+      }
 
-      .btn-save { background-color: #27ae60; }
-      .btn-save:hover { background-color: #1e8449; }
+      /* Keep Property and Status reasonable */
+      table.property-table td:nth-child(1),
+      table.property-table th:nth-child(1) {
+        width: 25%;
+        /* Property column */
+      }
 
-      .btn-review { background-color: #e67e22; }
-      .btn-review:hover { background-color: #d35400; }
+      table.property-table td:nth-child(3),
+      table.property-table th:nth-child(3) {
+        width: 5%;
+        /* Status column stays narrow */
+        text-align: center;
+      }
 
-      .btn-refresh { background-color: #7f8c8d; }
-      .btn-refresh:hover { background-color: #606f73; }
+      /* Optional: keep table compact */
+      table.property-table th,
+      table.property-table td {
+        padding: 6px 8px;
+        line-height: 1.3;
+      }
+
+.value-cell.red { background-color: #fdecea; }      /* very light red */
+.value-cell.yellow { background-color: #fffbe6; }   /* very light yellow */
+.value-cell.green { background-color: #eafaf1; }    /* very light green */
+.value-cell.gray { background-color: #f9f9f9; }     /* neutral */
+
+.value-editor.red { background-color: #fdecea; }
+.value-editor.yellow { background-color: #fffbe6; }
+.value-editor.green { background-color: #eafaf1; }
+.value-editor.gray { background-color: #f9f9f9; }
+
+
+/* Modern buttons */
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px 10px 10px;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #3498db;
+}
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+.btn-save {
+  background-color: #27ae60;
+}
+.btn-save:hover {
+  background-color: #1e8449;
+}
+
+.btn-review {
+  background-color: #e67e22;
+}
+.btn-review:hover {
+  background-color: #d35400;
+}
+
+.btn-refresh {
+  background-color: #7f8c8d;
+}
+.btn-refresh:hover {
+  background-color: #606f73;
+}
+
+th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+th.sortable:hover {
+  background-color: #e8e8e8;
+}
+
+
+      /* neutral */
     </style>
-</head>
-
-
+  </head>
   <body class="bundle list">
     <header class="site">
       <a id="header-logo" href="{{ url_for('visual_art') }}">
