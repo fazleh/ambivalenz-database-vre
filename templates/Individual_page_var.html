@@ -170,6 +170,19 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
     text-align: center;
   }
 
+    /* Highlighted inline text (Google Docs style) */
+.highlighted-text {
+  background-color: #fff59d;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Ensure text selection works */
+.value-text {
+  user-select: text;
+  cursor: text;
+}
+
 </style>
    </head>
    <body class=" site-page frontpage">
@@ -360,6 +373,188 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
             <a href="{{ url_for('privacy') }}">Privacy statement</a>
          </nav>
       </footer>
+<script>
+  // ===================== TRAFFIC LIGHT =====================
+  function cycleLight(id) {
+    const light = document.getElementById("light_" + id);
+    const hidden = document.getElementById("traffic_" + id);
+    const order = ["gray", "yellow", "green", "red"];
+    const current = hidden.value || "gray";
+    const next = order[(order.indexOf(current) + 1) % order.length];
+    hidden.value = next;
+    light.classList.remove("gray", "yellow", "green", "red");
+    light.classList.add(next);
+  }
+
+  // ===================== EDIT MODE =====================
+  function enableEditMode() {
+    document.getElementById("editBtn").disabled = true;
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const status = cell.dataset.status;
+      const textSpan = cell.querySelector(".value-text");
+      const textarea = cell.querySelector(".value-editor");
+      if (["yellow","red","green"].includes(status)) {
+        textSpan.style.display = "none";
+        textarea.style.display = "block";
+        textarea.classList.add(status);
+        cell.classList.add(status);
+      }
+    });
+  }
+
+  // ===================== SAVE CHANGES =====================
+  function saveChanges() {
+    const objectName = "{{ neo4j_name }}";
+    const rows = [];
+    function neo4jSafeProp(prop) {
+      return prop.trim().replace(/ /g,"_").replace(/\//g,"_").replace(/\*/g,"").replace(/:/g,"").replace(/-/g,"_");
+    }
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const property = cell.parentElement.querySelector("td:first-child").innerText.trim();
+      const textarea = cell.querySelector(".value-editor");
+      const textSpan = cell.querySelector(".value-text");
+      const trafficInput = cell.parentElement.querySelector("input[type=hidden]");
+      const status = trafficInput ? trafficInput.value : "";
+      const value = textarea ? textarea.value.trim() : textSpan.innerText.trim();
+      rows.push({property: property, prop_key: neo4jSafeProp(property), value: value||"", status: status});
+    });
+    const nodeType = "{{ table_rows[0].nodeType or 'Painting' }}";
+
+    fetch(`/update_object/${encodeURIComponent(objectName)}`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({rows, nodeType})
+    })
+    .then(r => r.json())
+    .then(data => {
+      if(data.success){ alert("✅ Data saved successfully!"); window.location.reload(); }
+      else { alert("❌ Error saving data: "+data.error); }
+    })
+    .catch(err => alert("❌ Error: "+err));
+  }
+
+  function refreshData() { window.location.reload(); }
+
+  // ===================== TABLE SORTING =====================
+  const sortState = {};
+  const STATUS_ORDER = {red:0, yellow:1, gray:2, green:3};
+  document.querySelectorAll("th.sortable").forEach(th => {
+    th.addEventListener("click", () => { sortTable(parseInt(th.dataset.col)); });
+  });
+
+  function sortTable(colIndex) {
+    const table = document.querySelector(".property-table tbody");
+    const rows = Array.from(table.querySelectorAll("tr"));
+    sortState[colIndex] = !sortState[colIndex];
+    const asc = sortState[colIndex];
+
+    rows.sort((a, b) => {
+      let A, B;
+
+      if(colIndex === 0){ // Property
+        A = a.children[0].innerText.toLowerCase();
+        B = b.children[0].innerText.toLowerCase();
+      } else if(colIndex === 2){ // Status
+        A = [...a.querySelector(".traffic-light").classList].find(c => STATUS_ORDER.hasOwnProperty(c)) || "gray";
+        B = [...b.querySelector(".traffic-light").classList].find(c => STATUS_ORDER.hasOwnProperty(c)) || "gray";
+        return asc ? STATUS_ORDER[A] - STATUS_ORDER[B] : STATUS_ORDER[B] - STATUS_ORDER[A];
+      } else if(colIndex === 3){ // Comments (if you implement sorting)
+        A = a.children[3]?.querySelector(".comments-list")?.innerText.toLowerCase() || "";
+        B = b.children[3]?.querySelector(".comments-list")?.innerText.toLowerCase() || "";
+      }
+
+      if(A < B) return asc ? -1 : 1;
+      if(A > B) return asc ? 1 : -1;
+      return 0;
+    });
+
+    rows.forEach(row => table.appendChild(row));
+  }
+
+  // ===================== INITIALIZE STATUS COLORS =====================
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const status = cell.dataset.status;
+      cell.classList.add(status);
+    });
+  });
+
+  // ===================== GOOGLE DOCS STYLE COMMENTS =====================
+  let selectedText = '';
+  let selectedCell = null;
+
+  // Show comment box on text selection
+  document.addEventListener('mouseup', (e) => {
+  if (document.getElementById('floatingCommentBox').contains(e.target)) return;
+
+    const sel = window.getSelection();
+    selectedText = sel.toString().trim();
+
+    if (!selectedText) {
+      document.getElementById('floatingCommentBox').style.display = 'none';
+      return;
+    }
+
+const cell = sel.anchorNode.nodeType === 3
+  ? sel.anchorNode.parentElement.closest('td.value-cell')
+  : sel.anchorNode.closest('td.value-cell');
+
+    if (!cell) return;
+
+    selectedCell = cell;
+    const rect = sel.getRangeAt(0).getBoundingClientRect();
+    const box = document.getElementById('floatingCommentBox');
+    box.style.top = (rect.top + window.scrollY + rect.height) + 'px';
+    box.style.left = (rect.right + window.scrollX + 5) + 'px';
+    box.style.display = 'block';
+    document.getElementById('commentInput').value = '';
+  });
+
+  // Submit comment
+  function submitComment() {
+    const commentText = document.getElementById('commentInput').value.trim();
+    if (!commentText || !selectedCell) return;
+
+    // Highlight selected text
+    const span = document.createElement('span');
+    span.classList.add('highlighted-text');
+    span.textContent = selectedText;
+    span.style.backgroundColor = '#ffff88';
+
+    const originalText = selectedCell.querySelector('.value-text');
+    originalText.innerHTML = originalText.innerHTML.replace(selectedText, span.outerHTML);
+
+    // Append comment to 4th column
+    const tr = selectedCell.parentElement;
+    const commentColumn = tr.querySelector('.comment-column .comments-list');
+    const commentEntry = document.createElement('div');
+    commentEntry.classList.add('comment-entry');
+    commentEntry.innerHTML = `<strong>You:</strong> ${commentText}`;
+    commentColumn.appendChild(commentEntry);
+
+    // Hide comment box
+    document.getElementById('floatingCommentBox').style.display = 'none';
+    selectedCell = null;
+    selectedText = '';
+  }
+
+  // Attach comment submit button
+
+  // Hide comment box if clicked outside
+document.addEventListener('mousedown', (e) => {
+  const box = document.getElementById('floatingCommentBox');
+  if (!box.contains(e.target)) {
+    box.style.display = 'none';
+  }
+});
+
+
+</script>
+
+   <div id="floatingCommentBox" class="comment-box">
+  <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+  <button onclick="submitComment()">Add Comment</button>
+</div>
 
    </body>
 </html>
