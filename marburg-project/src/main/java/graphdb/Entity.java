@@ -34,7 +34,7 @@ public final class Entity implements Constants {
         //System.out.println( this.properties.keySet());
         this.findSubjectAndType(this.properties);
         this.relation = new Relation(this.object_id ,this.properties);
-        this.properties.put(NAME, this.subject);
+        //this.properties.put(NAME, this.subject);
         this.properties.put(NODE_TYPE, this.nodeType);
         //this.properties.put(OBJECT_ID, this.object_id);
     }
@@ -43,9 +43,10 @@ public final class Entity implements Constants {
         String id = null;
         for (String property : properties.keySet()) {
             String object = properties.get(property);
-            if (property.contains(TITEL)) {
-                this.subject = object;
-            } else if (property.contains(NODE_TYPE)) {
+            //if (property.contains(TITEL)) {
+            //    this.subject = object;
+            //} else 
+            if (property.contains(NODE_TYPE)) {
                 this.nodeType = object;
                 //Integer number = INDEX + 1;
                 //this.object_id = object + "_" + number.toString();

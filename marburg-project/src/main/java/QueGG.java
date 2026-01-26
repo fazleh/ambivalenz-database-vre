@@ -200,7 +200,16 @@ public class QueGG implements Constants {
                     properties.put(att, value);
                     String att_status = "Z_"+att  ;
                     if (att.contains("nodeType"))
-                        ; else {
+                        ; 
+                     else if (att.contains(TITEL)) {
+                                 String att_new=NAME;
+                                 String value_new =value;
+                                 System.out.println("property >> " + att + " value >> " + value);
+                                 System.out.println("new_property >> " + att_new + " new_value >> " + value_new);
+                                 properties.put(att_new, value_new);
+                    } 
+
+                    else {
                         String value_status = info[2];
                         System.out.println("att_status >> " + att_status + " att_status >> " + value_status);
                         properties.put(att_status, value_status);
