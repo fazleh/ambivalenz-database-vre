@@ -176,7 +176,7 @@ def get_field_list():
         if props:
             return props
     return [
-        "Titel", "Künstler*in/Autor*in", "Sichtbare oder genannte Personen",
+        "ObjektID","Titel", "Künstler*in/Autor*in", "Sichtbare oder genannte Personen",
         "Entstehungsjahr", "Ort der Entstehung / Nutzung", "Gattung / Genre",
         "Technik", "Dimensionen", "Kurzbeschreibung", "Motive / Topoi",
         "Narrative / Diskurse", "Historischer Kontext",
@@ -239,7 +239,7 @@ def get_all_entities(label):
                 "title": node.get("Titel", node.get("Name", "")),
                 "description": node.get("Kurzbeschreibung", ""),
                 "image_path": node.get("Digitalisat_Link_Pfad", ""),
-                "url": f"/visual_art/{node.get('Name', '')}"
+                "url": f"/visual_art/{node.get('ObjektID', '')}"
             })
 
     return entities
@@ -305,20 +305,20 @@ def video():
 # ---------------------------------------------------------
 # INDIVIDUAL PAINTING ROUTE
 # ---------------------------------------------------------
-@app.route("/visual_art/<painting_name>")
-def painting_page(painting_name):
-    painting_name = normalize_neo4j_value(painting_name)
+@app.route("/visual_art/<object_id>")
+def painting_page(object_id):
+    object_id = normalize_neo4j_value(object_id)
     status_filter = request.args.get("status")  # red | yellow | None
 
     with driver.session() as session:
         query = """
-            MATCH (n:Painting {Name: $name})
+            MATCH (n:Painting {ObjektID: $object_id})
             RETURN n
         """
-        record = session.run(query, name=painting_name).single()
+        record = session.run(query, object_id=object_id).single()
 
     if not record:
-        return f"No data found for '{painting_name}'."
+        return f"No data found for ObjektID '{object_id}'."
 
     raw_node = dict(record["n"])
     node = {k: normalize_neo4j_value(v) for k, v in raw_node.items()}
@@ -326,7 +326,7 @@ def painting_page(painting_name):
     neo4j_name = node.get("Name")
 
     ordered_keys = [
-        "Objekt-ID",
+        "ObjektID",
         "Titel",
         "Künstler*in/Autor*in",
         "Sichtbare_oder_genannte_Personen",
@@ -334,7 +334,7 @@ def painting_page(painting_name):
         "Ort_der_Entstehung_/_Nutzung",
         "Gattung_/_Genre",
         "Technik",
-        "Dimensionen:",
+        "Dimensionen",
         "Kurzbeschreibung",
         "Motive_/_Topoi",
         "Narrative_/_Diskurse",
@@ -366,7 +366,7 @@ def painting_page(painting_name):
         raw_value = node.get(safe_key)
         status = node.get(f"Z_{safe_key}", "")
 
-        # 🔴🟡 FILTER HERE
+        # 🔴🟡 filter by traffic-light status
         if status_filter and status != status_filter:
             continue
 
@@ -382,12 +382,13 @@ def painting_page(painting_name):
 
     return render_template(
         "Individual_page_var.html",
-        title=node.get("Titel", painting_name),
-        neo4j_name=neo4j_name,  # ✅ ADD THIS
+        title=node.get("Titel", object_id),
+        neo4j_name=neo4j_name,
         artist_info=node.get("Kurzbeschreibung", ""),
         image_path=node.get("Digitalisat_Link_Pfad", ""),
         table_rows=table_rows
     )
+
 
 
 
@@ -1152,15 +1153,17 @@ def test_email():
 
 from flask import request, jsonify
 
-@app.route("/update_object/<painting_name>", methods=["POST"])
+@app.route("/update_object/<object_id>", methods=["POST"])
 @login_required
-def update_object(painting_name):
+def update_object(object_id):
+    object_id = normalize_neo4j_value(object_id)
+
     data = request.get_json()
     if not data or "rows" not in data:
         return jsonify({"success": False, "error": "No data received"})
 
     rows = data["rows"]
-    username = "current_user"  # ideally: current_user.username from flask_login
+    username = "current_user"  # ideally: current_user.username
 
     try:
         with driver.session() as session:
@@ -1170,28 +1173,36 @@ def update_object(painting_name):
                 status = row.get("status", "")
                 label = data.get("nodeType", "Painting")
 
-                # Get old value
+                # 🔍 get old value (by ObjektID)
                 old_val_record = session.run(
-                    f"MATCH (n:`{label}` {{Name: $name}}) RETURN n.{prop} AS old_value",
-                    {"name": painting_name}
+                    f"""
+                    MATCH (n:`{label}` {{ObjektID: $object_id}})
+                    RETURN n.{prop} AS old_value
+                    """,
+                    {"object_id": object_id}
                 ).single()
+
                 old_value = old_val_record["old_value"] if old_val_record else None
 
-                # Update main node
+                # ✏️ update node (by ObjektID)
                 session.run(
                     f"""
-                    MATCH (n:`{label}` {{Name: $name}})
+                    MATCH (n:`{label}` {{ObjektID: $object_id}})
                     SET n.{prop} = $value,
                         n.Z_{prop} = $status
                     """,
-                    {"name": painting_name, "value": value, "status": status}
+                    {
+                        "object_id": object_id,
+                        "value": value,
+                        "status": status
+                    }
                 )
 
-                # Create a ChangeLog entry
+                # 🧾 changelog (store BOTH ID + human name)
                 session.run(
                     """
                     CREATE (c:ChangeLog {
-                        object_name: $name,
+                        object_id: $object_id,
                         username: $username,
                         property: $prop,
                         old_value: $old_value,
@@ -1201,7 +1212,7 @@ def update_object(painting_name):
                     })
                     """,
                     {
-                        "name": painting_name,
+                        "object_id": object_id,
                         "username": username,
                         "prop": prop,
                         "old_value": old_value or "No data",
@@ -1209,9 +1220,12 @@ def update_object(painting_name):
                         "status": status
                     }
                 )
+
         return jsonify({"success": True})
+
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
+
 
 
 @app.route("/manage_data")
