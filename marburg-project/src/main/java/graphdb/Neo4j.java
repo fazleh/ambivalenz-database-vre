@@ -66,7 +66,7 @@ public class Neo4j implements AutoCloseable {
                 tx.run(cypher, parameters("props", properties));
                 return null;
             });
-            System.out.println("Node created with label: " + nodeType + " and properties: " + properties);
+            //System.out.println("Node created with label: " + nodeType + " and properties: " + properties);
         }
     }
 
@@ -76,7 +76,7 @@ public class Neo4j implements AutoCloseable {
                 tx.run("MATCH (n) DETACH DELETE n");
                 return null;
             });
-            System.out.println("All nodes and relationships deleted.");
+            //System.out.println("All nodes and relationships deleted.");
         }
     }
 
@@ -89,9 +89,9 @@ public class Neo4j implements AutoCloseable {
                 Value nodeValue = record.get("n");
                 Map<String, Object> properties = nodeValue.asNode().asMap();
 
-                System.out.println("Node Label(s): " + nodeValue.asNode().labels());
-                System.out.println("Properties: " + properties);
-                System.out.println("------------");
+                //System.out.println("Node Label(s): " + nodeValue.asNode().labels());
+                //System.out.println("Properties: " + properties);
+                //System.out.println("------------");
             }
         }
 
@@ -117,17 +117,51 @@ public class Neo4j implements AutoCloseable {
             });
         }
     }
+    
+    public String findNodeTypeGivenObjectID(String objectID_2) {
+        return findNodeTypeByObjectId(OBJECT_ID, objectID_2);
+    }
+    
 
     public Boolean createRelationship(Entity entity) {
-        String nodeType1 = null, nodeType2 = null, objectID_1 = null, objectID_2 = null;
-        Relation relation = entity.getRelation();
+           Relation relation = entity.getRelation();
+        
+        if (relation.isRelationExisit()) {
+            String objectID_1 = relation.getObject_ID_1();
+            String objectID_2 = relation.getObject_ID_2();
+            String nodeType1 = relation.getNodeType_1();
+            String nodeType2 = relation.getNodeType_2();
+            System.out.println("create relationship!!!!");
+             System.out.println("nodeType1: " + nodeType1 + " objectID_1:" + objectID_1 +"  nodeType2: " + nodeType1 + " objectID_2:" + objectID_2);
+             createRelationship(nodeType1, // label of first node
+                    objectID_1, // Objekt-ID of first node
+                    relation.getRelationName(),
+                    nodeType2, // label of second node
+                    objectID_2 // Objekt-ID of second node
+            );
+          
+            return true;
+        } else {
+            System.out.println(entity.getObjectID() + " No relation found!!");
+        }
+        
+        
+        return false;
+
+    }
+    
+    public Boolean createRelationship(Relation relation) {
+        String nodeType1 = null, nodeType2 = null,
+                objectID_1 = null, objectID_2 = null;
+
         if (relation.isRelationExisit()) {
             objectID_1 = relation.getObject_ID_1();
             objectID_2 = relation.getObject_ID_2();
-            nodeType1 = findNodeTypeByObjectId(OBJECT_ID,objectID_1);
-            nodeType2 = findNodeTypeByObjectId(OBJECT_ID,objectID_2);
-             System.out.println("nodeType1: " + nodeType1 + " objectID_1:" + objectID_1 +"  nodeType2: " + nodeType1 + " objectID_2:" + objectID_2);
-             createRelationship(nodeType1, // label of first node
+            nodeType1 = relation.getNodeType_1();
+            nodeType2 = findNodeTypeByObjectId(OBJECT_ID, objectID_2);
+            System.out.println("create relationship!!!!");
+            System.out.println("nodeType1: " + nodeType1 + " objectID_1:" + objectID_1 + "  nodeType2: " + nodeType1 + " objectID_2:" + objectID_2);
+            createRelationship(nodeType1, // label of first node
                     objectID_1, // Objekt-ID of first node
                     relation.getRelationName(),
                     nodeType2, // label of second node
@@ -141,10 +175,14 @@ public class Neo4j implements AutoCloseable {
             );*/
 
             return true;
+        } else {
+            System.out.println(" No relation found!!");
         }
+
         return false;
 
     }
+
 
     public void createRelationship(
             String label1, // label of Object1 (e.g. Painting or Person)
@@ -211,7 +249,7 @@ public class Neo4j implements AutoCloseable {
             }
             for (String subject : duplication.keySet()) {
                 Entity entity = duplication.get(subject);
-                System.out.println(entity);
+                //System.out.println(entity);
                 app.createNodeWithProperties(entity);
                 app.createRelationship(entity);
             }

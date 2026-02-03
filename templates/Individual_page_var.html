@@ -183,6 +183,62 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
   cursor: text;
 }
 
+/* ===================== COMPACT HISTORY TABLE ===================== */
+/* Make history table extremely compact */
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;           /* smaller font */
+    table-layout: fixed;
+}
+
+#history-table th,
+#history-table td {
+    padding: 2px 4px;          /* very tight padding */
+    line-height: 1;            /* minimal line height */
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    word-wrap: break-word;
+}
+
+#history-table th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+#history-table tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+#history-table .status-dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* Compact inline comment editor */
+#history-table .comment-editor {
+    width: 100%;
+    padding: 1px 2px;      /* minimal padding */
+    font-size: 11px;
+    line-height: 1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical;
+    min-height: 18px;      /* compact height */
+}
+
+/* Remove extra margin from inner spans */
+#history-table td .value-text,
+#history-table td .comments-list,
+#history-table td .comment-entry {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+}
+
+
 </style>
    </head>
    <body class=" site-page frontpage">
@@ -364,6 +420,27 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
   </div>
 </form>
 
+      <div id="history-panel" style="max-width:1300px; margin:40px auto;">
+  <h2 style="cursor:pointer;" onclick="toggleHistory()">
+    📜 Version History
+  </h2>
+
+  <table id="history-table" class="property-table" style="display:none;">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Property</th>
+        <th>Old Value</th>
+        <th>New Value</th>
+        <th>Status</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+
    <footer class="site">
          <div class="footer-title">Antiziganismus und Ambivalenz in Europa</div>
          <nav class="footer">
@@ -406,32 +483,70 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
   function saveChanges() {
     const objectName = "{{ neo4j_name }}";
     const rows = [];
+
     function neo4jSafeProp(prop) {
-      return prop.trim().replace(/ /g,"_").replace(/\//g,"_").replace(/\*/g,"").replace(/:/g,"").replace(/-/g,"_");
+        return prop.trim().replace(/ /g,"_")
+                         .replace(/\//g,"_")
+                         .replace(/\*/g,"")
+                         .replace(/:/g,"")
+                         .replace(/-/g,"_");
     }
+
     document.querySelectorAll(".value-cell").forEach(cell => {
-      const property = cell.parentElement.querySelector("td:first-child").innerText.trim();
-      const textarea = cell.querySelector(".value-editor");
-      const textSpan = cell.querySelector(".value-text");
-      const trafficInput = cell.parentElement.querySelector("input[type=hidden]");
-      const status = trafficInput ? trafficInput.value : "";
-      const value = textarea ? textarea.value.trim() : textSpan.innerText.trim();
-      rows.push({property: property, prop_key: neo4jSafeProp(property), value: value||"", status: status});
+        const property = cell.parentElement.querySelector("td:first-child").innerText.trim();
+        const textarea = cell.querySelector(".value-editor");
+        const textSpan = cell.querySelector(".value-text");
+        const trafficInput = cell.parentElement.querySelector("input[type=hidden]");
+
+        const oldValue = (cell.dataset.value || "").trim();
+        const oldStatus = (cell.dataset.status || "gray").trim();
+
+        // get current value, normalize whitespace
+        let newValue = textarea ? textarea.value.trim() : textSpan.innerText.trim();
+        newValue = newValue.replace(/\s+/g, " "); // collapse multiple spaces
+
+        const newStatus = trafficInput ? trafficInput.value.trim() : oldStatus;
+
+        // Only include if something changed
+        if(newValue !== oldValue || newStatus !== oldStatus){
+            rows.push({
+                property: property,
+                prop_key: neo4jSafeProp(property),
+                value: newValue,
+                status: newStatus
+            });
+
+            // Update data-value/status so next save won't trigger false change
+            cell.dataset.value = newValue;
+            cell.dataset.status = newStatus;
+        }
     });
+
+    if(rows.length === 0){
+        alert("No changes detected. History will not be saved.");
+        return; // nothing to save
+    }
+
     const nodeType = "{{ table_rows[0].nodeType or 'Painting' }}";
 
     fetch(`/update_object/${encodeURIComponent(objectName)}`, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({rows, nodeType})
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({rows, nodeType})
     })
     .then(r => r.json())
     .then(data => {
-      if(data.success){ alert("✅ Data saved successfully!"); window.location.reload(); }
-      else { alert("❌ Error saving data: "+data.error); }
+        if(data.success){
+            alert("✅ Data saved successfully!");
+            window.location.reload();
+        } else {
+            alert("❌ Error saving data: "+data.error);
+        }
     })
     .catch(err => alert("❌ Error: "+err));
-  }
+}
+
+
 
   function refreshData() { window.location.reload(); }
 
@@ -548,6 +663,57 @@ document.addEventListener('mousedown', (e) => {
   }
 });
 
+    let historyLoaded = false;
+
+function toggleHistory() {
+  const table = document.getElementById("history-table");
+  table.style.display = table.style.display === "none" ? "table" : "none";
+
+  if (!historyLoaded) {
+    loadHistory();
+    historyLoaded = true;
+  }
+}
+
+function loadHistory() {
+  const objectName = "{{ neo4j_name }}";
+
+  fetch(`/history/${encodeURIComponent(objectName)}`)
+    .then(r => r.json())
+    .then(data => {
+      const tbody = document.querySelector("#history-table tbody");
+      tbody.innerHTML = "";
+
+      data.forEach(row => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${row.user}</td>
+          <td>${row.property}</td>
+          <td>${row.old_value ?? ""}</td>
+          <td>${row.new_value ?? ""}</td>
+          <td><span class="status-dot ${row.status || 'gray'}"></span></td>
+          <td>${row.timestamp}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    });
+}
+
+data.forEach(row => {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td>${row.user}</td>
+    <td>${row.property}</td>
+    <td>${row.old_value ?? ""}</td>
+    <td>${row.new_value ?? ""}</td>
+    <td><span class="status-dot ${row.status || 'gray'}"></span></td>
+    <td>${row.timestamp}</td>
+    <td>
+      <textarea class="comment-editor" placeholder="Add comment...">${row.comment || ""}</textarea>
+    </td>
+  `;
+  tbody.appendChild(tr);
+});
 
 </script>
 

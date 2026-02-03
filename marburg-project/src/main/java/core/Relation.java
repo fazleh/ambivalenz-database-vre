@@ -19,6 +19,8 @@ public class Relation implements Constants {
     private String relationName = "";
     private String object_ID_1 = "";
     private String object_ID_2 = "";
+    private String nodeType_1 = "";
+    private String nodeType_2 = "";
     private boolean relationExisit = false;
 
 
@@ -30,11 +32,28 @@ public class Relation implements Constants {
                 this.object_ID_2 =entityObjectID;
                 this.relationExisit = true;
             }
+          
         }
 
     }
 
     public Relation() {
+    }
+
+    public Relation(String relationName, String object_ID_1, String object_ID_2) {
+        this.relationName=relationName;
+        this.object_ID_1=object_ID_1;
+        this.object_ID_2=object_ID_2;
+        this.relationExisit = true;
+    }
+
+    public Relation(String relationName, String object_ID_1, String object_ID_2, String nodeType1, String nodeType2) {
+        this.relationName = relationName;
+        this.object_ID_1 = object_ID_1;
+        this.object_ID_2 = object_ID_2;
+        this.relationExisit = true;
+        this.nodeType_1 = nodeType1;
+        this.nodeType_2 = nodeType2;
     }
 
     public String getRelationName() {
@@ -53,12 +72,22 @@ public class Relation implements Constants {
         return relationExisit;
     }
 
-   
+    public String getNodeType_1() {
+        return nodeType_1;
+    }
 
-   
+    public String getNodeType_2() {
+        return nodeType_2;
+    }
 
     @Override
     public String toString() {
-        return "Relation{" + "relationName=" + relationName + ", object_id=" + object_ID_1 + ", relationExisit=" + relationExisit + '}';
+        return "Relation{" + "relationName=" + relationName + ", object_ID_1=" + object_ID_1 + ", object_ID_2=" + object_ID_2 + ", nodeType_1=" + nodeType_1 + ", nodeType_2=" + nodeType_2 + ", relationExisit=" + relationExisit + '}';
     }
+
+   
+
+   
+
+    
 }

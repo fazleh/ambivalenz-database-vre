@@ -36,7 +36,18 @@ public final class Entity implements Constants {
         this.relation = new Relation(this.object_id ,this.properties);
         //this.properties.put(NAME, this.subject);
         this.properties.put(NODE_TYPE, this.nodeType);
-        //this.properties.put(OBJECT_ID, this.object_id);
+        this.properties.put(OBJECT_ID, this.object_id);
+    }
+
+    public Entity(LinkedHashMap<String, String> propertiesT, Relation relationship) {
+        this.properties = propertiesT;
+        //System.out.println(this.subject+" "+this.nodeType+" "+this.object_id);
+        //System.out.println( this.properties.keySet());
+        this.findSubjectAndType(this.properties);
+        this.relation = relationship;
+        //this.properties.put(NAME, this.subject);
+        this.properties.put(NODE_TYPE, this.nodeType);
+        this.properties.put(OBJECT_ID, this.object_id);        
     }
 
     private void findSubjectAndType(LinkedHashMap<String, String> properties) {
@@ -52,7 +63,7 @@ public final class Entity implements Constants {
                 //this.object_id = object + "_" + number.toString();
                 //INDEX = number;
 
-            } else if (property.contains(Entity.OBJECT_ID)) {
+            } else if (property.contains(OBJECT_ID)) {
                 this.object_id = object;
             }
            

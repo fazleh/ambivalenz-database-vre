@@ -727,11 +727,6 @@ def privacy():
 def project_detail():
     return "Welcome to the Project Detail page!"
 
-@app.route('/delete_all_data')
-def delete_all_data():
-    with driver.session() as session:
-        session.run("MATCH (n) DETACH DELETE n")
-    return "All data deleted from Neo4j."
 
 # -----------------------
 # Auth / register / login / logout
@@ -966,7 +961,6 @@ def add_data_open_entity_form():
 
 
 # Path where files will be saved (you can adjust this to your needs)
-UPLOAD_FOLDER = 'static/private/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'jpg', 'jpeg', 'png', 'gif', 'txt', 'zip', 'tar'}
 
@@ -1033,13 +1027,9 @@ def ensure_default_user():
                 {"id": 1, "username": "admin", "password_hash": hashed}
             )
 
-from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-import os
-
 from flask import request, redirect, url_for, flash
 from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
 import os
 
 EMAIL_GROUPS = {
@@ -1170,33 +1160,59 @@ def update_object(painting_name):
         return jsonify({"success": False, "error": "No data received"})
 
     rows = data["rows"]
+    username = "current_user"  # ideally: current_user.username from flask_login
 
     try:
         with driver.session() as session:
             for row in rows:
-                prop = row["prop_key"]  # ✅ FIX
-
+                prop = row["prop_key"]
                 value = row["value"]
                 status = row.get("status", "")
+                label = data.get("nodeType", "Painting")
 
-                label = data.get("nodeType", "Painting")  # default to Painting
+                # Get old value
+                old_val_record = session.run(
+                    f"MATCH (n:`{label}` {{Name: $name}}) RETURN n.{prop} AS old_value",
+                    {"name": painting_name}
+                ).single()
+                old_value = old_val_record["old_value"] if old_val_record else None
 
+                # Update main node
                 session.run(
                     f"""
                     MATCH (n:`{label}` {{Name: $name}})
                     SET n.{prop} = $value,
                         n.Z_{prop} = $status
                     """,
+                    {"name": painting_name, "value": value, "status": status}
+                )
+
+                # Create a ChangeLog entry
+                session.run(
+                    """
+                    CREATE (c:ChangeLog {
+                        object_name: $name,
+                        username: $username,
+                        property: $prop,
+                        old_value: $old_value,
+                        new_value: $new_value,
+                        status: $status,
+                        timestamp: timestamp()
+                    })
+                    """,
                     {
                         "name": painting_name,
-                        "value": value,
+                        "username": username,
+                        "prop": prop,
+                        "old_value": old_value or "No data",
+                        "new_value": value,
                         "status": status
                     }
                 )
-
         return jsonify({"success": True})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
+
 
 @app.route("/manage_data")
 @login_required
@@ -1241,6 +1257,25 @@ REVIEW_EMAIL_GROUPS = {
     ],
     "lawyer": ["haider.badol@gmail.com"]
 }
+
+@app.route("/history/<object_name>")
+@login_required
+def object_history(object_name):
+    with driver.session() as session:
+        result = session.run("""
+            MATCH (c:ChangeLog {object_name: $name})
+            RETURN
+              c.username AS user,
+              c.property AS property,
+              c.old_value AS old_value,
+              c.new_value AS new_value,
+              c.status AS status,
+              c.timestamp AS timestamp
+            ORDER BY c.timestamp DESC
+        """, {"name": object_name})
+
+        history = [dict(r) for r in result]
+    return jsonify(history)
 
 
 # -----------------------

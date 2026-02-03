@@ -22,7 +22,7 @@ public interface Constants {
     public static final String NAME = "Name";
     public static final String NODE_TYPE = "nodeType";
     public static final String TITEL = "Titel";
-    public static final String OBJECT_ID = "Objekt-ID";
+    public static final String OBJECT_ID = "ObjektID";
     public static final String Painting = "Painting";
     public static final String Book = "Book";
 

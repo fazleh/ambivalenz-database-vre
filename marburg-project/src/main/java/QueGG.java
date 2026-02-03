@@ -46,6 +46,7 @@ public class QueGG implements Constants {
         String menu = CREATE_FROM_STRING; // default action
         String nodeStr = 
                 "Gattung / Genre=Bildende Kunst=yellow=\n"
+                +"Objekt_ID=Object2=yellow=\n"
                 +"name=Paar=yellow=\n"
                 + "Titel=Paar=yellow=\n"
                 + "Technik=Öl Gemälde=yellow=\n"
@@ -71,6 +72,7 @@ public class QueGG implements Constants {
                 + "Erfassungsdatum=No data=red=\n"
                 + "Kommentar / Anmerkung=No data=red=\n"
                 + "Versionsgeschichte=No data=red=\n"
+                + "RELATION_authorOf=Object1=red=\n"
                 + "nodeType=Painting==";
 
         // Parse arguments
@@ -103,10 +105,10 @@ public class QueGG implements Constants {
             uri = "bolt://neo4j:7687";
         }
 
-        System.out.println("successfully get inside the java code:");
-        System.out.println(menu);
-        System.out.println(nodeStr);
-        System.out.println(dir + " " + uri + " " + user + " " + password);
+        //System.out.println("successfully get inside the java code:");
+        //System.out.println(menu);
+        //System.out.println(nodeStr);
+        //System.out.println(dir + " " + uri + " " + user + " " + password);
 
         Neo4j app = new Neo4j(uri, user, password);
 
@@ -120,9 +122,10 @@ public class QueGG implements Constants {
             }
 
             if (menu.contains(CREATE_FROM_STRING)) {
-                LinkedHashMap<String, String> properties = findPropertiesFromString(nodeStr);
+                Entity entity = findPropertiesFromString(nodeStr,app);
                 //System.out.println(properties);
-                Entity entity = new Entity(properties);
+                //Entity entity = new Entity(properties);
+                  
                 addDataToNeo4j(entity, neo4jFlag, app);
             }
 
@@ -141,17 +144,16 @@ public class QueGG implements Constants {
     }
 
     private static void addDataToNeo4j(Entity entity, Boolean neo4jFlag, Neo4j app) {
-        System.out.println("entity:" + entity);
+        System.out.println("!!!!!!!!!!  START  !!!!!!!!!!!!!!!!" );      
+                System.out.println("entity:" + entity);    
+                System.out.println("Relation::"+entity.getRelation());
+                System.out.println("!!!!!!!!!!  END  !!!!!!!!!!!!!!!!" );    
+        
         if (neo4jFlag) {
             app.createNodeWithProperties(entity);
-        }
-        if (entity.getRelation().isRelationExisit()) {
-            System.out.println(entity.getRelation());
-            if (neo4jFlag) {
-                app.createRelationship(entity);
-            }
-        } else {
-            System.out.println(entity.getObjectID() + " No relation found!!");
+            Relation relation = entity.getRelation();
+            if (relation.isRelationExisit()) {
+            app.createRelationship(entity);}
         }
     }
 
@@ -164,7 +166,7 @@ public class QueGG implements Constants {
             }
             try {
                 FileReader reader = new FileReader(Paths.get(csvPath).toFile());
-                System.out.println(Paths.get(csvPath).toFile());
+                //System.out.println(Paths.get(csvPath).toFile());
                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
                 LinkedHashMap<String, String> properties = new LinkedHashMap<String, String>();
                 for (CSVRecord record : csvParser) {
@@ -184,34 +186,46 @@ public class QueGG implements Constants {
 
     }
 
-    private static LinkedHashMap<String, String> findPropertiesFromString(String nodeStr) {
+    private static Entity findPropertiesFromString(String nodeStr,Neo4j app) {
         LinkedHashMap<String, String> properties = new LinkedHashMap<String, String>();
         String[] lines = nodeStr.split("\n");
+        String entityObjectID=null,nodeType1=null,nodeType2=null,
+                relationName= null,object_ID_1= null,object_ID_2 =null;
+        Boolean relationExist=false;
+                            
         for (String line : lines) {
             if (line.contains("=")) {
                 String[] info = line.split("\\=");
                 if (info.length < 2)
                 ; else if (info.length < 4) {
-                    System.out.println(line);
+                    System.out.println("line ..............."+line);
                     String att = info[0];
                     att=att.replace(" ", "_");
                     String value = info[1];
-                    System.out.println("property >> " + att + " value >> " + value);
+                    //System.out.println("property >> " + att + " value >> " + value);
                     properties.put(att, value);
                     String att_status = "Z_"+att  ;
+                    if (att.contains(OBJECT_ID))
+                        entityObjectID=value; 
                     if (att.contains("nodeType"))
-                        ; 
+                        nodeType1=value; 
                      else if (att.contains(TITEL)) {
                                  String att_new=NAME;
                                  String value_new =value;
-                                 System.out.println("property >> " + att + " value >> " + value);
-                                 System.out.println("new_property >> " + att_new + " new_value >> " + value_new);
+                                 //System.out.println("property >> " + att + " value >> " + value);
+                                 //System.out.println("new_property >> " + att_new + " new_value >> " + value_new);
                                  properties.put(att_new, value_new);
                     } 
+                    else if (att.contains(RELATION)) {
+                            relationName = att.replace(RELATION, "");
+                            object_ID_1 = entityObjectID;
+                            object_ID_2 =value;
+                            relationExist=true;
+                    }
 
                     else {
                         String value_status = info[2];
-                        System.out.println("att_status >> " + att_status + " att_status >> " + value_status);
+                        //System.out.println("att_status >> " + att_status + " att_status >> " + value_status);
                         properties.put(att_status, value_status);
                     }
                 }
@@ -219,7 +233,13 @@ public class QueGG implements Constants {
             }
 
         }
-        return properties;
+        Relation relationship = new Relation();
+        if (relationExist) {
+            nodeType2 = app.findNodeTypeGivenObjectID(object_ID_2);
+            relationship = new Relation(relationName, object_ID_1, object_ID_2, nodeType1, nodeType2);
+            //System.out.println("relationship >> " + relationName + " object_ID_1 >> " + object_ID_1+ " object_ID_2 >> " + object_ID_2);
+        }
+        return new Entity(properties, relationship);
     }
 
 }
