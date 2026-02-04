@@ -2,7 +2,15 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for, flash
 from markupsafe import Markup
 from markupsafe import Markup as MarkupType
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
+from flask_login import (
+    LoginManager,
+    UserMixin,
+    login_user,
+    login_required,
+    logout_user,
+    current_user   # ✅ ADD THIS
+)
+
 from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
 from neo4j import GraphDatabase
@@ -383,12 +391,12 @@ def painting_page(object_id):
     return render_template(
         "Individual_page_var.html",
         title=node.get("Titel", object_id),
+        objekt_id=node.get("ObjektID"),  # ✅ ADD THIS
         neo4j_name=neo4j_name,
         artist_info=node.get("Kurzbeschreibung", ""),
         image_path=node.get("Digitalisat_Link_Pfad", ""),
         table_rows=table_rows
     )
-
 
 
 
@@ -1156,53 +1164,57 @@ from flask import request, jsonify
 @app.route("/update_object/<object_id>", methods=["POST"])
 @login_required
 def update_object(object_id):
-    object_id = normalize_neo4j_value(object_id)
-
     data = request.get_json()
     if not data or "rows" not in data:
         return jsonify({"success": False, "error": "No data received"})
 
     rows = data["rows"]
-    username = "current_user"  # ideally: current_user.username
+    label = data.get("nodeType", "Painting")
 
+    # ✅ PUT IT HERE (replace the old line)
+    username = (
+        current_user.username
+        if current_user.is_authenticated
+        else "anonymous"
+    )
+    
     try:
         with driver.session() as session:
             for row in rows:
                 prop = row["prop_key"]
                 value = row["value"]
                 status = row.get("status", "")
-                label = data.get("nodeType", "Painting")
 
-                # 🔍 get old value (by ObjektID)
+                # 1️⃣ Get old value
                 old_val_record = session.run(
                     f"""
-                    MATCH (n:`{label}` {{ObjektID: $object_id}})
+                    MATCH (n:`{label}` {{ObjektID: $id}})
                     RETURN n.{prop} AS old_value
                     """,
-                    {"object_id": object_id}
+                    {"id": object_id}
                 ).single()
 
                 old_value = old_val_record["old_value"] if old_val_record else None
 
-                # ✏️ update node (by ObjektID)
+                # 2️⃣ Update node
                 session.run(
                     f"""
-                    MATCH (n:`{label}` {{ObjektID: $object_id}})
+                    MATCH (n:`{label}` {{ObjektID: $id}})
                     SET n.{prop} = $value,
                         n.Z_{prop} = $status
                     """,
                     {
-                        "object_id": object_id,
+                        "id": object_id,
                         "value": value,
                         "status": status
                     }
                 )
 
-                # 🧾 changelog (store BOTH ID + human name)
+                # 3️⃣ ChangeLog
                 session.run(
                     """
                     CREATE (c:ChangeLog {
-                        object_id: $object_id,
+                        objekt_id: $id,
                         username: $username,
                         property: $prop,
                         old_value: $old_value,
@@ -1212,7 +1224,7 @@ def update_object(object_id):
                     })
                     """,
                     {
-                        "object_id": object_id,
+                        "id": object_id,
                         "username": username,
                         "prop": prop,
                         "old_value": old_value or "No data",
@@ -1225,6 +1237,7 @@ def update_object(object_id):
 
     except Exception as e:
         return jsonify({"success": False, "error": str(e)})
+
 
 
 
