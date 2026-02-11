@@ -893,7 +893,10 @@ def add_data_submit():
         elif key.startswith("traffic_") or key in ("source_node_id", "relation_name", "category", "nodeType"):
             continue  # skip control fields
         else:
-            val = value.strip() or "No data"
+            if key == "Titel":
+                val = clean_title(value)
+            else:
+                val = value.strip() or "No data"
             status = posted.get(f"traffic_{key}", "red")
             rows.append([key, val, status, ""])
 
@@ -945,6 +948,35 @@ def add_data_submit():
         return f"<h3>ERROR: {e.stderr}</h3>"
 
     return redirect(url_for('add_data'))
+
+import re
+
+def clean_title(title: str) -> str:
+    """
+    Clean title coming from form:
+    - remove double quotes
+    - remove special characters
+    - remove extra spaces
+    - replace spaces with underscore
+    """
+    if not isinstance(title, str):
+        return title
+
+    # Remove double quotes
+    title = title.replace('"', '')
+
+    # Remove special characters (keep letters, numbers, spaces, underscore)
+    title = re.sub(r'[^A-Za-z0-9äöüÄÖÜß\s]', '', title)
+
+    # Remove extra spaces
+    title = re.sub(r'\s+', ' ', title).strip()
+
+    # Replace spaces with underscore
+    title = title.replace(" ", "_")
+
+    return title
+
+
 
 @app.route('/add_data/open_entity_form')
 @login_required
