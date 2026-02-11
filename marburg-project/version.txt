@@ -1,3 +1,0 @@
-fully working version:
-
-Version1.1 : node and relation addition works by command line. stable version.

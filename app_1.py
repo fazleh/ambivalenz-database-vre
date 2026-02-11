@@ -878,120 +878,76 @@ def add_data_extract_entities():
 @app.route('/add_data/submit', methods=['POST'])
 @login_required
 def add_data_submit():
-
     posted = request.form
-    node_type = posted.get("nodeType", posted.get("category", "article"))
+    rows = []
 
-    properties = {}
-    status_properties = {}
-
-    # -------------------------
-    # Build property dictionaries
-    # -------------------------
+    # build rows from the posted form
     for key, value in posted.items():
-
-        # Skip control fields
-        if key.startswith("traffic_") or key in (
-            "source_node_id", "relation_name", "category", "nodeType"
-        ):
-            continue
-
-        # -------------------------
-        # Custom Properties
-        # -------------------------
         if key.startswith("custom_property_"):
             index = key.split("_")[-1]
-            prop_name = posted.get(f"custom_property_{index}", "").strip()
-            prop_value = posted.get(f"custom_value_{index}", "").strip() or "No data"
-
-            if prop_name:
-                safe_prop = neo4j_safe_prop(prop_name)
-                properties[safe_prop] = prop_value
-
-                status = posted.get(f"traffic_custom_{index}", "red")
-                status_properties[f"Z_{safe_prop}"] = status
-            continue
-
-        # -------------------------
-        # Normal Fields
-        # -------------------------
-        safe_key = neo4j_safe_prop(key)
-
-        if key == "Titel":
-            cleaned_value = clean_title(value)
-            properties["Name"] = cleaned_value   # Unique ID
-            properties[safe_key] = cleaned_value
+            prop_name = value.strip()
+            prop_val = posted.get(f"custom_value_{index}", "").strip() or "No data"
+            prop_status = posted.get(f"traffic_custom_{index}", "red")
+            if prop_name or prop_val:
+                rows.append([prop_name or "No data", prop_val or "No data", prop_status, ""])
+        elif key.startswith("traffic_") or key in ("source_node_id", "relation_name", "category", "nodeType"):
+            continue  # skip control fields
         else:
-            properties[safe_key] = value.strip() or "No data"
+            if key == "Titel":
+                val = clean_title(value)
+            else:
+                val = value.strip() or "No data"
+            status = posted.get(f"traffic_{key}", "red")
+            rows.append([key, val, status, ""])
 
-        status = posted.get(f"traffic_{key}", "red")
-        status_properties[f"Z_{safe_key}"] = status
+    # final nodeType row
+    node_type_value = posted.get("nodeType", posted.get("category", "article"))
+    rows.append(["nodeType", node_type_value, "", ""])
 
-    # Safety: ensure Name exists
-    if "Name" not in properties:
-        return "<h3>Error: Titel field is required.</h3>"
+    # Build CSV-like string (instead of writing real CSV)
+    header = ["Property", "text", "Status", "Name Entity"]
+    result_string = "=".join(header) + "\n"
 
-    # -------------------------
-    # Neo4j Connection
-    # -------------------------
-    neo4j_uri = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
+    for row in rows:
+        result_string += "=".join(str(col) for col in row) + "\n"
+    # Generate unique object ID
+    number = random.randint(1, 100)
+    category = posted.get("category", "article")
+    objekt_id = f"{category}_{number}"
+
+    CSV_DIR = "/app/marburg-project/dataset/german/input/"
+    JAR_PATH = "/app/marburg-project/target/QuestionGrammarGenerator.jar"
+
+    source_node_id = posted.get("source_node_id")
+    relation_name = posted.get("relation_name")
+    # menu = "RELATION" if (source_node_id and relation_name) else "CREATE"
+
+    menu ="CREATE_FROM_STRING"
+    neo4j_uri = os.environ.get("NEO4J_URI", "bolt://neo4j:7687")
     neo4j_user = os.environ.get("NEO4J_USER", "neo4j")
     neo4j_pass = os.environ.get("NEO4J_PASSWORD", "password")
+    javaflag="FALSE"
 
-    driver = GraphDatabase.driver(
+    cmd = [
+        "java", "-jar", JAR_PATH,
+        menu,
+        CSV_DIR,  # directory containing generated text file
         neo4j_uri,
-        auth=(neo4j_user, neo4j_pass)
-    )
+        neo4j_user,
+        neo4j_pass,
+        result_string,
+        javaflag
+    ]
 
     try:
-        with driver.session() as session:
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print("stdout:", result.stdout)
+        print("stderr:", result.stderr)
+    except subprocess.CalledProcessError as e:
+        print(e.stderr)
+        return f"<h3>ERROR: {e.stderr}</h3>"
 
-            # -------------------------
-            # Create or Update Node
-            # -------------------------
-            query = f"""
-            MERGE (n:`{node_type}` {{Name: $name}})
-            SET n += $props,
-                n += $status_props
-            RETURN n
-            """
-
-            session.run(
-                query,
-                name=properties["Name"],
-                props=properties,
-                status_props=status_properties
-            )
-
-            # -------------------------
-            # Optional Relationship
-            # -------------------------
-            source_node_id = posted.get("source_node_id")
-            relation_name = posted.get("relation_name")
-
-            if source_node_id and relation_name:
-
-                relation_name = neo4j_safe_prop(relation_name)
-
-                rel_query = f"""
-                MATCH (a {{Name: $source}})
-                MATCH (b:`{node_type}` {{Name: $target}})
-                MERGE (a)-[:{relation_name}]->(b)
-                """
-
-                session.run(
-                    rel_query,
-                    source=source_node_id,
-                    target=properties["Name"]
-                )
-
-        driver.close()
-        return redirect(url_for('add_data'))
-
-    except Exception as e:
-        driver.close()
-        return f"<h3>ERROR: {str(e)}</h3>"
-
+    return redirect(url_for('add_data'))
 
 import re
 
