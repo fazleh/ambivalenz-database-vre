@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}">
+
+  <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.detect_swipe.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/helper.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 1300px;
+      margin: 40px auto;
+    }
+
+    .portrait {
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+      background-color: #eeeeee;
+      border-radius: 8px;
+      border: 2px solid black;
+      flex-shrink: 0;
+    }
+
+    .text {
+      flex-grow: 1;
+      border: 2px solid black;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      box-sizing: border-box;
+    }
+
+
+   .property-table textarea {
+  width: 100%;
+  min-height: 38px;
+  resize: vertical;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 4px 6px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+   .property-table td:nth-child(3),
+.property-table th:nth-child(3) {
+  width: 60px;
+  text-align: center;
+}
+
+
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+
+    table.property-table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+      font-size: 16px;
+    }
+
+    table.property-table {
+  width: 95%;
+  margin: 16px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+table.property-table th,
+table.property-table td {
+  border: 1px solid #bbb;
+  padding: 6px 8px;
+  vertical-align: top;
+  line-height: 1.3;
+}
+
+table.property-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  text-align: left;
+}
+
+table.property-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+
+    table.property-table tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    table.property-table a {
+      color: #0645AD;
+      text-decoration: underline;
+    }
+
+    /* 🔴🟡🟢 TRAFFIC LIGHT STYLES */
+    .traffic-light {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid #333;
+    }
+
+    .red    { background: #c0392b; }
+    .yellow { background: #f1c40f; }
+    .green  { background: #27ae60; }
+    .gray   { background: #ccc; }
+
+    footer.site {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    footer.site a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0645AD;
+    }
+
+    /* Column widths */
+table.property-table td:nth-child(2),
+table.property-table th:nth-child(2) {
+  width: 50%;       /* Value column smaller */
+}
+
+table.property-table td:nth-child(4),
+table.property-table th:nth-child(4) {
+  width: 20%;       /* Comment column bigger */
+}
+
+/* Keep Property and Status reasonable */
+table.property-table td:nth-child(1),
+table.property-table th:nth-child(1) {
+  width: 25%;       /* Property column */
+}
+
+table.property-table td:nth-child(3),
+table.property-table th:nth-child(3) {
+  width: 5%;        /* Status column stays narrow */
+  text-align: center;
+}
+
+/* Optional: keep table compact */
+table.property-table th,
+table.property-table td {
+  padding: 6px 8px;
+  line-height: 1.3;
+}
+
+  </style>
+</head>
+
+<body class="bundle list">
+
+<header class="site">
+  <a id="header-logo" href="{{ url_for('visual_art') }}">
+    <img class="logo"
+         src="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }}"
+         alt="Uni Marburg Logo">
+  </a>
+  <h1 id="header-title">{{ title }}</h1>
+</header>
+
+<div class="container">
+  <img class="portrait"
+       src="{{ url_for('static', filename=image_path if image_path and image_path != 'No data' else 'images/placeholder.png') }}"
+       alt="{{ title }}">
+
+  <div class="text">
+    <p>{{ artist_info }}</p>
+  </div>
+</div>
+
+<h2>Object Information</h2>
+
+<table class="property-table">
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Value</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for row in table_rows %}
+  <tr>
+    <td>{{ row.property }}</td>
+
+    <td>
+      {% if row.value is string and row.value.startswith("http") %}
+        <a href="{{ row.value }}" target="_blank">{{ row.value }}</a>
+      {% else %}
+        {{ row.value }}
+      {% endif %}
+    </td>
+
+    <!-- ✅ EDITABLE TRAFFIC LIGHT -->
+    <td style="text-align:center;">
+      {% set color = row.status if row.status else 'gray' %}
+
+      <div class="traffic-light {{ color }}"
+           id="light_{{ loop.index }}"
+           onclick="cycleLight('{{ loop.index }}')"></div>
+
+      <input type="hidden"
+             name="status_{{ row.property }}"
+             id="traffic_{{ loop.index }}"
+             value="{{ color }}">
+    </td>
+
+    <td>
+  <textarea
+    name="comment_{{ row.property }}"
+    rows="3"
+    style="width:100%; box-sizing:border-box; font-size:14px;"
+    placeholder="Write a comment here...">{{ row.comment if row.comment else "" }}</textarea>
+</td>
+
+  </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+<footer class="site">
+  <div class="footer-title">Antiziganismus und Ambivalenz in Europa</div>
+  <nav class="footer">
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('supporters') }}">Supporters</a>
+    <a href="{{ url_for('imprint') }}">Imprint</a>
+    <a href="{{ url_for('privacy') }}">Privacy statement</a>
+  </nav>
+</footer>
+
+<script>
+function cycleLight(id) {
+  const light = document.getElementById("light_" + id);
+  const hidden = document.getElementById("traffic_" + id);
+
+  const order = ["gray", "yellow", "green", "red"];
+  const current = hidden.value || "gray";
+  const next = order[(order.indexOf(current) + 1) % order.length];
+
+  hidden.value = next;
+  light.classList.remove("gray", "yellow", "green", "red");
+  light.classList.add(next);
+}
+
+</script>
+
+</body>
+</html>

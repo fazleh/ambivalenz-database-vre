@@ -1,0 +1,28 @@
+Property,Eingabefeld,text
+Objekt-ID,,Interne ID für eindeutige Referenzierung in der Datenbank
+Titel,,"Erkennbarer Titel (auf diskriminierende Begriffe und Herkunft prüfen. Die Titeln wurden nicht immer vom Künstler selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.))"
+Künstler:in/Autor:in,,Wer das Objekt geschaffen oder veröffentlicht hat
+Entstehungsjahr,,Datum oder Zeitraum der Entstehung
+Ort der Entstehung / Nutzung,,"Geografische Lage (Ort, Region)"
+Gattung / Genre ,,"z.B. Historiengemälde, Postkarte, Film "
+Objekttyp / Medium / Technik,,"Bild, Ton, Text, Video, Hybrid"
+Motive / Topoi ,,"Typische Stereotypmotive, z.B. Lagerfeuer, Musikant"
+Narrative / Diskurse,,"Narrative Rahmen: Romantisierung, Kriminalisierung"
+Historischer Kontext,,"Ereignisse wie 1848er-Revolution, Gesetzgebungen"
+Antiziganistische / Stigmatisierende Elemente,,Diskriminierende Darstellungen benennen
+Agency,,"Form(en) der Selbstermächtigung, Selbstrepräsentation oder Selbstartikulation, die dem Objekt zugeordnet werden können"
+Verknüpfung ,,"Verlinkung verwandter Werke auch in anderen Medienformen (z. B. Vorlage für Film, Adaption als Illustration etc.)"
+Narrativwandel bei Medienwechsel,,Veränderung des Narrativs über Medien hinweg
+Rezeptionsnsweg,,Tradierungs- oder Transformationsbeziehungen
+Sammlung / Archiv / ,,Fundort oder archivische Herkunft
+Provenienz,,Chronologischer Weg des Objekts
+Literatur,,Wissenschaftliche oder publizistische Referenzen
+Ausstellungen / Aufführungen / Veröffentlichungen,,"Präsentationen, Aufführungen, Ausstellungen"
+Beschriftung / Glossierung ,,"Signaturen, Aufkleber, handschriftliche Notizen"
+Rechte / Lizenzen,,"Lizenzstatus, CC-Lizenz etc."
+Digitalisat-Link/Pfad,,Pfad oder URL zum Digitalisat
+Metadaten-Status,,"vollständig, unvollständig, geprüft"
+Erfasst von,,Name der erfassenden Person
+Erfassungsdatum,,JJJJ-MM-TT
+Kommentar / Anmerkung,,Zusätzliche Bemerkungen oder Besonderheiten
+Versionsgeschichte,,X

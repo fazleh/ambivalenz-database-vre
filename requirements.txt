@@ -1,0 +1,13 @@
+﻿flask
+neo4j
+flask-login
+markupsafe
+openpyxl
+spacy
+werkzeug
+pandas
+spacy[lookups]
+Flask-Mail
+itsdangerous
+flask-mail
+sendgrid

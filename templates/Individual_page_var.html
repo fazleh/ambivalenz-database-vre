@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+   <head>
+     <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!--title>{{ title }}</title-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Picture Narratives and Visual Staging of Antigypsy Motifs</title>
+      <meta name="description" content="">
+      <meta name="HandheldFriendly" content="True">
+      <meta name="MobileOptimized" content="320">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="cleartype" content="on">
+      <meta name="google-site-verification" content="5mewDMRKHpmN4nOFNMBcL74PmpSCkHIAstEhMHTHDjk">
+      <title>Neo4j Flask App</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}">
+      <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery.detect_swipe.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/helper.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+      <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5shiv.min.js"></script>
+      <![endif]-->
+       <meta charset="UTF-8">
+<title>Objekt Informationen</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f2f2f2;
+}
+
+/* ===== BLACK HEADER BOX ===== */
+header.site {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* header text + links */
+header.site a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* logo visibility on black */
+header.site img {
+  filter: brightness(0) invert(1);
+}
+
+/* header title */
+#header-title {
+  margin: 0;
+}
+
+/* tools alignment */
+#header-tools img {
+  filter: invert(1);
+}
+
+/* hamburger icon */
+#hamburger img {
+  filter: invert(1);
+}
+
+#menu {
+  background: #000;
+}
+
+
+  table.property-table { width:100%; border-collapse:collapse; background:#fff; margin-top:10px; }
+th,td { border:1px solid #ccc; padding:8px; vertical-align:top; }
+.col1{width:25%;background:#f9f9f9;font-weight:bold;}
+.col2{width:45%;}
+.col3{width:10%;text-align:center;}
+.col4{width:20%;}
+textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid #bbb;border-radius:4px;resize:vertical;}
+.submit-btn,.add-row-btn,.upload-btn,.entity-button{
+    margin-top:10px;padding:8px 15px;border:none;border-radius:4px;font-size:14px;cursor:pointer;}
+.submit-btn{background:#4CAF50;color:white;}
+.add-row-btn{background:#2196F3;color:white;margin-right:10px;}
+.upload-btn{background:#FF9800;color:white;margin-right:10px;}
+.entity-button{background:#e7f4ff;color:#005b8f;margin:2px 2px;border:1px solid #80cfff;border-radius:4px;}
+.traffic-light{width:20px;height:20px;border-radius:50%;display:inline-block;margin-left:5px;border:1px solid #999;cursor:pointer;}
+.red{background:red;} .yellow{background:yellow;} .green{background:green;} .gray{background:#ccc;}
+.delete-btn { background: #c62828; color: white; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; }
+.delete-btn:hover { background: #b71c1c; }
+
+    /* ===================== HEADER like FOOTER (BLACK BAR) ===================== */
+    header.site { background-color:#000; color:#fff; padding:20px 0; margin:0; text-align:center; display:flex; justify-content:center; align-items:center; }
+    header.site h1#header-title { font-size:32px; font-weight:700; margin:0; line-height:1.2; color:#fff; }
+    header.site #header-logo { position:absolute; left:20px; }
+    header.site #header-logo img { height:46px; width:auto; background-color:#fff; padding:4px; border-radius:4px; }
+
+    body { font-family: Arial,sans-serif; background-color:#f9f9f9; padding:20px; }
+    .container { margin:10px auto; gap:14px; display:flex; align-items:flex-start; max-width:1300px; }
+    .portrait { width:260px; height:260px; max-width:35vw; max-height:35vw; object-fit:contain; background-color:#eeeeee; border-radius:8px; border:2px solid black; flex-shrink:0; }
+    .text { flex-grow:1; border:2px solid black; padding:20px; border-radius:8px; font-size:18px; box-sizing:border-box; }
+    h2 { text-align:center; margin-top:10px; margin-bottom:10px; color:#333; }
+
+    table.property-table { width:95%; margin:10px auto; border-collapse:collapse; background-color:#fff; font-size:14px; table-layout:fixed; }
+    table.property-table th, table.property-table td { border:1px solid #bbb; padding:6px 8px; vertical-align:top; line-height:1.3; }
+    table.property-table th { background-color:#f0f0f0; font-weight:600; text-align:left; }
+    table.property-table tr:nth-child(even) { background-color:#f5f5f5; }
+    table.property-table a { color:#0645AD; text-decoration:underline; }
+
+    /* Fix column widths */
+    .property-table th:nth-child(1), .property-table td:nth-child(1) { width:20%; }
+    .property-table th:nth-child(2), .property-table td:nth-child(2) { width:45%; }
+    .property-table th:nth-child(3), .property-table td:nth-child(3) { width:10%; text-align:center; }
+    .property-table th:nth-child(4), .property-table td:nth-child(4) { width:25%; }
+
+    .value-editor { width:100%; box-sizing:border-box; resize:vertical; }
+
+    /* Traffic lights */
+    .traffic-light { width:20px; height:20px; border-radius:50%; display:inline-block; cursor:pointer; border:1px solid #333; }
+    .red { background:#c0392b; } .yellow { background:#f1c40f; } .green { background:#27ae60; } .gray { background:#ccc; }
+
+    /* Buttons */
+    .btn { padding:12px 28px; font-size:16px; font-weight:600; border-radius:6px; border:none; cursor:pointer; margin:0 10px 10px 10px; transition:all 0.2s ease; color:white; }
+    .btn-edit { background-color:#3498db; } .btn-edit:hover { background-color:#2980b9; }
+    .btn-save { background-color:#27ae60; } .btn-save:hover { background-color:#1e8449; }
+    .btn-review { background-color:#e67e22; } .btn-review:hover { background-color:#d35400; }
+    .btn-refresh { background-color:#7f8c8d; } .btn-refresh:hover { background-color:#606f73; }
+
+    /* Light background based on traffic light */
+    .value-cell.red, .value-editor.red { background-color:#fdecea; }
+    .value-cell.yellow, .value-editor.yellow { background-color:#fffbe6; }
+    .value-cell.green, .value-editor.green { background-color:#eafaf1; }
+    .value-cell.gray, .value-editor.gray { background-color:#f9f9f9; }
+
+    /* Inline comment icon */
+    .comment-icon { margin-left:4px; cursor:pointer; }
+
+/* Floating comment box */
+.comment-box {
+  position: absolute;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: none; /* hidden initially */
+  z-index: 1000;
+}
+
+.comment-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  height: 60px;
+}
+
+.comment-box button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#header-title {
+    text-align: center;
+  }
+
+    /* Highlighted inline text (Google Docs style) */
+.highlighted-text {
+  background-color: #fff59d;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Ensure text selection works */
+.value-text {
+  user-select: text;
+  cursor: text;
+}
+
+</style>
+   </head>
+   <body class=" site-page frontpage">
+      <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <header class="site">
+         <a id="header-logo" href="http://127.0.0.1:5000/">
+         <img class="logo" srcset="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 57w,
+            {{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 93w,
+            {{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }} 103w"
+            src="{{ url_for('static', filename='images/Uni_Marburg_Siegel.png') }}" alt="Uni Marburg Logo">
+         </a>
+         <div class="header-language-switcher">
+            <span class="current-language">EN</span>
+         </div>
+         <h1 id="header-title">
+            <a href="http://127.0.0.1:5000/" title="RomArchive">Antiziganismus und Ambivalenz in Europa</a>
+         </h1>
+         <div id="header-tools">
+            <a id="search" href="http://127.0.0.1:5000/search/">
+            <img src="{{ url_for('static', filename='images/search.svg') }}" alt="Search"></a>
+            <div id="hamburger">
+               <img class="hamburger" src="{{ url_for('static', filename='images/menu-open.svg') }}">
+            </div>
+         </div>
+      </header>
+      <div id="menu" class="menu">
+         <img class="logo" srcset="{{ url_for('static', filename='RomArchive_files/Uni_Marburg_Siegel.png') }} 57w,
+            {{ url_for('static', filename='RomArchive_files/Uni_Marburg_Siegel.png') }} 93w,
+            {{ url_for('static', filename='RomArchive_files/Uni_Marburg_Siegel.png') }} 103w"
+            src="{{ url_for('static', filename='RomArchive_files/Uni_Marburg_Siegel.png') }}">
+         <nav class="site">
+            <h1 id="header-title-menu" class="box clickable-box"><a class="box-link" href="http://127.0.0.1:5000/">Antiziganismus und Ambivalenz in Europa</a></h1>
+            <ul class="menu">
+               <li class="box clickable-box">
+                  <a class="box-link" href="http://127.0.0.1:5000/">Home</a>
+               </li>
+               <li class="submenu collapsed">
+                  <div class="box submenu-header clickable-box">
+                     <a class="box-link" href="http://127.0.0.1:5000/sections/">Curated sections</a>
+                     <button class="collapse"><img src="{{ url_for('static', filename='images/open-vertical.svg') }}" alt="collapse"></button>
+                  </div>
+                  <ul class="menu">
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('add_data') }}">Add Data</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('manage_data') }}">Manage Data</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('visual_art') }}">Painting</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('poster') }}">Poster</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('portrait') }}">Portrait</a></li>
+                     <!--li class="box clickable-box"><a class="box-link" href="{{ url_for('audio') }}">Audio</a></li-->
+                     <!--li class="box clickable-box"><a class="box-link" href="{{ url_for('video') }}">Video</a></li-->
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('book') }}">Book</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('article') }}">Scientific Article</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('song') }}">Song</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('poem') }}">Poem</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('legal_text') }}">Legal Text</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('Person') }}">Person</a></li>
+
+                     <li class="box clickable-box"><a class="box-link" href="http://127.0.0.1:7474/browser/">Graph</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('Metadata') }}">Metadata</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('logout') }}">Logout</a></li>
+                     <!-- External URL is fine -->
+                  </ul>
+               </li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('add_data') }}">Add Data</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('manage_data') }}">Manage Data</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('visual_art') }}">Painting</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('poster') }}">Poster</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('portrait') }}">Portrait</a></li>
+               <!--li class="box clickable-box"><a class="box-link" href="{{ url_for('audio') }}">Audio</a></li-->
+               <!--li class="box clickable-box"><a class="box-link" href="{{ url_for('video') }}">Video</a></li-->
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('book') }}">Book</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('article') }}">Scientific Article</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('song') }}">Song</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('poem') }}">Poem</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('legal_text') }}">Legal Text</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('Person') }}">Person</a></li>
+
+               <li class="box clickable-box"><a class="box-link" href="http://127.0.0.1:7474/browser/">Graph</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('Metadata') }}">Metadata</a></li>
+               <li class="box clickable-box"><a class="box-link" href="{{ url_for('logout') }}">Logout</a></li>
+               <!-- External URL is fine -->
+               <li class="secondary submenu collapsed">
+                  <div class="box submenu-header clickable-box">
+                     <a class="box-link" href="{{ url_for('about') }}">About</a>
+                     <button class="collapse"> <img src="{{ url_for('static', filename='images/open-vertical.svg') }}" alt="collapse"></button>
+                  </div>
+                  <ul class="menu">
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('context_project') }}">Roma: Who Are We?</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('history_of_romarchive') }}">Idea - Advisory Board - Team</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('curators') }}">Archive Sections and Curators</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('ethical_guidelines') }}">RomArchive Ethical Guidelines*</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('collection_policy') }}">Collection Policy</a></li>
+                     <li class="box clickable-box"><a class="box-link" href="{{ url_for('faq') }}">Frequently Asked Questions | FAQ</a></li>
+                  </ul>
+               </li>
+               <li class="box secondary clickable-box"><a class="box-link" href="{{ url_for('search') }}">Search</a></li>
+               <li class="box secondary clickable-box"><a class="box-link" href="{{ url_for('terms') }}">Terms</a></li>
+               <li class="box secondary clickable-box"><a class="box-link" href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+
+  <!--h1 id="header-title">{{ title }}</h1-->
+</header>
+
+<div class="container">
+  <img class="portrait" src="{{ url_for('static', filename=image_path if image_path and image_path != 'No data' else 'images/placeholder.png') }}" alt="{{ title }}">
+  <div class="text">
+    <p>{{ artist_info }}</p>
+  </div>
+</div>
+
+     <!--h2>Object Information</h2-->
+       <h1 id="header-title">{{ title }}</h1>
+
+<form method="POST" action="{{ url_for('submit_review') }}">
+  <table class="property-table">
+    <thead>
+      <tr>
+        <th data-col="0" class="sortable">Property ▲▼</th>
+        <th>Value</th>
+        <th data-col="2" class="sortable">Status ▲▼</th>
+          <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+  {% for row in table_rows %}
+  <tr>
+    <td>{{ row.property }}</td>
+    <td class="value-cell" data-value="{{ row.value }}" data-status="{{ row.status or 'gray' }}">
+      <span class="value-text">
+        {% if row.value is string and row.value.startswith("http") %}
+          <a href="{{ row.value }}" target="_blank">{{ row.value }}</a>
+        {% else %}
+          {{ row.value }}
+        {% endif %}
+      </span>
+      <textarea class="value-editor" name="value_{{ loop.index }}" style="display:none; width:100%; box-sizing:border-box;" rows="3">{{ row.value }}</textarea>
+    </td>
+    <td style="text-align:center;">
+      {% set color = row.status if row.status else 'gray' %}
+      <div class="traffic-light {{ color }}" id="light_{{ loop.index }}" onclick="cycleLight('{{ loop.index }}')"></div>
+      <input type="hidden" name="status_{{ row.property }}" id="traffic_{{ loop.index }}" value="{{ color }}">
+    </td>
+    <td class="comment-column">
+      <!-- Comments will appear here -->
+      <div class="comments-list">
+        {% if row.comments %}
+          {% for comment in row.comments %}
+            <div class="comment-entry">
+              <strong>{{ comment.user }}:</strong> {{ comment.text }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+
+  </table>
+
+  <!-- Action Buttons -->
+  <div class="btn-container" style="text-align:center; margin:25px 0;">
+    <button type="button" class="btn btn-edit" id="editBtn" onclick="enableEditMode()">Edit</button>
+    <button type="button" class="btn btn-save" id="saveBtn" onclick="saveChanges()">Save</button>
+    <button type="button" class="btn btn-refresh" onclick="refreshData()">Refresh</button>
+
+    <!-- Recipient Dropdown -->
+    <select name="recipient_group" required style="margin-left:10px; padding:5px;">
+      <option value="" disabled selected>Select Reviewer</option>
+      <option value="administration">Administrator</option>
+      <option value="reviewers">Reviewers</option>
+      <option value="lawyer">Lawyers</option>
+    </select>
+
+    <button type="submit" class="btn btn-review" style="margin-left:5px;">Submit Review</button>
+  </div>
+</form>
+
+   <footer class="site">
+         <div class="footer-title">Antiziganismus und Ambivalenz in Europa</div>
+         <nav class="footer">
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('supporters') }}">Supporters</a>
+            <a href="{{ url_for('imprint') }}">Imprint</a>
+            <a href="{{ url_for('privacy') }}">Privacy statement</a>
+         </nav>
+      </footer>
+<script>
+  // ===================== TRAFFIC LIGHT =====================
+  function cycleLight(id) {
+    const light = document.getElementById("light_" + id);
+    const hidden = document.getElementById("traffic_" + id);
+    const order = ["gray", "yellow", "green", "red"];
+    const current = hidden.value || "gray";
+    const next = order[(order.indexOf(current) + 1) % order.length];
+    hidden.value = next;
+    light.classList.remove("gray", "yellow", "green", "red");
+    light.classList.add(next);
+  }
+
+  // ===================== EDIT MODE =====================
+  function enableEditMode() {
+    document.getElementById("editBtn").disabled = true;
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const status = cell.dataset.status;
+      const textSpan = cell.querySelector(".value-text");
+      const textarea = cell.querySelector(".value-editor");
+      if (["yellow","red","green"].includes(status)) {
+        textSpan.style.display = "none";
+        textarea.style.display = "block";
+        textarea.classList.add(status);
+        cell.classList.add(status);
+      }
+    });
+  }
+
+  // ===================== SAVE CHANGES =====================
+  function saveChanges() {
+    const objectName = "{{ neo4j_name }}";
+    const rows = [];
+    function neo4jSafeProp(prop) {
+      return prop.trim().replace(/ /g,"_").replace(/\//g,"_").replace(/\*/g,"").replace(/:/g,"").replace(/-/g,"_");
+    }
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const property = cell.parentElement.querySelector("td:first-child").innerText.trim();
+      const textarea = cell.querySelector(".value-editor");
+      const textSpan = cell.querySelector(".value-text");
+      const trafficInput = cell.parentElement.querySelector("input[type=hidden]");
+      const status = trafficInput ? trafficInput.value : "";
+      const value = textarea ? textarea.value.trim() : textSpan.innerText.trim();
+      rows.push({property: property, prop_key: neo4jSafeProp(property), value: value||"", status: status});
+    });
+    const nodeType = "{{ table_rows[0].nodeType or 'Painting' }}";
+
+    fetch(`/update_object/${encodeURIComponent(objectName)}`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({rows, nodeType})
+    })
+    .then(r => r.json())
+    .then(data => {
+      if(data.success){ alert("✅ Data saved successfully!"); window.location.reload(); }
+      else { alert("❌ Error saving data: "+data.error); }
+    })
+    .catch(err => alert("❌ Error: "+err));
+  }
+
+  function refreshData() { window.location.reload(); }
+
+  // ===================== TABLE SORTING =====================
+  const sortState = {};
+  const STATUS_ORDER = {red:0, yellow:1, gray:2, green:3};
+  document.querySelectorAll("th.sortable").forEach(th => {
+    th.addEventListener("click", () => { sortTable(parseInt(th.dataset.col)); });
+  });
+
+  function sortTable(colIndex) {
+    const table = document.querySelector(".property-table tbody");
+    const rows = Array.from(table.querySelectorAll("tr"));
+    sortState[colIndex] = !sortState[colIndex];
+    const asc = sortState[colIndex];
+
+    rows.sort((a, b) => {
+      let A, B;
+
+      if(colIndex === 0){ // Property
+        A = a.children[0].innerText.toLowerCase();
+        B = b.children[0].innerText.toLowerCase();
+      } else if(colIndex === 2){ // Status
+        A = [...a.querySelector(".traffic-light").classList].find(c => STATUS_ORDER.hasOwnProperty(c)) || "gray";
+        B = [...b.querySelector(".traffic-light").classList].find(c => STATUS_ORDER.hasOwnProperty(c)) || "gray";
+        return asc ? STATUS_ORDER[A] - STATUS_ORDER[B] : STATUS_ORDER[B] - STATUS_ORDER[A];
+      } else if(colIndex === 3){ // Comments (if you implement sorting)
+        A = a.children[3]?.querySelector(".comments-list")?.innerText.toLowerCase() || "";
+        B = b.children[3]?.querySelector(".comments-list")?.innerText.toLowerCase() || "";
+      }
+
+      if(A < B) return asc ? -1 : 1;
+      if(A > B) return asc ? 1 : -1;
+      return 0;
+    });
+
+    rows.forEach(row => table.appendChild(row));
+  }
+
+  // ===================== INITIALIZE STATUS COLORS =====================
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".value-cell").forEach(cell => {
+      const status = cell.dataset.status;
+      cell.classList.add(status);
+    });
+  });
+
+  // ===================== GOOGLE DOCS STYLE COMMENTS =====================
+  let selectedText = '';
+  let selectedCell = null;
+
+  // Show comment box on text selection
+  document.addEventListener('mouseup', (e) => {
+  if (document.getElementById('floatingCommentBox').contains(e.target)) return;
+
+    const sel = window.getSelection();
+    selectedText = sel.toString().trim();
+
+    if (!selectedText) {
+      document.getElementById('floatingCommentBox').style.display = 'none';
+      return;
+    }
+
+const cell = sel.anchorNode.nodeType === 3
+  ? sel.anchorNode.parentElement.closest('td.value-cell')
+  : sel.anchorNode.closest('td.value-cell');
+
+    if (!cell) return;
+
+    selectedCell = cell;
+    const rect = sel.getRangeAt(0).getBoundingClientRect();
+    const box = document.getElementById('floatingCommentBox');
+    box.style.top = (rect.top + window.scrollY + rect.height) + 'px';
+    box.style.left = (rect.right + window.scrollX + 5) + 'px';
+    box.style.display = 'block';
+    document.getElementById('commentInput').value = '';
+  });
+
+  // Submit comment
+  function submitComment() {
+    const commentText = document.getElementById('commentInput').value.trim();
+    if (!commentText || !selectedCell) return;
+
+    // Highlight selected text
+    const span = document.createElement('span');
+    span.classList.add('highlighted-text');
+    span.textContent = selectedText;
+    span.style.backgroundColor = '#ffff88';
+
+    const originalText = selectedCell.querySelector('.value-text');
+    originalText.innerHTML = originalText.innerHTML.replace(selectedText, span.outerHTML);
+
+    // Append comment to 4th column
+    const tr = selectedCell.parentElement;
+    const commentColumn = tr.querySelector('.comment-column .comments-list');
+    const commentEntry = document.createElement('div');
+    commentEntry.classList.add('comment-entry');
+    commentEntry.innerHTML = `<strong>You:</strong> ${commentText}`;
+    commentColumn.appendChild(commentEntry);
+
+    // Hide comment box
+    document.getElementById('floatingCommentBox').style.display = 'none';
+    selectedCell = null;
+    selectedText = '';
+  }
+
+  // Attach comment submit button
+
+  // Hide comment box if clicked outside
+document.addEventListener('mousedown', (e) => {
+  const box = document.getElementById('floatingCommentBox');
+  if (!box.contains(e.target)) {
+    box.style.display = 'none';
+  }
+});
+
+
+</script>
+
+   <div id="floatingCommentBox" class="comment-box">
+  <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+  <button onclick="submitComment()">Add Comment</button>
+</div>
+
+   </body>
+</html>

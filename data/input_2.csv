@@ -1,0 +1,63 @@
+SubjectType,PropertyTpe,ObjectType,Subject,NodeProperty,NodeObject,PropertyCategory,ObjectAsNode,Property,Object,
+Painting,GND,xsd:string,Ilonka,X,X,Objektinformationen,X,Name,Ilonka,
+Painting,GND,xsd:string,Ilonka,X,X,Objektinformationen,X,Objekt-ID,Eindeutige Kennung des Objekts in der Datenbank,
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Titel,Ilonka,
+Painting,"GND, Getty AAT",xsd:string,Ilonka,X,X,Objektinformationen,X,Objekttyp_Medium_Technik,"Öl auf Leinwand, Maße	135 × 100 cm",
+Painting,Datumsfeld,xsd:string,Ilonka,X,X,Objektinformationen,X,Entstehungsdatum,Ilonka,
+Painting,Datumsfeld,xsd:integer,Ilonka,X,X,Objektinformationen,X,Entstehungsdatum_Original,1932,
+Painting,GND,xsd:string,Ilonka,X,X,Objektinformationen,X,Entstehungsort,Land / Stadt / Region ?,
+Painting,GND                                     Link zu diesem Datensatz,https://d-nb.info/gnd/118508210,Ilonka,X,X,BECKMANN_MAX,X,Objektinformationen,Autor_Künstler_Regisseur,Name (ggf. mit Lebensdaten): Max Beckmann (Max Carl Friedrich Beckman 
+Painting,GND-ID,xsd:string,Ilonka,X,X,Objektinformationen,X,Beteiligte_Sichtbare_Personen,Name (ggf. mit Lebensdaten) Ilonka (name der Abgebildeten Romni),
+Painting,GND,xsd:string,Ilonka,dbo:mueseum,"Museum Ludwig, Köln",Objektinformationen,"Museum Ludwig, Köln",Sammlung_Archiv_Fundort,"Museum Ludwig, Köln",
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Provenienz,"1954-1957, Lilly von Schnitzler-Mallinckrodt, Murnau (Kreis Garmisch-Partenkirchen)
+1957-1976, Wallraf-Richartz-Museum & Fondation Corboud, Köln, Inv.-Nr.: WRM 3015 (Ankauf 1957)
+1954 Ankauf Lilly von Schnitzler aus dem Nachlass Beckmann. 1957 erworben aus der Sammlung Lilly von Schnitzler-Malinckrodt, Murnau.",
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Literatur,"Beckmann, Max, Winterthur 1938, Kat-Nr. 7 
+hrsg. v. Kunsthalle Winterthur 1938
+Beckmann, Max, Zürich 1955, Kat-Nr. 63 hrsg. v. Kunsthalle Basel
+Basel 1956
+",
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Ausstellungen,"Max Beckmann, 1932 Berlin, Galerie Alfred Flechtheim /  1938 Winterthur, Kunstverein/  22.11.1955-08.01.1956 Zürich, Kunsthaus",
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Beschriftung,"Signatur, Vorderseite (links oben): Beckmann F. 32
+Aufkleber, Rückseite, oben links, auf dem Rahmen: BUCHHOL GALLERY / CURT VALENTIN / 32 EAST 57th STREET, NEW YORK. / TITLE & YEAR Gypsy. 1932 / ARTIST Max Beckmann / MEDIUM & / SIZE Oil 53 1/2 X 39 3/4 "" / NO. / 11296 / Oui [handschritfliche Notiz]",
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Werkkommentar,"Kurz nach Entstehen wurde das Bild mit dem Titel „Ilonka“ ausgestellt. Offensichtlich handelt es sich um ein Porträt. Eine Zeichnung des wahrscheinlich selben Modells (heute Art Institute Chicago, Inv-Nr. 1989.169), ist ebenfalls Ilonka betitelt. Sie wurde 1955 bei Theo Hill, Köln unter diesem Titel ausgestellt. (Vgl. Kat. Hill, S. 14) Das WVZ Göpel 1979 erwähnt zwei Stellen aus Beckmanns Tagebuch von 1945, in denen Beckmann auf das Bild, das er in einer Amsterdamer Ausstellung sah, mit „Zigeunerin✶✶“ referiert. Göpel erwähnt auch die Zeichnung Ilonka, ohne daraus einen Rückschluss auf den Titel zu ziehen. Im Zuge einer Prüfung von Bildtiteln auf rassistische Bezeichnungen, haben wir entschieden, den ersten Titel Ilonka wiederherzustellen und auf den späteren Titel Zigeunerin✶✶ II zu verzichten. Barbara Tiedemann und Siegfried Gohr, die das aktuelle Werkverzeichnis zu Beckmann bearbeiten, werden das Werk ebenfalls unter dem Titel Ilonka führen.
+
+Dr. Julia Friedrich",
+Painting,URL,xsd:string,Ilonka,X,X,Objektinformationen,X,Angaben_rassistische_Fremdbezeichnung,"Diese rassistische Fremdbezeichnung vermittelt seit Jahrhunderten negative und exotisierende Stereotype. Sie ist untrennbar verbunden mit der Ausgrenzung, Vertreibung, Verfolgung und Ermordung von Sinti*zze und Rom*nja und schreibt ein diskriminierendes Menschenbild fort. Dennoch belassen wir sie im Werktitel. Als Museum können wir Werke nicht ändern – eine rassistische Darstellung so wenig wie einen rassistischen Titel. Wir können auf die soziale Gewalt und Unterdrückung, die Kunstwerke spiegeln oder selbst betreiben, hinweisen und sie in der Präsentation sichtbar machen.",
+Painting,Freitext,xsd:string,Ilonka,X,X,Inhaltliche_Beschreibung,X,Bilderzählungen_Stereotype,"Eine dunkelhaarige Frau mit auffälligem Schmuck sitzt in Nahsicht an einem Tisch, ein blonder Mann mit Flasche im Hintergrund.",
+Painting,GND,xsd:string,Ilonka,X,X,Inhaltliche_Beschreibung,X,Zentrale_Figuren_Typen," „Zigeunerin“ – als Repräsentation einer Romni-Frau, möglicherweise als Wahrsagerin oder Barbesucherin inszeniert",
+Painting,GND,xsd:string,Ilonka,X,X,Inhaltliche_Beschreibung,X,Tradierte_Antiziganistische_Motive,"visuelle Codierung durch Kleidung, Haltung, Exotik. Goldene Reifenarmbänder, große Ohrringe, Fächerartige Drapierung, schwarze Mähne, Begleitfigur (Kavalier) mit Alkoholflasche",
+Painting,Freitext,xsd:string,Ilonka,X,X,Inhaltliche_Beschreibung,X,Ästhetischen_Kompositorischen," Szene in einem Innenraum (Bar? Bordell? Bühne?), Frau als Objekt männlicher Begierde oder Projektionsfläche",
+Painting,GND,xsd:string,Ilonka,X,X,Inhaltliche_Beschreibung,X,Schlagwörter_(Inhaltliche_Beschreibung| ),"Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:
+kritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels.",
+Painting,Projektspezifischer Thesaurus,xsd:string,Ilonka,X,X,Semantische_Annotation,X,Stereotyptypus ,"Erotisierung, Exotisierung, Mystifizierung",
+Painting,Freitext,xsd:string,Ilonka,X,X,Semantische_Annotation,X,Diskursanalyse_Ideologiekritik,"Frau wird zur Projektionsfläche für Männlichkeit, Fremdheit, und sexuelles Begehren",
+Painting,kontrollierte Vokabularien,xsd:string,Ilonka,X,X,Semantische_Annotation,X,Modus_Darstellung,"Expressiv-stilisiert, selbstbewusst, aber auch fragmentarisch anonymisiert",
+Painting,Freitext ,xsd:string,Ilonka,X,X,Semantische_Annotation,X,Bezug_Agency,"Ambivalent – Frau erscheint selbstsicher, aber bleibt Objekt des männlichen Blicks",
+Painting,Freitext ,xsd:string,Ilonka,X,X,Semantische_Annotation,X,Antiziganismus_Ambivalenz,"1. Fremdbild vs. Selbstpräsenz:	Ilonka wird mit Attributen der „Zigeunerin“ ausgestattet: dunkle Kleidung, Goldschmuck, sinnlicher Blick  Deutungsrahmen: Exotisierung – aber: Sie schaut selbstbewusst, konfrontativ zurück                                                                                                                                                                                                                                                                                                                         2. Erotisierung vs. Eigenständigkeit: Körperhaltung & Kleidung betonen Sexualität – zugleich kein passives Objekt, sondern aktiv gesetzte Präsenz Deutungsrahmen: Erotik wird nicht konsumierbar gemacht, sondern wirkt verweigernd                                                                                                  3. Stilisierung vs. Individualisierung: Typisierte Züge, starke Farbkontraste – aber auch persönliche Tiefe, Melancholie Deutungsrahmen: Beckmann bricht mit klarem Stereotyp durch Ambivalenz der Darstellung                                                                                                        4. Historischer Kontext: Krise vs. Aufwertung	1932 – kurz vor Machtübernahme der NSDAP, zunehmende Entmenschlichung von Roma Deutungsrahmen: Gegenbild zur NS-Ideologie? Oder doch Projektion bürgerlicher Männlichkeit?  Beckmanns Ilonka verkörpert ein Spannungsverhältnis:
+Sie ist eine Figur der Projektion – und zugleich eine Figur der Störung dieser Projektion. Beckmann inszeniert Ambivalenz bewusst: Ilonka ist weder Opfer noch Klischee, sondern eine Art Grenzfigur im Bilddiskurs der Weimarer Republik.                                                                                   Beckmanns Ilonka ist ein Beispiel für die ambivalente Konstruktion von „Zigeunerinnenbildern“: Das Bild bewegt sich zwischen diskursiver Zuschreibung und ästhetischer Destabilisierung, zwischen Kunstbild und kulturellem Spiegel gesellschaftlicher Spannungen in der Zwischenkriegszeit.",
+Painting,Freitext ,xsd:string,Ilonka,X,X,Semantische_Annotation,X,Selbstartikulation_Fremdrepräsentation,"keine Selbstdarstellung, aber starke Eigenpräsenz gegen stereotype Lesart",
+Painting,GND,xsd:string,Ilonka,X,X,Semantische_Annotation,X,"
+Schlagwörter_(Semantische_Annotation)
+","Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:
+kritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels.",
+Painting,URL,xsd:string,Ilonka,X,X,Semantische_Relationen,X,Verwandte_Objekte,"Beckmanns frühere Werke 289 Zigeunerin
+Gemälde 1928 Frankfurt am Main
+Öl auf Leinwand 136 × 58 cm
+Nicht signiert
+Im Museum: HAMBURG Kunsthalle
+Inventarnummer: HK-5001",
+Painting,Freitext,xsd:string,Ilonka,X,X,Semantische_Relationen,X,Relationstyp,"„inspiriert von“, „stilistisch verwandt“, „kritisiert romantisierende Darstellung“",
+Painting,Transmediale Relation,xsd:string,Ilonka,X,X,Semantische_Relationen,X,Medienübergreifender_Zusammenhang,"Motivwanderung: von Postkarten / Fotografie ins expressionistische Gemälde, später in Filmästhetik. Verbindung zur Filmästhetik der Weimarer Republik, insbesondere Club- und Varieté-Szenen",
+Painting,Freitext,xsd:string,Ilonka,X,X,Semantische_Relationen,X,Historischer_Kontext,"Zwischenkriegszeit, Deutschland 1932 – kurz vor dem Machtantritt der Nationalsozialisten, Krise der Repräsentation, politische Unsicherheit",
+Painting,Empfehlungen,xsd:string,Ilonka,X,X,Semantische_Relationen,X,Prüfung_rassistische_Bezeichnungen,"Besonders historische Werke, bei denen diskriminierende Begriffe unreflektiert tradiert oder unhinterfragt übernommen wurden.Diese Titel wurden nicht immer vom Künstler selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.
+Ungeprüfte Übernahme solcher Titel kann zur Reproduktion diskriminierender Begriffe führen. Beispiel für Formulierung im Metadatenblatt
+Originaltitel: Zigeunerin mit Fächer
+Alternativtitel: Porträt einer Frau mit Fächer (vermutlich Romni)
+Hinweis: Der im Originaltitel verwendete Begriff „Zigeunerin“ gilt heute als diskriminierend. Er wurde hier aus dokumentarischen Gründen belassen, jedoch kritisch kontextualisiert. Weiterführende Informationen
+Zigeuner*in ist eine historische, seit den1980er Jahren allgemein aufgegebene Fremdbezeichnung der Sinti und Roma. Der Titel des Gemäldes wurde beibehalten, obwohl er diesen heute nicht mehr erwünschten und als diskriminierend empfundenen Begriff beinhaltet. Wie die meisten Titel hat auch dieser seinen Ursprung in der Bilderliste des Künstlers und ist in einem historischen Kontext entstanden. Max Beckmann hat ihn nicht in beleidigender oder demütigender Weise verwendet. Er ist ein Teil seines künstlerischen
+Vermächtnisses.",
+Painting,GND gemeinsame Normdatei,xsd:string,Ilonka,X,X,Semantische_Relationen,X,"
+Schlagwörter_(Semantische_Relationen)
+","Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:
+kritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels.",

@@ -1,0 +1,28 @@
+Property,Eingabefeld,text,translated_Property,translated_text
+Objekt-ID,,Interne ID für eindeutige Referenzierung in der Datenbank,Object ID,Internal ID for clear reference in the database
+Titel,,"Erkennbarer Titel (auf diskriminierende Begriffe und Herkunft prüfen. Die Titeln wurden nicht immer vom Künstler selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.))",title,"Recognizable title (check for discriminatory terms and origin. The titles were not always awarded by the artist himself, but often come from museums, publishers or later cataloging.))"
+Künstler:in/Autor:in,,Wer das Objekt geschaffen oder veröffentlicht hat,Artist: In/Author: In,Who created or published the object
+Entstehungsjahr,,Datum oder Zeitraum der Entstehung,Year of origin,Date or period of the formation
+Ort der Entstehung / Nutzung,,"Geografische Lage (Ort, Region)",Place of origin / use,"Geographical location (location, region)"
+Gattung / Genre ,,"z.B. Historiengemälde, Postkarte, Film ",Genus / genre,"For example, painting of history, postcard, film"
+Objekttyp / Medium / Technik,,"Bild, Ton, Text, Video, Hybrid",Object type / medium / technology,"Image, sound, text, video, hybrid"
+Motive / Topoi ,,"Typische Stereotypmotive, z.B. Lagerfeuer, Musikant",Motifs / topoi,"Typical stereotype motifs, e.g. campfire, musician"
+Narrative / Diskurse,,"Narrative Rahmen: Romantisierung, Kriminalisierung",Narrative / discourses,"Narrative framework: romance, criminalization"
+Historischer Kontext,,"Ereignisse wie 1848er-Revolution, Gesetzgebungen",Historical context,"Events such as 1848 revolution, legislation"
+Antiziganistische / Stigmatisierende Elemente,,Diskriminierende Darstellungen benennen,Anti -Zigan / stigmatizing elements,Name discriminatory representations
+Agency,,"Form(en) der Selbstermächtigung, Selbstrepräsentation oder Selbstartikulation, die dem Objekt zugeordnet werden können",Agent,"Form (s) of self -empowerment, self -representation or self -launch that can be assigned to the object"
+Verknüpfung ,,"Verlinkung verwandter Werke auch in anderen Medienformen (z. B. Vorlage für Film, Adaption als Illustration etc.)",Link,"Link of related works also in other media forms (e.g. template for film, adaptation as illustration etc.)"
+Narrativwandel bei Medienwechsel,,Veränderung des Narrativs über Medien hinweg,Narrative change in media change,Change of narrative over media
+Rezeptionsnsweg,,Tradierungs- oder Transformationsbeziehungen,Reception,Trading or transformation relationships
+Sammlung / Archiv / ,,Fundort oder archivische Herkunft,Collection / archive /,Location or archive origin
+Provenienz,,Chronologischer Weg des Objekts,Provenance,Chronological path of the property
+Literatur,,Wissenschaftliche oder publizistische Referenzen,literature,Scientific or journalistic references
+Ausstellungen / Aufführungen / Veröffentlichungen,,"Präsentationen, Aufführungen, Ausstellungen",Exhibitions / performances / publications,"Presentations, performances, exhibitions"
+Beschriftung / Glossierung ,,"Signaturen, Aufkleber, handschriftliche Notizen",Lettering / glossing,"Signatures, stickers, handwritten notes"
+Rechte / Lizenzen,,"Lizenzstatus, CC-Lizenz etc.",Right / licenses,"License status, CC license etc."
+Digitalisat-Link/Pfad,,Pfad oder URL zum Digitalisat,Digitized link/path,Path or URL to the digitized
+Metadaten-Status,,"vollständig, unvollständig, geprüft",Metadata status,"Complete, incomplete, checked"
+Erfasst von,,Name der erfassenden Person,Calculated by,Name of the captivating person
+Erfassungsdatum,,JJJJ-MM-TT,Detection date,JJJJ-MM-TT
+Kommentar / Anmerkung,,Zusätzliche Bemerkungen oder Besonderheiten,Comment / note,Additional comments or special features
+Versionsgeschichte,,X,Version history,X

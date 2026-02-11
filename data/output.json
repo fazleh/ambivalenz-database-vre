@@ -1,0 +1,1068 @@
+[
+    {
+        "text": "Zwei_Zigeuner",
+        "entities": []
+    },
+    {
+        "text": "6",
+        "entities": []
+    },
+    {
+        "text": "1",
+        "entities": []
+    },
+    {
+        "text": "Zwei Zigeuner",
+        "entities": []
+    },
+    {
+        "text": "Öl auf Leinwand, Maße\t 73 × 92 cm",
+        "entities": [
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            }
+        ]
+    },
+    {
+        "text": "Zwei Zigeuner",
+        "entities": []
+    },
+    {
+        "text": "1910",
+        "entities": []
+    },
+    {
+        "text": "Land / Stadt / Region ?",
+        "entities": []
+    },
+    {
+        "text": "Name (ggf. mit Lebensdaten): Kunffy, Lajos (GND: 132187388)",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            }
+        ]
+    },
+    {
+        "text": "Name (ggf. mit Lebensdaten) Ermittlung der Namen (ggf. mit Lebensdaten) der abgebildeten Roma-Männer – Rechercheaufgabe im Nachlass von Kunffy sowie im Stadtarchiv.",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Nachlass",
+                "dbpedia_uri": "http://dbpedia.org/resource/Nachlass",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Nachlass"
+            }
+        ]
+    },
+    {
+        "text": "Lajos Kunffy- Memorial-Museum, Somogytúr, Ungarn",
+        "entities": [
+            {
+                "surface_form": "Somogytúr",
+                "dbpedia_uri": "http://dbpedia.org/resource/Somogytúr",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Somogytúr"
+            }
+        ]
+    },
+    {
+        "text": "Ermittlung der Daten…",
+        "entities": []
+    },
+    {
+        "text": "• Roma & Sinti : \"Zigeuner-Darstellungen\" der Moderne ; [Katalog zur Ausstellung Roma & Sinti. \"Zigeuner-Darstellungen\" der Moderne, 17. Juni bis 2. September 2007 ; Kooperationsprojekt der Kunsthalle Krems mit dem Ethnographischen Museum Budapest] 1. Aufl. Krems an der Donau: Kunsthalle,2007                                                                                                                                         •  Black Bodies, White Bodies –\n‘Gypsy’ Images in Central Europe at the Turn\nof the Twentieth Century (1880–1920) Éva Kovács In: Vol. 3. No. 2. 2020, 72–94 • DOI: 10.29098/crs.v3i2.75\n• Kunffy Lajos: Visszaemlékezéseim (szerk.: Horváth Kános). Kaposvár, Somogy Mezei Múzeumok Igazgatósága 2006, 108-109.   (Lajos Kunffy: Meine Erinnerungen (Hrsg.: Kános Horváth) Kaposvár, Somogy Mezei Múzeumok Direktgatósága 2006, 108-109.)",
+        "entities": [
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Sinti",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Sinti",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Krems",
+                "dbpedia_uri": "http://dbpedia.org/resource/Krems_an_der_Donau",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Krems_an_der_Donau"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Budapest",
+                "dbpedia_uri": "http://dbpedia.org/resource/Budapest",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Budapest"
+            },
+            {
+                "surface_form": "Krems",
+                "dbpedia_uri": "http://dbpedia.org/resource/Krems_an_der_Donau",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Krems_an_der_Donau"
+            },
+            {
+                "surface_form": "Black Bodies",
+                "dbpedia_uri": "http://dbpedia.org/resource/Black_body",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Black_body"
+            },
+            {
+                "surface_form": "White",
+                "dbpedia_uri": "http://dbpedia.org/resource/White_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/White_people"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Central Europe",
+                "dbpedia_uri": "http://dbpedia.org/resource/Central_Europe",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Central_Europe"
+            },
+            {
+                "surface_form": "DOI",
+                "dbpedia_uri": "http://dbpedia.org/resource/Digital_object_identifier",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Digital_object_identifier"
+            },
+            {
+                "surface_form": "Kaposvár",
+                "dbpedia_uri": "http://dbpedia.org/resource/Kaposvár",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Kaposvár"
+            },
+            {
+                "surface_form": "Somogy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Somogy_County",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Somogy_County"
+            },
+            {
+                "surface_form": "Kaposvár",
+                "dbpedia_uri": "http://dbpedia.org/resource/Kaposvár",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Kaposvár"
+            },
+            {
+                "surface_form": "Somogy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Somogy_County",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Somogy_County"
+            }
+        ]
+    },
+    {
+        "text": "Gerhard Baumgartner, Ausstellung Roma & Sinti. Zigeuner-Darstellungen der Moderne (2007, Krems an der Donau) und Kunsthalle Krems",
+        "entities": [
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Sinti",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sinti",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sinti"
+            },
+            {
+                "surface_form": "Krems",
+                "dbpedia_uri": "http://dbpedia.org/resource/Krems_an_der_Donau",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Krems_an_der_Donau"
+            },
+            {
+                "surface_form": "Krems",
+                "dbpedia_uri": "http://dbpedia.org/resource/Krems_an_der_Donau",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Krems_an_der_Donau"
+            }
+        ]
+    },
+    {
+        "text": "Ermittlung der Daten: Signatur, Vorderseite (links oben): ?\nAufkleber, Rückseite, oben links, auf dem Rahmen: ?",
+        "entities": [
+            {
+                "surface_form": "Signatur",
+                "dbpedia_uri": "http://dbpedia.org/resource/NSB_Class_73",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/NSB_Class_73"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Digital_elevation_model",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Digital_elevation_model"
+            }
+        ]
+    },
+    {
+        "text": "Zusammenfassung:  Der ungarische Maler Lajos Kunffy beschreibt in seinen Erinnerungen, wie er ab 1905 begann, Bilder von sogenannten „Zigeunern“ zu malen – besonders von einer Gruppe mit langen Haaren und dunkler Haut, die er als besonders malerisch empfand. Diese Menschen weckten für ihn einen ursprünglichen, exotischen Eindruck. Kunffy stellte fest, dass man vergleichbare „Gestalten“ auch in Ungarn finden könne, und seine Werke fanden internationales Interesse, u.a. auf einer Ausstellung in Paris 1912, wo er als „Maler der Zigeuner“ bekannt wurde.\n\nEr berichtet, dass nach dem Ersten Weltkrieg die langen Haare dieser Männer verschwunden waren – sie wurden als Rekruten geschoren. Um Deserteure zu entlarven, kontrollierten Gendarmen sogar ihre Hüte auf eingenähte Haarsträhnen. Kunffy malte nach dem Krieg weiterhin diese Personen, obwohl ihr charakteristisches äußeres Merkmal – die langen Haare – fehlte. Originaltext In: Roma & Sinti : \"Zigeuner-Darstellungen\" der Moderne ; Katalog zur Ausstellung  S. 78",
+        "entities": [
+            {
+                "surface_form": "seinen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Seinen_manga",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Seinen_manga"
+            },
+            {
+                "surface_form": "Gruppe",
+                "dbpedia_uri": "http://dbpedia.org/resource/Kampfgruppe",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Kampfgruppe"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Haaren",
+                "dbpedia_uri": "http://dbpedia.org/resource/Haaren,_North_Brabant",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Haaren,_North_Brabant"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "Paris",
+                "dbpedia_uri": "http://dbpedia.org/resource/Paris",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Paris"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Ersten",
+                "dbpedia_uri": "http://dbpedia.org/resource/Das_Erste",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Das_Erste"
+            },
+            {
+                "surface_form": "waren",
+                "dbpedia_uri": "http://dbpedia.org/resource/Waren_(Müritz)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Waren_(Müritz)"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Sinti",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sinti",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sinti"
+            }
+        ]
+    },
+    {
+        "text": "Ermittlung der Daten…",
+        "entities": []
+    },
+    {
+        "text": "Das Bild stellt zwei Männer mit langen, ungepflegten Haaren, dunklem Teint und einfacher Kleidung dar – Merkmale, die häufig mit dem romantisierten, aber auch negativ stereotypisierten Bild von „Zigeunern“ verknüpft wurden. Die Darstellung spielt mit Exotik und sozialer Außenseiterposition. Kunffy fokussiert nicht auf Individualität, sondern stilisiert „das Fremde“, was eine exotisierende, entmenschlichende Wirkung haben kann.",
+        "entities": [
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Haaren",
+                "dbpedia_uri": "http://dbpedia.org/resource/Haaren,_North_Brabant",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Haaren,_North_Brabant"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "negativ",
+                "dbpedia_uri": "http://dbpedia.org/resource/Negativ",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Negativ"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            }
+        ]
+    },
+    {
+        "text": "Der Wilde / Primitive: Die Männer erscheinen rau, ernst, wortkarg, fast archaisch.\nDer Fremde / Andere: Ihre Erscheinung (lange Haare, zusammengewachsene Augenbrauen, einfache Kleidung) hebt sie stark von der bürgerlichen Norm ab.\nBeide Typen verkörpern romantisierte Randfiguren, wie sie im 19. Jahrhundert im europäischen Kunst- und Literaturkanon auftauchten.",
+        "entities": [
+            {
+                "surface_form": "Wilde",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oscar_Wilde",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oscar_Wilde"
+            },
+            {
+                "surface_form": "rau",
+                "dbpedia_uri": "http://dbpedia.org/resource/Rau",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Rau"
+            }
+        ]
+    },
+    {
+        "text": "Nomadentum und Naturverbundenheit: Durch Kleidung und Haartracht werden die Männer mit \"ursprünglichen\" Lebensformen verbunden.\n\nMystifizierte Fremdheit: Die dargestellten Merkmale wurden im Zeitraum 1850–1950 häufig verwendet, um Romnja und Sintizze als „nicht zivilisiert“ oder „andersartig“ zu kennzeichnen.\n\nMännliche Stärke und Wildheit – ein wiederkehrendes Motiv in Kunstwerken, die sich mit dem antiziganistischen Blick auf „Zigeuner“ beschäftigten.",
+        "entities": [
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Uruguayan_Football_Association",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Uruguayan_Football_Association"
+            }
+        ]
+    },
+    {
+        "text": "Dunkle Farbpalette: Erzeugt eine melancholische, erdverbundene Atmosphäre.\n\nRealistische Darstellung: Die realistische Malweise verstärkt die Wirkung der Stereotype – sie erscheinen „authentisch“ und „beweisend“.\n\nKompakte Komposition: Die beiden Männer sind eng zusammen dargestellt, ohne Kontext oder Hintergrund – was ihren Typuscharakter verstärkt und sie nicht als individuelle Persönlichkeiten, sondern als Beispiel einer „Gattung“ erscheinen lässt.",
+        "entities": [
+            {
+                "surface_form": "Stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            }
+        ]
+    },
+    {
+        "text": "Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:\nkritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels. Antiziganismus\n\n• Stereotyp\n• Porträtmalerei\n• Ungarn (Früh 20. Jh.)\n• Romani-Darstellung in der Kunst\n• Exotismus\n• Ethnisierung\n• Lajos Kunffy\n• Zigeunerbild (historisch)                                                                                                                              • Mitteleuropa\n• Kolonialer Blick\n• Emanzipatorischer Blick\n• Modernität\n• Malerei an der Wende zum 19. Jahrhundert\n• Visuelle Darstellung",
+        "entities": [
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "Früh",
+                "dbpedia_uri": "http://dbpedia.org/resource/Cölner_Hofbräu_Früh",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Cölner_Hofbräu_Früh"
+            },
+            {
+                "surface_form": "Mitteleuropa",
+                "dbpedia_uri": "http://dbpedia.org/resource/Mitteleuropa",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Mitteleuropa"
+            },
+            {
+                "surface_form": "Wende",
+                "dbpedia_uri": "http://dbpedia.org/resource/Peaceful_Revolution",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Peaceful_Revolution"
+            }
+        ]
+    },
+    {
+        "text": "Der „edle Wilde“ / „primitive Fremde“: Die dargestellten Männer verkörpern einen Typus, der romantisiert, aber zugleich kulturell abgewertet wird.\nMännlich, stark, schweigend, archaisch: Diese Art der Darstellung konstruiert eine vermeintlich typische „Zigeuner-Männlichkeit“, die wild und unzivilisiert erscheint.\nEs handelt sich um einen ethnisierten Stereotyp, der kulturelle Unterschiede überbetont und Individualität ausblendet.",
+        "entities": [
+            {
+                "surface_form": "Wilde",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oscar_Wilde",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oscar_Wilde"
+            }
+        ]
+    },
+    {
+        "text": "Das Bild ist Teil eines kolonial geprägten Blicks auf das „Fremde“ im eigenen Land – hier Ungarn.\nDer Diskurs um „Zigeuner“ speiste sich aus romantisierenden Vorstellungen, aber auch aus sozialer Ausgrenzung, Kriminalisierung und rassistischen Zuschreibungen.\nKunffys Werk spiegelt eine bürgerliche Sehnsucht nach Ursprünglichkeit, aber auch eine ideologische Konstruktion von Differenz.",
+        "entities": [
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "Blicks",
+                "dbpedia_uri": "http://dbpedia.org/resource/Blicks_River",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Blicks_River"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "Werk",
+                "dbpedia_uri": "http://dbpedia.org/resource/WERK",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/WERK"
+            },
+            {
+                "surface_form": "Sehnsucht",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sehnsucht",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sehnsucht"
+            }
+        ]
+    },
+    {
+        "text": "Realistische Malweise mit dokumentarischem Anspruch – dies verleiht der Darstellung eine vermeintliche Objektivität.\nDie Inszenierung ist bewusst statisch, ohne Handlung oder Kontext, was den Eindruck verstärkt, dass die Figuren „zeitlos“ und „typisch“ seien.\nDurch das Fehlen eines erzählerischen Rahmens entsteht eine visuelle Fixierung auf den Typus, nicht auf Biografie oder Individualität.",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            }
+        ]
+    },
+    {
+        "text": "Die dargestellten Männer haben keine erkennbare Handlung oder Stimme – sie sind passive Objekte eines Blicks.\nKeine Agency im Bild selbst: Sie handeln nicht, sie werden gezeigt.\nAuch Kunffys Erzählsituation (aus seiner Perspektive, nachträglich reflektierend) unterstreicht seine Deutungsmacht über die Figuren.                                                                                                                                                                                                                                             Die Hand kann als einzige Andeutung von Agency im Bild gedeutet werden: Während die Figuren sonst passiv dargestellt sind, drückt sich hier ein individueller Moment aus.\nIm antiziganistischen Kontext solcher Bilder könnte diese Hand zwischen menschlicher Nähe und exotisierender Distanz vermitteln: Ein Versuch der Identifikation – aber aufgeladen mit Projektionen.\nAuch könnte sie als stilles Protestzeichen gelesen werden – gegen den „fremden Blick“, gegen die Reduktion auf ein Stereotyp. Ihre Haltung, ihr Blick, ihre Kleidung, die Geste der Hand – all das steht in einem nicht sichtbaren, aber wirksamen Zusammenhang mit einem Erbe von Enteignung, Entmenschlichung und kolonialer Kontrolle.\nIhre Passivität oder Stille im Bild könnte weniger als Abwesenheit von Agency gelesen werden – sondern als Agency unter der Bedingung von Trauma.",
+        "entities": [
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "sind",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sind_Division",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sind_Division"
+            },
+            {
+                "surface_form": "Blicks",
+                "dbpedia_uri": "http://dbpedia.org/resource/Blicks_River",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Blicks_River"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "Auch",
+                "dbpedia_uri": "http://dbpedia.org/resource/Auch",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Auch"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "sind",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sind_Division",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sind_Division"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Auch",
+                "dbpedia_uri": "http://dbpedia.org/resource/Auch",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Auch"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "auf",
+                "dbpedia_uri": "http://dbpedia.org/resource/Anguilla_United_Front",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Anguilla_United_Front"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "unter",
+                "dbpedia_uri": "http://dbpedia.org/resource/Unter_(playing_card)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Unter_(playing_card)"
+            }
+        ]
+    },
+    {
+        "text": "Das Bild ist ambivalent: Es zeigt einerseits Respekt für die Ästhetik und „Malerhaftigkeit“ der dargestellten Menschen, andererseits reproduziert es stereotype und exotisierende Merkmale.\nEs kann sowohl als bewundernde Darstellung als auch als visuelle Festschreibung von „Andersartigkeit“ gelesen werden.\nDie Ambivalenz liegt in der gleichzeitigen Bewunderung und Abwertung. Die Hand der linken Figur ist ein emotionaler Ankerpunkt in der ansonsten starren Komposition. Sie bringt Bewegung, Ambivalenz und vielleicht sogar Widerstand in die Darstellung hinein. In einem Bild, das stark von Fremdzuschreibungen geprägt ist, eröffnet diese kleine Geste eine menschlichere, vielschichtigere Lesart.                                                                                                                                                                   Für eine reparative Lesart ist es essenziell, solche Risse im hegemonialen Bilddiskurs zu erkennen und weiterzudenken: Was bleibt an Subjektivität sichtbar, selbst unter entmenschlichender Repräsentation?",
+        "entities": [
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "Respekt",
+                "dbpedia_uri": "http://dbpedia.org/resource/Respekt",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Respekt"
+            },
+            {
+                "surface_form": "stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "Widerstand",
+                "dbpedia_uri": "http://dbpedia.org/resource/German_resistance_to_Nazism",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/German_resistance_to_Nazism"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "Was bleibt",
+                "dbpedia_uri": "http://dbpedia.org/resource/What_Remains_(novella)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/What_Remains_(novella)"
+            },
+            {
+                "surface_form": "unter",
+                "dbpedia_uri": "http://dbpedia.org/resource/Unter_(playing_card)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Unter_(playing_card)"
+            }
+        ]
+    },
+    {
+        "text": "Es handelt sich klar um eine Fremdrepräsentation – die dargestellten Männer haben keine Stimme, keine Perspektive im Bild oder Text.\nKunffy als Maler und Erzähler beansprucht Definitionsmacht über ihre Darstellung.\nKeine Hinweise auf Selbstinszenierung oder Beteiligung der dargestellten Personen.In einem Bild, das stark von Fremdrepräsentation geprägt ist, bietet die Geste der Hand eine visuelle Bresche: ein Moment, in dem die dargestellte Person nicht nur Objekt des Blicks ist, sondern etwas Eigenes, Individuelles ausdrückt.\nReparative Narrationen könnten genau an solchen Brüchen im Stereotyp ansetzen, um neue Sichtweisen zu entwickeln. Wenn wir wissen, dass die abgebildeten Männer Nachfahren einer Gruppe sind, die über Jahrhunderte versklavt war (in den Fürstentümern Moldau und Walachei bis 1856), dann lesen wir das Bild nicht mehr nur als ethnografisch oder exotisierend – sondern als ?",
+        "entities": [
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "nur",
+                "dbpedia_uri": "http://dbpedia.org/resource/Nur_Ahmed_Aman",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Nur_Ahmed_Aman"
+            },
+            {
+                "surface_form": "Blicks",
+                "dbpedia_uri": "http://dbpedia.org/resource/Blicks_River",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Blicks_River"
+            },
+            {
+                "surface_form": "wissen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Wissen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Wissen"
+            },
+            {
+                "surface_form": "Gruppe",
+                "dbpedia_uri": "http://dbpedia.org/resource/Glossary_of_German_military_terms",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Glossary_of_German_military_terms"
+            },
+            {
+                "surface_form": "sind",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sind_Division",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sind_Division"
+            },
+            {
+                "surface_form": "Moldau",
+                "dbpedia_uri": "http://dbpedia.org/resource/Vltava",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Vltava"
+            },
+            {
+                "surface_form": "Bild",
+                "dbpedia_uri": "http://dbpedia.org/resource/Bild",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Bild"
+            },
+            {
+                "surface_form": "nur",
+                "dbpedia_uri": "http://dbpedia.org/resource/Nur_Ahmed_Aman",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Nur_Ahmed_Aman"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            }
+        ]
+    },
+    {
+        "text": "Weitere Gemälde von Lajos Kunffy mit ähnlichen Motiven („Zigeunerbilder“) Ermittlung der Daten…\n\nWerke von Künstlern wie József Rippl-Rónai (https://d-nb.info/gnd/118601210 ) die sich mit ähnlichen Themen im osteuropäischen oder bürgerlichen Kontext auseinandersetzen\n\nFotografien und Reiseberichte über Roma-Gruppen um 1900 Ermittlung der Daten…\n\nExotismus- und Völkerkundesammlungen aus dem 19. Jh. Ermittlung der Daten…",
+        "entities": [
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "József Rippl-Rónai",
+                "dbpedia_uri": "http://dbpedia.org/resource/József_Rippl-Rónai",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/József_Rippl-Rónai"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            }
+        ]
+    },
+    {
+        "text": "Ikonographisch: Vergleichbare Darstellungen ethnischer oder sozialer Typen in der Malerei\nDiskursiv: Verknüpft mit kolonialen und antiziganistischen Diskursen\nRezeptionell: Rezeption in Frankreich (Kunffy wurde als „peintre des Tziganes“ bekannt) Ermittlung der Daten… \"Transgressions and Exceptions\nThis is how the optical unconscious of society is reflected in typical ‘Gypsy’ representations of\nModernity. Yet, there are certain (and as far as I know unique) cases when multifaceted pro-Gypsy\nsensibilities and essentialist anti-Gypsy feelings – Romaphilia and Romaphobia – transgress the\nlimits of ‘Gypsy’ as a cultural code and paradoxically come close to self-representation or even create\na position to be taken by Roma artists later – even if no ‘Gypsy’ or Roma artists were known to be\npracticing fine art production at the time these paintings were created. An example of this is Gypsy\nwith a Pipe by József Rippl-Rónai (Figure 8). Rippl-Rónai is said to have depicted one of Kunffy’s\nmodels (Figure 9) when visiting in Somogytúr; in his painting Kunffy’s beautiful beast is turned into\na jovial gentleman.\" In: Èva Kovács, Black Bodies, White Bodies – ‘Gypsy’ Images in Central Europe at the Turn of the Twentieth Century (1880–1920), S. 87",
+        "entities": [
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Modernity",
+                "dbpedia_uri": "http://dbpedia.org/resource/Age_of_Enlightenment",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
+            },
+            {
+                "surface_form": "essentialist",
+                "dbpedia_uri": "http://dbpedia.org/resource/Essentialism",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Essentialism"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "József Rippl-Rónai",
+                "dbpedia_uri": "http://dbpedia.org/resource/József_Rippl-Rónai",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/József_Rippl-Rónai"
+            },
+            {
+                "surface_form": "Figure 8",
+                "dbpedia_uri": "http://dbpedia.org/resource/Figure_8_racing",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Figure_8_racing"
+            },
+            {
+                "surface_form": "Somogytúr",
+                "dbpedia_uri": "http://dbpedia.org/resource/Somogytúr",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Somogytúr"
+            },
+            {
+                "surface_form": "Black Bodies",
+                "dbpedia_uri": "http://dbpedia.org/resource/Black_body",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Black_body"
+            },
+            {
+                "surface_form": "White",
+                "dbpedia_uri": "http://dbpedia.org/resource/White_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/White_people"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Central Europe",
+                "dbpedia_uri": "http://dbpedia.org/resource/Central_Europe",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Central_Europe"
+            }
+        ]
+    },
+    {
+        "text": "Die Darstellung knüpft an mediale Erzählformen der Zeit an: ethnografische Fotografien, Reiseliteratur, Opern (z. B. Carmen), Literatur (z. B. Victor Hugo, Puschkin)\nStereotype des „Zigeuners“ wurden über verschiedene Medien hinweg tradiert und verstärkt\nKunffys Werk steht in einem europäischen Zusammenhang antiziganistischer Bildproduktion Ermittlung der Daten…",
+        "entities": [
+            {
+                "surface_form": "Carmen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Carmen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Carmen"
+            },
+            {
+                "surface_form": "Victor Hugo",
+                "dbpedia_uri": "http://dbpedia.org/resource/Victor_Hugo",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Victor_Hugo"
+            },
+            {
+                "surface_form": "Stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            },
+            {
+                "surface_form": "Werk",
+                "dbpedia_uri": "http://dbpedia.org/resource/WERK",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/WERK"
+            }
+        ]
+    },
+    {
+        "text": "Entstehung: frühes 20. Jahrhundert, kurz vor dem Ersten Weltkrieg\nUngarn als Teil der Donaumonarchie mit starken ethnischen Spannungen\nZunehmende politische Kontrolle und Militarisierung (z. B. Haarschnitt der Rekruten ab 1914 als Disziplinierungsmaßnahme)\nStigmatisierung und Marginalisierung von Roma-Gruppen im gesamten europäischen Raum\nBeginn einer staatlich regulierten Rassifizierung  Ermittlung der Daten…",
+        "entities": [
+            {
+                "surface_form": "dem",
+                "dbpedia_uri": "http://dbpedia.org/resource/Deutsche_Mark",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Deutsche_Mark"
+            },
+            {
+                "surface_form": "Ersten",
+                "dbpedia_uri": "http://dbpedia.org/resource/Das_Erste",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Das_Erste"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            }
+        ]
+    },
+    {
+        "text": "Besonders historische Werke, bei denen diskriminierende Begriffe unreflektiert tradiert oder unhinterfragt übernommen wurden.Diese Titel wurden nicht immer vom Künstler selbst vergeben, sondern stammen oft von Museen, Verlagen oder späteren Katalogisierungen.\nUngeprüfte Übernahme solcher Titel kann zur Reproduktion diskriminierender Begriffe führen. Beispiel für Formulierung im Metadatenblatt Originaltitel: Zigeunerin mit Fächer. Alternativtitel: Porträt einer Frau mit Fächer (vermutlich Romni) Hinweis: Der im Originaltitel verwendete Begriff „Zigeunerin“ gilt heute als diskriminierend. Er wurde hier aus dokumentarischen Gründen belassen, jedoch kritisch kontextualisiert. Der Begriff „Zigeuner“ ist heute klar als rassistisch und diskriminierend einzuordnen. Auch wenn er historisch korrekt für Kunffys Zeit ist, sollte er kontextualisiert und mit heutigen Begriffen wie „Roma“ bzw. „Sinti“ ersetzt oder problematisiert werden\nEine kritische Umbenennung oder Annotation im Museumskontext wäre empfehlenswert",
+        "entities": [
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "vom",
+                "dbpedia_uri": "http://dbpedia.org/resource/VOM_(punk_rock_band)",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/VOM_(punk_rock_band)"
+            },
+            {
+                "surface_form": "stammen",
+                "dbpedia_uri": "http://dbpedia.org/resource/Craig_Stammen",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Craig_Stammen"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "Titel",
+                "dbpedia_uri": "http://dbpedia.org/resource/Titel",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Titel"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "heute",
+                "dbpedia_uri": "http://dbpedia.org/resource/Heute",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Heute"
+            },
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "heute",
+                "dbpedia_uri": "http://dbpedia.org/resource/Heute",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Heute"
+            },
+            {
+                "surface_form": "Auch",
+                "dbpedia_uri": "http://dbpedia.org/resource/Auch",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Auch"
+            },
+            {
+                "surface_form": "wenn",
+                "dbpedia_uri": "http://dbpedia.org/resource/Remember_WENN",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Remember_WENN"
+            },
+            {
+                "surface_form": "mit",
+                "dbpedia_uri": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+            },
+            {
+                "surface_form": "Roma",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            },
+            {
+                "surface_form": "Sinti",
+                "dbpedia_uri": "http://dbpedia.org/resource/Sinti",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Sinti"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "oder",
+                "dbpedia_uri": "http://dbpedia.org/resource/Oder",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Oder"
+            }
+        ]
+    },
+    {
+        "text": "Dieses Feld ist dafür gedacht, kontrollierte Schlagwörter aus der GND (Gemeinsame Normdatei) zu verwenden – also standardisierte Begriffe, die eine eindeutige Zuordnung ermöglichen. Die GND ist ein mächtiges Werkzeug, aber im Kontext von Ambivalenzforschung muss sie:\nkritisch reflektiert, kontextualisiert, und ggf. ergänzt werden durch eigene, dekolonisierende Vokabulare. So lässt sich ein Spannungsfeld zwischen Wissensordnung und Diskurskritik produktiv nutzen – ganz im Sinne daS Projekttitels. Antiziganismus\n\n•Bildanalyse\n•Ethnische Stereotype\n•Fremdbild\n•Kunst und Kolonialismus\n•Rassismus in der Kunst                                                                                                                                                                                                 •Exotismus\n•Ethnische Stereotype\n•Fremdwahrnehmung\n•Porträtmalerei\n•Ungarn\n•Romani-Darstellung\n•Realismus (Kunst)\n•Lajos Kunffy\n•Bilddiskurs                                                                                                                                                                                                                                               • Èva Kovács                                                                                                                                                                                                                                                                                          •József Rippl-Rónai                                                                                                                                                                                                                                           •Gypsy with a Pipe                                                                                                                                                                                                                  •Pipe",
+        "entities": [
+            {
+                "surface_form": "aus",
+                "dbpedia_uri": "http://dbpedia.org/resource/Australia",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Australia"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "GND",
+                "dbpedia_uri": "http://dbpedia.org/resource/Integrated_Authority_File",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Integrated_Authority_File"
+            },
+            {
+                "surface_form": "werden",
+                "dbpedia_uri": "http://dbpedia.org/resource/Werden_Abbey",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Werden_Abbey"
+            },
+            {
+                "surface_form": "Stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            },
+            {
+                "surface_form": "Stereotype",
+                "dbpedia_uri": "http://dbpedia.org/resource/Stereotype",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Stereotype"
+            },
+            {
+                "surface_form": "József Rippl-Rónai",
+                "dbpedia_uri": "http://dbpedia.org/resource/József_Rippl-Rónai",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/József_Rippl-Rónai"
+            },
+            {
+                "surface_form": "Gypsy",
+                "dbpedia_uri": "http://dbpedia.org/resource/Romani_people",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/Romani_people"
+            }
+        ]
+    }
+]
