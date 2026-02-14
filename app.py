@@ -891,6 +891,13 @@ def add_data_submit():
     properties = {}
     status_properties = {}
 
+    # Generate a random number, e.g., between 1000 and 9999
+    rand_num = random.randint(1000, 9999)
+
+    # Create the ObjektID string
+    objekt_id = f"ObjektID_{rand_num}"
+    properties["ObjektID"] = objekt_id
+
     # -------------------------
     # Build property dictionaries
     # -------------------------
@@ -1325,6 +1332,27 @@ REVIEW_EMAIL_GROUPS = {
     "lawyer": ["haider.badol@gmail.com"]
 }
 
+import random
+
+
+def generate_objekt_id(min_value=1000, max_value=9999):
+    """
+    Generate a random ObjektID string like 'ObjektID4832'.
+
+    Args:
+        min_value (int): Minimum random number (inclusive). Default 1000.
+        max_value (int): Maximum random number (inclusive). Default 9999.
+
+    Returns:
+        str: ObjektID with random number appended.
+    """
+    rand_num = random.randint(min_value, max_value)
+    return f"ObjektID{rand_num}"
+
+
+# Example usage:
+new_id = generate_objekt_id()
+print(new_id)
 
 # -----------------------
 # Run app

@@ -273,11 +273,16 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
 <label for="objectType">Objekt Typ auswählen:</label>
 <select id="objectType" onchange="fillFields()">
     <option value="">-- Bitte wählen --</option>
-    <option value="LegalText">LegalText</option>
-    <option value="Literature">Literature</option>
-    <option value="Painting">Painting</option>
-    <option value="Person">Person</option>
-    <option value="Portrait">Portrait</option>
+        <option value="Article">Article</option>
+        <option value="LegalText">LegalText</option>
+        <option value="Literature">Literature</option>
+        <option value="Painting">Painting</option>
+        <option value="Person">Person</option>
+        <option value="Portrait">Portrait</option>
+        <option value="Poster">Poster</option>
+        <option value="Poem">Poem</option>
+        <option value="Song">Song</option>
+        <option value="Scientific-Article">Scientific Article</option>
 </select>
 
 <!-- Main Form -->
@@ -299,9 +304,17 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
 
   <td class="col2">
     <select name="nodeType" id="nodeTypeSelect" required>
-      <option value="">-- Bitte wählen --</option>
-      <option value="Painting">Painting</option>
-      <option value="Book">Book</option>
+        <option value="Article">Article</option>
+        <option value="Book">Book</option>
+        <option value="LegalText">LegalText</option>
+        <option value="Literature">Literature</option>
+        <option value="Painting">Painting</option>
+        <option value="Person">Person</option>
+        <option value="Portrait">Portrait</option>
+        <option value="Poster">Poster</option>
+        <option value="Poem">Poem</option>
+        <option value="Song">Song</option>
+        <option value="Scientific-Article">Scientific Article</option>
     </select>
   </td>
 
@@ -471,15 +484,25 @@ if (nodeTypeSelect && selectedType) {
   async function saveData() {
     const form = document.getElementById('mainForm');
     if (!form) return;
+
+    // ✅ Check if nodeType is selected
+    const nodeTypeSelect = document.getElementById('nodeTypeSelect');
+    if (!nodeTypeSelect.value) {
+        alert("❌ Bitte wählen Sie den 'nodeType' aus, bevor Sie speichern."); // German message
+        nodeTypeSelect.focus();
+        return; // stop submission
+    }
+
     const fd = new FormData(form);
     try {
-      await fetch(form.action, { method: 'POST', body: fd });
-      document.getElementById('saveMessage').textContent = "✅ Daten erfolgreich gespeichert!";
+        await fetch(form.action, { method: 'POST', body: fd });
+        document.getElementById('saveMessage').textContent = "✅ Daten erfolgreich gespeichert!";
     } catch (e) {
-      console.error(e);
-      document.getElementById('saveMessage').textContent = "❌ Fehler beim Speichern!";
+        console.error(e);
+        document.getElementById('saveMessage').textContent = "❌ Fehler beim Speichern!";
     }
-  }
+}
+
   window.saveData = saveData;
 
   function clearForm() {
