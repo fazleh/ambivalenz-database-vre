@@ -249,10 +249,15 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
 <div class="main-content">
 
 <!-- Upload Excel -->
+<!-- Upload Excel / ODS -->
 <form method="POST" action="{{ url_for('add_data_upload') }}" enctype="multipart/form-data">
-    <input type="file" name="file" accept=".xlsx" required>
-    <button type="submit" class="upload-btn">Excel importieren</button>
+    <input type="file" name="file"
+           accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
+                   .ods,application/vnd.oasis.opendocument.spreadsheet"
+           required>
+    <button type="submit" class="upload-btn">Excel / ODS importieren</button>
 </form>
+
 
 <hr>
 
@@ -289,6 +294,24 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
 <tr><th class="col1">Property</th><th class="col2">Value</th><th class="col3">Status</th><th class="col4">Name Entities</th></tr>
 </thead>
 <tbody>
+<tr>
+  <td class="col1">nodeType *</td>
+
+  <td class="col2">
+    <select name="nodeType" id="nodeTypeSelect" required>
+      <option value="">-- Bitte wählen --</option>
+      <option value="Painting">Painting</option>
+      <option value="Book">Book</option>
+    </select>
+  </td>
+
+  <td class="col3">
+    <div class="traffic-light yellow"></div>
+  </td>
+
+  <td class="col4">–</td>
+</tr>
+
 {% for field in fields %}
 <tr>
 <td class="col1">{{ field }}</td>
@@ -363,6 +386,12 @@ textarea{width:100%;min-height:50px;padding:6px;font-size:14px;border:1px solid 
   function fillFields() {
     const typeSelect = document.getElementById("objectType");
     const selectedType = typeSelect ? typeSelect.value : "";
+    // sync nodeType dropdown
+const nodeTypeSelect = document.getElementById("nodeTypeSelect");
+if (nodeTypeSelect && selectedType) {
+  nodeTypeSelect.value = selectedType;
+}
+
     const tableBody = document.querySelector('.property-table tbody');
     if (!tableBody) return;
     tableBody.innerHTML = "";

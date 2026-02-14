@@ -420,6 +420,7 @@ def book_item(painting_name):
 @app.route("/article/<painting_name>")
 def article_item(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+
     with driver.session() as session:
         query = """
             MATCH (n:Article {Name: $name})
@@ -445,6 +446,7 @@ def article_item(painting_name):
 @app.route("/poem/<painting_name>")
 def poem_item(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+
     with driver.session() as session:
         query = """
             MATCH (n:Poem {Name: $name})
@@ -470,6 +472,7 @@ def poem_item(painting_name):
 @app.route("/song/<painting_name>")
 def song_item(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+
     with driver.session() as session:
         query = """
             MATCH (n:Song {Name: $name})
@@ -522,6 +525,7 @@ def legal_text_item(painting_name):
 @app.route("/Person/<painting_name>")
 def person_item(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+
     with driver.session() as session:
         query = """
             MATCH (n:Person {Name: $name})
@@ -547,6 +551,7 @@ def person_item(painting_name):
 @app.route("/poster/<painting_name>")
 def poster_item(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+
     with driver.session() as session:
         query = """
             MATCH (n:Poster {Name: $name})
@@ -572,6 +577,7 @@ def poster_item(painting_name):
 @app.route("/portrait/<painting_name>")
 def portrait_item(painting_name):
     painting_name = normalize_neo4j_value(painting_name)
+
     with driver.session() as session:
         query = """
             MATCH (n:Portrait {Name: $name})
@@ -880,7 +886,7 @@ def add_data_extract_entities():
 def add_data_submit():
 
     posted = request.form
-    node_type = posted.get("nodeType", posted.get("category", "article"))
+    node_type = posted.get("nodeType") or posted.get("category") or "Painting"
 
     properties = {}
     status_properties = {}
@@ -918,8 +924,9 @@ def add_data_submit():
         safe_key = neo4j_safe_prop(key)
 
         if key == "Titel":
+            # Clean the title for Neo4j storage and URL usage
             cleaned_value = clean_title(value)
-            properties["Name"] = cleaned_value   # Unique ID
+            properties["Name"] = cleaned_value  # Unique ID used for URL
             properties[safe_key] = cleaned_value
         else:
             properties[safe_key] = value.strip() or "No data"
